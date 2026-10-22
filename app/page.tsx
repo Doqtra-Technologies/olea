@@ -66,7 +66,7 @@ export default function Home() {
             <Link href="/contact" className="group relative block aspect-[4/5] overflow-hidden lg:col-span-5">
               <Image
                 src="/images/exterior.jpg"
-                alt="The glowing Olea Social shopfront at night"
+                alt="The Olea Social dining room prepared for guests"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -117,7 +117,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Button href="/book">Book now</Button>
                 <Button href="/group-dining" variant="light">
-                  Group dining
+                  Private dining
                 </Button>
               </div>
             </div>

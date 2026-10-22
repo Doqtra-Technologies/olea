@@ -13,7 +13,7 @@ export default function WhatsOnPage() {
     <>
       <PageHero
         image="/images/whats-on.jpg"
-        alt="Moussaka, dips and white wine on a marble table"
+        alt="Guests enjoying Mediterranean dishes and drinks at Olea Social"
         eyebrow={whatsOn.eyebrow}
         title={whatsOn.title}
         back={{ href: "/", label: "Home" }}

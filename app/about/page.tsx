@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  { src: "/images/hero.jpg", alt: "Mezze, tagine and wine on a marble table" },
-  { src: "/images/festive.jpg", alt: "Grilled salmon with piperade" },
-  { src: "/images/private-dining.jpg", alt: "Green velvet booth seating" },
-  { src: "/images/lunch-spread.jpg", alt: "Hummus and cacik with bread" },
-  { src: "/images/blog-christmas.jpg", alt: "Steak with red wine" },
+  { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
+  { src: "/images/festive.jpg", alt: "Vegetable moussaka served with Mediterranean sides" },
+  { src: "/images/private-dining.jpg", alt: "The Olea Social dining room set for a gathering" },
+  { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
+  { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
 ];
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="relative min-h-[60vh]">
             <Image
               src="/images/exterior.jpg"
-              alt="The Olea Social shopfront on Upper St Martin's Lane at night"
+              alt="The Olea Social dining room, ready for guests"
               fill
               priority
               sizes="(min-width: 1024px) 50vw, 100vw"

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button, Container, PageHero } from "@/components/ui";
 import { menus } from "@/lib/menus";
-import { site, whatsOn } from "@/lib/site";
+import { whatsOn } from "@/lib/site";
 
 export function generateStaticParams() {
   return whatsOn.items.map((i) => ({ slug: i.slug }));
@@ -30,6 +30,7 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
       <section className="bg-cream py-16 text-ink sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-6">
+            {item.date && <p className="eyebrow mb-4 text-leaf">{item.date}</p>}
             <p className="font-display text-2xl leading-relaxed sm:text-3xl">{item.summary}</p>
             {menu && (
               <div className="mt-10 border-t border-ink/15 pt-8">
@@ -43,19 +44,13 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
               </div>
             )}
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/book">Book your table</Button>
+              <Button href="/book">{item.category === "Events" ? "Book your place" : "Book your table"}</Button>
               {menu && (
                 <Button href={`/menu#${menu.id}`} variant="outline" className="!text-forest-800 !border-forest-800 hover:!bg-forest-800 hover:!text-cream">
                   View the menu
                 </Button>
               )}
             </div>
-            <p className="mt-6 text-sm text-ink/60">
-              Larger groups and private dining: call{" "}
-              <a href={site.phoneHref} className="underline underline-offset-4">
-                {site.phone}
-              </a>
-            </p>
           </div>
           <div className="relative aspect-[4/5] lg:col-span-5 lg:col-start-8">
             <Image src={item.image} alt={item.alt} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />

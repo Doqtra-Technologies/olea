@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LeafMark } from "@/components/brand";
 import { Container, Rule } from "@/components/ui";
 import { site } from "@/lib/site";
 
@@ -23,19 +22,30 @@ export default function BookPage() {
         </p>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-12">
-          {/* Replace this panel with the restaurant's booking widget embed (e.g. OpenTable / SevenRooms). */}
           <div
-            aria-label="Booking"
-            className="flex min-h-[480px] flex-col items-center justify-center gap-6 bg-cream p-10 text-center text-ink lg:col-span-8"
+            aria-label="OpenTable booking"
+            className="flex min-h-[560px] flex-col items-center justify-center gap-6 bg-cream p-8 text-center text-ink sm:p-12 lg:col-span-8"
           >
-            <LeafMark className="h-24 w-auto text-leaf" />
-            <p className="max-w-md font-display text-3xl leading-snug">Call the team to reserve your table</p>
-            <a href={site.phoneHref} className="font-display text-4xl text-forest-800 underline-offset-8 hover:underline">
-              {site.phone}
+            <p className="eyebrow text-leaf">Book online with OpenTable</p>
+            <h2 className="max-w-xl font-display text-4xl font-light leading-snug sm:text-5xl">
+              Find a table at Olea Social
+            </h2>
+            <p className="max-w-md text-sm leading-relaxed text-ink/65">
+              Choose your date, time and party size through our OpenTable booking page.
+            </p>
+            <a
+              href={site.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-14 items-center justify-center bg-brass px-10 py-4 font-mono text-sm font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-dark"
+            >
+              Book now
             </a>
             <p className="max-w-sm text-sm text-ink/60">
-              For group bookings and private dining, share your preferred date and group size and the team
-              will help you plan.
+              Prefer to speak to our team? Call{" "}
+              <a href={site.phoneHref} className="underline underline-offset-4">
+                {site.phone}
+              </a>
             </p>
           </div>
 

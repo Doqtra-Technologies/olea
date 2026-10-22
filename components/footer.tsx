@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 const explore = [
   { href: "/menu", label: "Menu" },
-  { href: "/group-dining", label: "Group Dining" },
+  { href: "/group-dining", label: "Private Dining" },
   { href: "/whats-on", label: "What's On" },
   { href: "/blog", label: "Blog" },
   { href: "/book", label: "Book a Table" },

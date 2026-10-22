@@ -12,7 +12,7 @@ export default function ContactPage() {
     <>
       <PageHero
         image="/images/exterior.jpg"
-        alt="The Olea Social shopfront at night"
+        alt="The Olea Social dining room"
         eyebrow="Contact & location"
         title="Olea Social Covent Garden"
       >
