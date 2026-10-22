@@ -5,10 +5,9 @@ import { site } from "@/lib/site";
 
 const explore = [
   { href: "/menu", label: "Menu" },
-  { href: "/group-dining", label: "Private Dining" },
+  { href: "/private-dining", label: "Private Dining" },
   { href: "/whats-on", label: "What's On" },
   { href: "/blog", label: "Blog" },
-  { href: "/book", label: "Book a Table" },
 ];
 
 const heading = "font-mono text-[10px] uppercase tracking-[0.25em] text-white/40";
@@ -78,6 +77,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a className={link} href={site.bookingUrl} target="_blank" rel="noopener noreferrer">
+                  Book a Table
+                </a>
+              </li>
             </ul>
           </div>
         </div>

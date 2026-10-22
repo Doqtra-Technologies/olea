@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import type { home } from "@/lib/site";
+import { site, type home } from "@/lib/site";
 
 type Promo = (typeof home.promos)[number];
 
@@ -99,12 +99,14 @@ export function PromoCarousel({ promos }: { promos: Promo[] }) {
               </svg>
             </button>
           </div>
-          <Link
-            href="/book"
+          <a
+            href={site.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-forest-800 px-6 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-cream hover:bg-forest-700"
           >
             Reserve now
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Button, Container, PageHero } from "@/components/ui";
+import { BookingLink, Container, PageHero } from "@/components/ui";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -60,9 +60,9 @@ export default function ContactPage() {
               >
                 Map &amp; directions
               </a>
-              <Button href="/book" variant="outline" className="!border-forest-800 !text-forest-800 hover:!bg-forest-800 hover:!text-cream">
+              <BookingLink variant="outline" className="!border-forest-800 !text-forest-800 hover:!bg-forest-800 hover:!text-cream">
                 Book now
-              </Button>
+              </BookingLink>
             </div>
           </div>
           <div className="relative min-h-[420px] overflow-hidden border border-ink/10 lg:col-span-8">

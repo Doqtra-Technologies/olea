@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logotype } from "@/components/brand";
+import { BookingLink } from "@/components/ui";
 import { nav, site } from "@/lib/site";
 
 export function Header() {
@@ -53,12 +54,12 @@ export function Header() {
               </Link>
             );
           })}
-          <Link
-            href="/book"
-            className="border border-brass px-5 py-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-brass transition-colors hover:bg-brass hover:text-ink"
+          <BookingLink
+            variant="outline"
+            className="px-5 py-2.5"
           >
             Reserve
-          </Link>
+          </BookingLink>
         </nav>
 
         <button
@@ -98,12 +99,11 @@ export function Header() {
             ))}
           </ul>
           <div className="mt-10 space-y-4">
-            <Link
-              href="/book"
-              className="block bg-brass px-6 py-4 text-center font-mono text-xs font-medium uppercase tracking-[0.2em] text-ink"
+            <BookingLink
+              className="block px-6 py-4 text-center text-xs"
             >
               Reserve a table
-            </Link>
+            </BookingLink>
             <a href={site.phoneHref} className="block text-center text-sm text-white/70">
               {site.phone}
             </a>

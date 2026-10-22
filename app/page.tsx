@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LeafMark, Logotype } from "@/components/brand";
 import { PromoCarousel } from "@/components/promo-carousel";
-import { Arrow, Button, Container } from "@/components/ui";
+import { Arrow, BookingLink, Button, Container } from "@/components/ui";
 import { home, site, story, whatsOn } from "@/lib/site";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
             </h1>
             <p className="mt-6 max-w-md font-display text-xl text-white/85 sm:text-2xl">{site.tagline}</p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/book">Book a table</Button>
+              <BookingLink>Book a table</BookingLink>
               <Button href="/menu" variant="light">
                 View menus
               </Button>
@@ -43,7 +43,8 @@ export default function Home() {
         <LeafMark className="pointer-events-none absolute -right-24 top-10 hidden h-[520px] w-auto text-forest-800 lg:block" />
         <Container className="relative">
           <p className="reveal max-w-5xl font-display text-3xl font-light leading-snug text-white sm:text-4xl lg:text-5xl">
-            {home.intro} <span className="text-leaf-light">{home.introSub}</span>
+            <span className="block">{home.intro}</span>
+            <span className="mt-2 block text-leaf-light">{home.introSub}</span>
           </p>
           <p className="reveal mt-10 max-w-3xl text-base leading-relaxed text-white/75 sm:text-lg">{home.body}</p>
           <ul className="reveal mt-10 flex flex-wrap gap-x-6 gap-y-2">
@@ -115,8 +116,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Button href="/book">Book now</Button>
-                <Button href="/group-dining" variant="light">
+                <BookingLink>Book now</BookingLink>
+                <Button href="/private-dining" variant="light">
                   Private dining
                 </Button>
               </div>
@@ -137,25 +138,50 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {whatsOn.items.map((item) => (
-              <Link key={item.slug} href={`/whats-on/${item.slug}`} className="reveal group relative block aspect-[3/4] overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black/30" />
-                <div className="absolute left-5 right-5 top-5">
-                  <p className="eyebrow text-[10px] text-white/80">{item.category}</p>
-                  <p className="mt-2 font-display text-3xl leading-tight text-white">{item.title}</p>
-                </div>
-                <span className="absolute bottom-5 right-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/70 text-white transition-colors group-hover:bg-white group-hover:text-forest-900">
-                  <Arrow />
-                </span>
-              </Link>
-            ))}
+            {whatsOn.items.map((item) => {
+              const isEvent = item.category === "Events";
+
+              return (
+                <Link
+                  key={item.slug}
+                  href={`/whats-on/${item.slug}`}
+                  className={`reveal group relative block overflow-hidden ${isEvent ? "bg-cream" : "aspect-[3/4]"}`}
+                >
+                  <div className={`relative overflow-hidden ${isEvent ? "aspect-[4/3] bg-white" : "absolute inset-0"}`}>
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className={`transition-transform duration-700 group-hover:scale-105 ${isEvent ? "object-contain" : "object-cover"}`}
+                    />
+                    {!isEvent && <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black/30" />}
+                    {!isEvent && (
+                      <div className="absolute left-5 right-5 top-5">
+                        <p className="eyebrow text-[10px] text-white/80">{item.category}</p>
+                        <p className="mt-2 font-display text-3xl leading-tight text-white">{item.title}</p>
+                      </div>
+                    )}
+                  </div>
+                  {isEvent && (
+                    <div className="flex items-center justify-between p-4">
+                      <div>
+                        <p className="eyebrow text-[10px] text-leaf">{item.category}</p>
+                        <p className="mt-2 font-display text-2xl text-ink">{item.title}</p>
+                      </div>
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/40 text-ink transition-colors group-hover:bg-ink group-hover:text-cream">
+                        <Arrow />
+                      </span>
+                    </div>
+                  )}
+                  {!isEvent && (
+                    <span className="absolute bottom-5 right-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/70 text-white transition-colors group-hover:bg-white group-hover:text-forest-900">
+                      <Arrow />
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </Container>
       </section>

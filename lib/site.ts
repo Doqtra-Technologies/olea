@@ -25,7 +25,7 @@ export const site = {
 export const nav = [
   { href: "/about", label: "About Us" },
   { href: "/menu", label: "Menu" },
-  { href: "/group-dining", label: "Private Dining" },
+  { href: "/private-dining", label: "Private Dining" },
   { href: "/whats-on", label: "What's On" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
@@ -33,9 +33,9 @@ export const nav = [
 
 export const home = {
   intro:
-    "Welcome to Olea Social. Where the spirit of the modern Mediterranean brings people together over great food, vibrant flavours and shared experiences.",
+    "Welcome to Olea Social.",
   introSub:
-    "From day to night, it's a place to eat, drink, connect and enjoy the moment in the heart of Covent Garden.",
+    "Where the spirit of the modern Mediterranean brings people together over great food, vibrant flavours and shared experiences. From day to night, it's a place to eat, drink, connect and enjoy the moment in the heart of Covent Garden.",
   body: "It's time to discover the modern Mediterranean. Explore a menu inspired by the coasts of Turkey, Greece, Spain, Italy and Morocco, where fresh ingredients meet timeless cooking techniques and a contemporary touch. From the kitchen to the bar, everything at Olea Social is made for sharing.",
   promos: [
     {
@@ -58,9 +58,9 @@ export const home = {
         "Take a break in the heart of Covent Garden with our Lunch Set Menu, £19.50 per person. Choose from Mediterranean-inspired starters and mains, from Babaganoush and Hummus to Chicken Tagine, Pide and Vegetable Moussaka.",
         "Perfect for a quick weekday lunch, a business catch-up or a leisurely afternoon.",
       ],
-      cta: { label: "Book your table", href: "/book" },
+      cta: { label: "Book your table", href: site.bookingUrl },
       image: "/images/set-lunch.jpg",
-      alt: "Mediterranean sharing plates with hummus, tabbouleh and aubergine",
+      alt: "A freshly baked pide served with Mediterranean dips and salad",
     },
   ],
 };
@@ -90,6 +90,7 @@ export type WhatsOnItem = {
   image: string;
   alt: string;
   heroImage: string;
+  heroAlt?: string;
   menu?: string;
   date?: string;
 };
@@ -98,7 +99,7 @@ export const whatsOn = {
   eyebrow: "Events & updates",
   title: "What's on at Olea Social",
   intro:
-    "From seasonal menus and special celebrations to exciting events and more, discover what's happening at Olea Social in the heart of Covent Garden.",
+    "Seasonal celebrations, special gatherings and moments worth sharing. Find your next reason to visit Olea Social in the heart of Covent Garden.",
   items: [
     {
       slug: "festive-season",
@@ -107,30 +108,21 @@ export const whatsOn = {
       summary:
         "Celebrate the festive season at Olea Social with specially curated menus, vibrant Mediterranean flavours and a warm, lively atmosphere — perfect for Christmas lunches, group dinners and festive celebrations in Covent Garden.",
       image: "/images/festive.jpg",
-      alt: "Vegetable moussaka with Mediterranean sides",
+      alt: "Guests raising a glass over a Mediterranean meal at Olea Social",
       heroImage: "/images/christmas.jpg",
+      heroAlt: "Guests celebrating together over festive food and drinks at Olea Social",
       menu: "christmas",
-    },
-    {
-      slug: "set-lunch",
-      title: "Set Lunch Menu",
-      category: "Menus",
-      summary:
-        "Make lunch something to look forward to at Olea Social with our Set Lunch Menu — a vibrant selection of Mediterranean dishes, perfect for a business lunch, a catch-up with friends or a relaxed afternoon in Covent Garden.",
-      image: "/images/lunch-spread.jpg",
-      alt: "Aubergine, hummus and tabbouleh served as Mediterranean sharing plates",
-      heroImage: "/images/set-lunch.jpg",
-      menu: "set-lunch",
     },
     {
       slug: "kizlarla-bulusuyoruz",
       title: "Kızlarla Buluşuyoruz!",
       category: "Events",
       summary:
-        "Join SuSu and Ino Beauty at Olea Social on 7 November 2026 for an evening with live music from Gizem Özbek. The event begins at 19:30.",
+        "Join SuSu × INO Beauty at Olea Social on 7 November for an unforgettable evening of conversation, new connections and live music from Gizem Özbek. The event begins at 19:30.",
       image: "/images/event-kizlarla.png",
       alt: "Poster for Kızlarla Buluşuyoruz! at Olea Social on 7 November",
-      heroImage: "/images/event-kizlarla.png",
+      heroImage: "/images/whats-on.jpg",
+      heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
       date: "7 November 2026 · 19:30",
     },
     {
@@ -138,10 +130,11 @@ export const whatsOn = {
       title: "Ekim Kahvaltı Buluşması",
       category: "Events",
       summary:
-        "Celebrate Halloween at Olea Social with Anneler Kulübü Londra on Sunday 25 October 2026, from 11:00 to 14:00. Tickets are £45 per person.",
+        "Join Anneler Kulübü Londra for a Halloween breakfast at Olea Social on Sunday 25 October, 11:00–14:00. Enjoy a traditional breakfast spread and unlimited tea while children take part in fancy dress, face painting, crafts and games. Tickets are £45 per adult; children aged 0–5 dine free with an adult and ages 5–11 are £15.",
       image: "/images/event-ekim-kahvalti.png",
       alt: "Poster for the Halloween breakfast gathering at Olea Social on 25 October",
-      heroImage: "/images/event-ekim-kahvalti.png",
+      heroImage: "/images/whats-on.jpg",
+      heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
       date: "25 October 2026 · 11:00–14:00 · £45 per person",
     },
   ] satisfies WhatsOnItem[],

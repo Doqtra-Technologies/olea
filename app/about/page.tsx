@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { LeafMark } from "@/components/brand";
-import { Button, Container } from "@/components/ui";
+import { BookingLink, Button, Container } from "@/components/ui";
 import { story } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const gallery = [
   { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
-  { src: "/images/festive.jpg", alt: "Vegetable moussaka served with Mediterranean sides" },
+  { src: "/images/festive.jpg", alt: "Guests raising a glass over a Mediterranean meal at Olea Social" },
   { src: "/images/private-dining.jpg", alt: "The Olea Social dining room set for a gathering" },
   { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
   { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
@@ -90,9 +90,9 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 flex flex-wrap gap-3">
             <Button href="/menu">Explore the menu</Button>
-            <Button href="/book" variant="light">
+            <BookingLink variant="light">
               Book a table
-            </Button>
+            </BookingLink>
           </div>
         </Container>
       </section>

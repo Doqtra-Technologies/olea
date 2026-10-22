@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Button, Container, PageHero } from "@/components/ui";
+import { BookingLink, Button, Container, PageHero } from "@/components/ui";
 import { menus } from "@/lib/menus";
 import { whatsOn } from "@/lib/site";
 
@@ -25,7 +25,13 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
 
   return (
     <>
-      <PageHero image={item.heroImage} alt={item.alt} eyebrow={item.category} title={item.title} back={{ href: "/whats-on", label: "What's On" }} />
+      <PageHero
+        image={item.heroImage}
+        alt={item.heroAlt ?? item.alt}
+        eyebrow={item.category}
+        title={item.title}
+        back={{ href: "/whats-on", label: "What's On" }}
+      />
 
       <section className="bg-cream py-16 text-ink sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-12 lg:items-center">
@@ -44,7 +50,7 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
               </div>
             )}
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href="/book">{item.category === "Events" ? "Book your place" : "Book your table"}</Button>
+              <BookingLink>{item.category === "Events" ? "Book your place" : "Book your table"}</BookingLink>
               {menu && (
                 <Button href={`/menu#${menu.id}`} variant="outline" className="!text-forest-800 !border-forest-800 hover:!bg-forest-800 hover:!text-cream">
                   View the menu
@@ -52,8 +58,14 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
               )}
             </div>
           </div>
-          <div className="relative aspect-[4/5] lg:col-span-5 lg:col-start-8">
-            <Image src={item.image} alt={item.alt} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+          <div className={`relative bg-white lg:col-span-5 lg:col-start-8 ${item.category === "Events" ? "aspect-[3/2]" : "aspect-[4/5]"}`}>
+            <Image
+              src={item.image}
+              alt={item.alt}
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className={item.category === "Events" ? "object-contain" : "object-cover"}
+            />
           </div>
         </Container>
       </section>
