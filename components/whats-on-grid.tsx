@@ -34,13 +34,13 @@ export function WhatsOnGrid({ items }: { items: WhatsOnItem[] }) {
             href={`/whats-on/${item.slug}`}
             className="animate-rise group block border border-ink/15 bg-cream transition-shadow hover:shadow-lg"
           >
-            <div className={`relative overflow-hidden ${item.category === "Events" ? "aspect-[4/3] bg-white" : "aspect-square"}`}>
+            <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.alt}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className={`transition-transform duration-700 group-hover:scale-105 ${item.category === "Events" ? "object-contain" : "object-cover"}`}
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div className="min-h-32 p-5">

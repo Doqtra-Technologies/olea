@@ -119,7 +119,7 @@ export const whatsOn = {
       category: "Events",
       summary:
         "Join SuSu × INO Beauty at Olea Social on 7 November for an unforgettable evening of conversation, new connections and live music from Gizem Özbek. The event begins at 19:30.",
-      image: "/images/event-kizlarla.png",
+      image: "/images/event-kizlarla-v2.png",
       alt: "Poster for Kızlarla Buluşuyoruz! at Olea Social on 7 November",
       heroImage: "/images/whats-on.jpg",
       heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
@@ -131,7 +131,7 @@ export const whatsOn = {
       category: "Events",
       summary:
         "Join Anneler Kulübü Londra for a Halloween breakfast at Olea Social on Sunday 25 October, 11:00–14:00. Enjoy a traditional breakfast spread and unlimited tea while children take part in fancy dress, face painting, crafts and games. Tickets are £45 per adult; children aged 0–5 dine free with an adult and ages 5–11 are £15.",
-      image: "/images/event-ekim-kahvalti.png",
+      image: "/images/event-ekim-kahvalti-v2.png",
       alt: "Poster for the Halloween breakfast gathering at Olea Social on 25 October",
       heroImage: "/images/whats-on.jpg",
       heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
