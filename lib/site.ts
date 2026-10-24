@@ -47,8 +47,8 @@ export const home = {
         "For something more intimate, celebrate in our private dining room, perfect for your Christmas gathering.",
       ],
       cta: { label: "Book your celebration", href: "/whats-on/festive-season" },
-      image: "/images/christmas.jpg",
-      alt: "Guests raising glasses of wine over a grilled dish at Olea Social",
+      image: "/images/christmas-home.png",
+      alt: "Decorated Christmas tree beside a table set with red berries at Olea Social",
     },
     {
       id: "set-lunch",

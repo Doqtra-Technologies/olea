@@ -138,50 +138,32 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {whatsOn.items.map((item) => {
-              const isEvent = item.category === "Events";
-
-              return (
-                <Link
-                  key={item.slug}
-                  href={`/whats-on/${item.slug}`}
-                  className={`reveal group relative block overflow-hidden ${isEvent ? "bg-cream" : "aspect-[3/4]"}`}
-                >
-                  <div className={`relative overflow-hidden ${isEvent ? "aspect-[4/3] bg-white" : "absolute inset-0"}`}>
-                    <Image
-                      src={item.image}
-                      alt={item.alt}
-                      fill
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className={`transition-transform duration-700 group-hover:scale-105 ${isEvent ? "object-contain" : "object-cover"}`}
-                    />
-                    {!isEvent && <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-transparent to-black/30" />}
-                    {!isEvent && (
-                      <div className="absolute left-5 right-5 top-5">
-                        <p className="eyebrow text-[10px] text-white/80">{item.category}</p>
-                        <p className="mt-2 font-display text-3xl leading-tight text-white">{item.title}</p>
-                      </div>
-                    )}
+            {whatsOn.items.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/whats-on/${item.slug}`}
+                className="reveal group flex h-full flex-col overflow-hidden bg-cream"
+              >
+                <div className="relative aspect-[5/7] overflow-hidden bg-forest-900">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 items-center justify-between gap-4 p-5">
+                  <div>
+                    <p className="eyebrow text-[10px] text-leaf">{item.category}</p>
+                    <p className="mt-2 font-display text-2xl leading-tight text-ink">{item.title}</p>
                   </div>
-                  {isEvent && (
-                    <div className="flex items-center justify-between p-4">
-                      <div>
-                        <p className="eyebrow text-[10px] text-leaf">{item.category}</p>
-                        <p className="mt-2 font-display text-2xl text-ink">{item.title}</p>
-                      </div>
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/40 text-ink transition-colors group-hover:bg-ink group-hover:text-cream">
-                        <Arrow />
-                      </span>
-                    </div>
-                  )}
-                  {!isEvent && (
-                    <span className="absolute bottom-5 right-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/70 text-white transition-colors group-hover:bg-white group-hover:text-forest-900">
-                      <Arrow />
-                    </span>
-                  )}
-                </Link>
-              );
-            })}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/40 text-ink transition-colors group-hover:bg-ink group-hover:text-cream">
+                    <Arrow />
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
