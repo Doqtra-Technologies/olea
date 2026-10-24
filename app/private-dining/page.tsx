@@ -36,22 +36,13 @@ export default function PrivateDiningPage() {
       </section>
 
       <section aria-label="Private dining at Olea Social" className="bg-forest-950 py-8 sm:py-12">
-        <Container className="grid gap-4 sm:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden">
+        <Container>
+          <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[21/9]">
             <Image
               src="/images/dining-room.jpg"
               alt="The Olea Social dining room set for a private gathering"
               fill
-              sizes="(min-width: 640px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src="/images/hero.jpg"
-              alt="Mediterranean dishes prepared for sharing around the table"
-              fill
-              sizes="(min-width: 640px) 50vw, 100vw"
+              sizes="100vw"
               className="object-cover"
             />
           </div>
