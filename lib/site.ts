@@ -107,8 +107,8 @@ export const whatsOn = {
       category: "Festive",
       summary:
         "Celebrate the festive season at Olea Social with specially curated menus, vibrant Mediterranean flavours and a warm, lively atmosphere — perfect for Christmas lunches, group dinners and festive celebrations in Covent Garden.",
-      image: "/images/festive.jpg",
-      alt: "Guests raising a glass over a Mediterranean meal at Olea Social",
+      image: "/images/festive-card.png",
+      alt: "Olea Social shopfront at night, lit sign and windows decorated with gold and silver baubles",
       heroImage: "/images/christmas.jpg",
       heroAlt: "Guests celebrating together over festive food and drinks at Olea Social",
       menu: "christmas",
