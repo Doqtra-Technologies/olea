@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const gallery = [
   { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
-  { src: "/images/festive.jpg", alt: "Guests raising a glass over a Mediterranean meal at Olea Social" },
+  { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
   { src: "/images/private-dining.jpg", alt: "The Olea Social dining room set for a gathering" },
   { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
   { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
@@ -83,7 +83,7 @@ export default function AboutPage() {
         <Container>
           <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2" aria-label="Gallery">
             {gallery.map((g) => (
-              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[19%]">
+              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(20%-9.6px)]">
                 <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 20vw, 60vw" className="object-cover" />
               </div>
             ))}

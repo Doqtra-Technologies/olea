@@ -11,8 +11,8 @@ export const site = {
   bookingUrl:
     "https://www.opentable.co.uk/booking/restref/availability?lang=en-GB&correlationId=cb23b425-3861-4c8d-998e-2ef41d1075c5&restRef=334638&otSource=Restaurant%20website",
   hours: [
-    { days: "Monday – Friday", time: "11:30am – 11:30pm" },
-    { days: "Saturday – Sunday", time: "9:30am – 11:30pm" },
+    { days: "Monday â€“ Friday", time: "11:30am â€“ 11:30pm" },
+    { days: "Saturday â€“ Sunday", time: "9:30am â€“ 11:30pm" },
   ],
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Olea+Social+10+Upper+St+Martin%27s+Lane+London+WC2H+9FB",
@@ -55,7 +55,7 @@ export const home = {
       eyebrow: "Make lunch worth looking forward to",
       title: "Lunch at Olea Social",
       body: [
-        "Take a break in the heart of Covent Garden with our Lunch Set Menu, £19.50 per person. Choose from Mediterranean-inspired starters and mains, from Babaganoush and Hummus to Chicken Tagine, Pide and Vegetable Moussaka.",
+        "Take a break in the heart of Covent Garden with our Lunch Set Menu, Â£19.50 per person. Choose from Mediterranean-inspired starters and mains, from Babaganoush and Hummus to Chicken Tagine, Pide and Vegetable Moussaka.",
         "Perfect for a quick weekday lunch, a business catch-up or a leisurely afternoon.",
       ],
       cta: { label: "Book your table", href: site.bookingUrl },
@@ -69,12 +69,12 @@ export const story = {
   title: "Our story",
   paragraphs: [
     "Olea Social began with a simple idea: to bring the flavours and food cultures of the Mediterranean together under one roof.",
-    "The vision came before the restaurant itself – a place inspired by the generosity, simplicity and sociability of Mediterranean dining, drawing freely from across the region rather than defining itself through any single cuisine.",
+    "The vision came before the restaurant itself â€“ a place inspired by the generosity, simplicity and sociability of Mediterranean dining, drawing freely from across the region rather than defining itself through any single cuisine.",
     "When the opportunity arose to take on Olea's Covent Garden site, its generosity of space offered the chance to bring the concept to life. Olea could become more than somewhere to eat: a restaurant and bar built around gathering, sharing and spending time together.",
   ],
   name: [
-    "The name reflects that same idea. Olea, the botanical name associated with the olive tree, connects the restaurant to something shared across much of the Mediterranean – its landscapes, its food and its culture of hospitality. Social expresses the other half of the idea: food as something best enjoyed together.",
-    "Today, Olea continues to evolve, but that original idea remains at its heart – a contemporary expression of Mediterranean food, hospitality and social life in the heart of Covent Garden.",
+    "The name reflects that same idea. Olea, the botanical name associated with the olive tree, connects the restaurant to something shared across much of the Mediterranean â€“ its landscapes, its food and its culture of hospitality. Social expresses the other half of the idea: food as something best enjoyed together.",
+    "Today, Olea continues to evolve, but that original idea remains at its heart â€“ a contemporary expression of Mediterranean food, hospitality and social life in the heart of Covent Garden.",
   ],
   regions: ["Turkey", "Greece", "Spain", "Italy", "Morocco", "France"],
 };
@@ -89,8 +89,6 @@ export type WhatsOnItem = {
   summary: string;
   image: string;
   alt: string;
-  heroImage: string;
-  heroAlt?: string;
   menu?: string;
   date?: string;
 };
@@ -106,36 +104,30 @@ export const whatsOn = {
       title: "Festive season at Olea Social",
       category: "Festive",
       summary:
-        "Celebrate the festive season at Olea Social with specially curated menus, vibrant Mediterranean flavours and a warm, lively atmosphere — perfect for Christmas lunches, group dinners and festive celebrations in Covent Garden.",
+        "Celebrate the festive season at Olea Social with specially curated menus, vibrant Mediterranean flavours and a warm, lively atmosphere â€” perfect for Christmas lunches, group dinners and festive celebrations in Covent Garden.",
       image: "/images/festive-card.png",
       alt: "Olea Social shopfront at night, lit sign and windows decorated with gold and silver baubles",
-      heroImage: "/images/christmas.jpg",
-      heroAlt: "Guests celebrating together over festive food and drinks at Olea Social",
       menu: "christmas",
     },
     {
       slug: "kizlarla-bulusuyoruz",
-      title: "Kızlarla Buluşuyoruz!",
+      title: "KÄ±zlarla BuluÅŸuyoruz!",
       category: "Events",
       summary:
-        "Join SuSu × INO Beauty at Olea Social on 7 November for an unforgettable evening of conversation, new connections and live music from Gizem Özbek. The event begins at 19:30.",
+        "Join SuSu Ã— INO Beauty at Olea Social on 7 November for an unforgettable evening of conversation, new connections and live music from Gizem Ã–zbek. The event begins at 19:30.",
       image: "/images/event-kizlarla-v2.png",
-      alt: "Poster for Kızlarla Buluşuyoruz! at Olea Social on 7 November",
-      heroImage: "/images/whats-on.jpg",
-      heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
-      date: "7 November 2026 · 19:30",
+      alt: "Poster for KÄ±zlarla BuluÅŸuyoruz! at Olea Social on 7 November",
+      date: "7 November 2026 Â· 19:30",
     },
     {
       slug: "ekim-kahvalti-bulusmasi",
-      title: "Ekim Kahvaltı Buluşması",
+      title: "Ekim KahvaltÄ± BuluÅŸmasÄ±",
       category: "Events",
       summary:
-        "Join Anneler Kulübü Londra for a Halloween breakfast at Olea Social on Sunday 25 October, 11:00–14:00. Enjoy a traditional breakfast spread and unlimited tea while children take part in fancy dress, face painting, crafts and games. Tickets are £45 per adult; children aged 0–5 dine free with an adult and ages 5–11 are £15.",
+        "Join Anneler KulÃ¼bÃ¼ Londra for a Halloween breakfast at Olea Social on Sunday 25 October, 11:00â€“14:00. Enjoy a traditional breakfast spread and unlimited tea while children take part in fancy dress, face painting, crafts and games. Tickets are Â£45 per adult; children aged 0â€“5 dine free with an adult and ages 5â€“11 are Â£15.",
       image: "/images/event-ekim-kahvalti-v2.png",
       alt: "Poster for the Halloween breakfast gathering at Olea Social on 25 October",
-      heroImage: "/images/whats-on.jpg",
-      heroAlt: "Guests raising a glass over a Mediterranean meal at Olea Social",
-      date: "25 October 2026 · 11:00–14:00 · £45 per person",
+      date: "25 October 2026 Â· 11:00â€“14:00 Â· Â£45 per person",
     },
   ] satisfies WhatsOnItem[],
 };

@@ -79,7 +79,7 @@ export default function PrivateDiningPage() {
             </address>
           </div>
           <div className="lg:col-span-8">
-            <PrivateDiningEnquiryForm phone={site.phone} phoneHref={site.phoneHref} />
+            <PrivateDiningEnquiryForm phone={site.phone} />
           </div>
         </Container>
       </section>

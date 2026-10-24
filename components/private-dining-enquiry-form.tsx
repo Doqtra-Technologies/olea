@@ -4,7 +4,6 @@ import { useState, type FormEvent } from "react";
 
 type PrivateDiningEnquiryFormProps = {
   phone: string;
-  phoneHref: string;
 };
 
 const inputStyles =
@@ -12,7 +11,7 @@ const inputStyles =
 
 const labelStyles = "block font-mono text-xs text-white/85";
 
-export function PrivateDiningEnquiryForm({ phone, phoneHref }: PrivateDiningEnquiryFormProps) {
+export function PrivateDiningEnquiryForm({ phone }:PrivateDiningEnquiryFormProps) {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
@@ -91,15 +90,7 @@ export function PrivateDiningEnquiryForm({ phone, phoneHref }: PrivateDiningEnqu
           Send enquiry
         </button>
         <p role="status" className="mt-4 min-h-5 text-sm text-white/80">
-          {status || (
-            <>
-              Online submissions aren&apos;t connected yet. To enquire now, call{" "}
-              <a href={phoneHref} className="text-brass underline underline-offset-4 hover:text-white">
-                {phone}
-              </a>
-              .
-            </>
-          )}
+          {status}
         </p>
       </div>
     </form>

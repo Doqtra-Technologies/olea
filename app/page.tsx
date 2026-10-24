@@ -66,8 +66,8 @@ export default function Home() {
           <div className="mt-8 grid gap-4 lg:grid-cols-12">
             <Link href="/contact" className="group relative block aspect-[4/5] overflow-hidden lg:col-span-5">
               <Image
-                src="/images/exterior.jpg"
-                alt="The Olea Social dining room prepared for guests"
+                src="/images/find-us.jpg"
+                alt="Sunlit tables set for guests beside Olea Social's street-facing windows"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

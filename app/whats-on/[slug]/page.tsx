@@ -26,16 +26,17 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
   return (
     <>
       <PageHero
-        image={item.heroImage}
-        alt={item.heroAlt ?? item.alt}
+        image={item.image}
+        alt={item.alt}
         eyebrow={item.category}
         title={item.title}
         back={{ href: "/whats-on", label: "What's On" }}
+        poster
       />
 
       <section className="bg-cream py-16 text-ink sm:py-24">
-        <Container className="grid gap-12 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-6">
+        <Container>
+          <div className="max-w-3xl">
             {item.date && <p className="eyebrow mb-4 text-leaf">{item.date}</p>}
             <p className="font-display text-2xl leading-relaxed sm:text-3xl">{item.summary}</p>
             {menu && (
@@ -57,15 +58,6 @@ export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[
                 </Button>
               )}
             </div>
-          </div>
-          <div className={`relative bg-white lg:col-span-5 lg:col-start-8 ${item.category === "Events" ? "aspect-[3/2]" : "aspect-[4/5]"}`}>
-            <Image
-              src={item.image}
-              alt={item.alt}
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className={item.category === "Events" ? "object-contain" : "object-cover"}
-            />
           </div>
         </Container>
       </section>
