@@ -25,18 +25,6 @@ export function PrivateDiningEnquiryForm({ phone, phoneHref }: PrivateDiningEnqu
     <form className="grid gap-8" onSubmit={handleSubmit}>
       <fieldset className="grid gap-5">
         <legend className="eyebrow mb-5 text-brass">Booking details</legend>
-        <label className={labelStyles}>
-          Booking option
-          <select name="bookingOption" defaultValue="" className={inputStyles}>
-            <option value="" disabled>
-              Booking option
-            </option>
-            <option>Group booking</option>
-            <option>Semi-private dining</option>
-            <option>Private dining</option>
-            <option>Full restaurant hire</option>
-          </select>
-        </label>
         <div className="grid gap-5 sm:grid-cols-2">
           <label className={labelStyles}>
             Date

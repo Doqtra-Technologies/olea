@@ -67,9 +67,9 @@ export default function AboutPage() {
 
       <section className="bg-forest-900 py-16 sm:py-20">
         <Container>
-          <h2 className="eyebrow font-medium text-white">Flavours from five coasts</h2>
+          <h2 className="eyebrow font-medium text-white">Flavours from six coasts</h2>
           <div className="mt-2 h-px w-8 bg-brass" />
-          <ul className="mt-10 grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-5">
+          <ul className="mt-10 grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-3 lg:grid-cols-6">
             {story.regions.map((r) => (
               <li key={r} className="reveal bg-forest-900 py-10 text-center font-display text-2xl font-light text-cream">
                 {r}

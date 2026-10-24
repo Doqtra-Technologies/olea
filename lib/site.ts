@@ -36,7 +36,7 @@ export const home = {
     "Welcome to Olea Social.",
   introSub:
     "Where the spirit of the modern Mediterranean brings people together over great food, vibrant flavours and shared experiences. From day to night, it's a place to eat, drink, connect and enjoy the moment in the heart of Covent Garden.",
-  body: "It's time to discover the modern Mediterranean. Explore a menu inspired by the coasts of Turkey, Greece, Spain, Italy and Morocco, where fresh ingredients meet timeless cooking techniques and a contemporary touch. From the kitchen to the bar, everything at Olea Social is made for sharing.",
+  body: "It's time to discover the modern Mediterranean. Explore a menu inspired by the coasts of Turkey, Greece, Spain, Italy, Morocco and France, where fresh ingredients meet timeless cooking techniques and a contemporary touch. From the kitchen to the bar, everything at Olea Social is made for sharing.",
   promos: [
     {
       id: "christmas",
@@ -76,7 +76,7 @@ export const story = {
     "The name reflects that same idea. Olea, the botanical name associated with the olive tree, connects the restaurant to something shared across much of the Mediterranean – its landscapes, its food and its culture of hospitality. Social expresses the other half of the idea: food as something best enjoyed together.",
     "Today, Olea continues to evolve, but that original idea remains at its heart – a contemporary expression of Mediterranean food, hospitality and social life in the heart of Covent Garden.",
   ],
-  regions: ["Turkey", "Greece", "Spain", "Italy", "Morocco"],
+  regions: ["Turkey", "Greece", "Spain", "Italy", "Morocco", "France"],
 };
 
 export const privateDining =
