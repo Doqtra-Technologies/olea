@@ -12,8 +12,8 @@ export default function WhatsOnPage() {
   return (
     <>
       <PageHero
-        image="/images/whats-on.jpg"
-        alt="Guests raising a glass over a Mediterranean meal at Olea Social"
+        image="/images/whats-on-banner.jpg"
+        alt="Sunlit Olea Social dining room with hanging greenery, herringbone floor and floor-to-ceiling windows"
         eyebrow={whatsOn.eyebrow}
         title={whatsOn.title}
         back={{ href: "/", label: "Home" }}
