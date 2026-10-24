@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-forest-950: #0d1a12;
-  --color-forest-900: #132519;
-  --color-forest-800: #1b3324;
-  --color-forest-700: #264531;
-  --color-leaf: #5b8a65;
-  --color-leaf-light: #97ad83;
+  --color-forest-950: #142619;
+  --color-forest-900: #1b3122;
+  --color-forest-800: #24402e;
+  --color-forest-700: #31553d;
+  --color-leaf: #6a9873;
+  --color-leaf-light: #a5ba92;
   --color-brass: #c9a35b;
   --color-brass-dark: #a8843f;
   --color-cream: #fbeddd;
