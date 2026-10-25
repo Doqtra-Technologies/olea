@@ -37,13 +37,6 @@ export function PrivateDiningEnquiryForm({ phone }:PrivateDiningEnquiryFormProps
             Start time
             <input name="startTime" type="time" defaultValue="12:00" className={inputStyles} />
           </label>
-          <label className={labelStyles}>
-            Type of event
-            <select name="eventType" defaultValue="On-Premise" className={inputStyles}>
-              <option>On-Premise</option>
-              <option>Off-Premise</option>
-            </select>
-          </label>
         </div>
       </fieldset>
 

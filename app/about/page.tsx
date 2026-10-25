@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { LeafMark } from "@/components/brand";
+import { StorySlider } from "@/components/story-slider";
 import { BookingLink, Button, Container } from "@/components/ui";
 import { story } from "@/lib/site";
 
@@ -9,10 +10,15 @@ export const metadata: Metadata = {
   description: "How Olea Social brought the food cultures of the Mediterranean together under one roof in Covent Garden.",
 };
 
+const storySlides = [
+  { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
+  { src: "/images/our-story-2.jpg", alt: "Tables set beside Olea Social's tall street-facing windows" },
+  { src: "/images/our-story-3.jpg", alt: "The marble-topped bar with green stools and back-lit shelves of bottles" },
+];
+
 const gallery = [
   { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
   { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
-  { src: "/images/private-dining.jpg", alt: "The Olea Social dining room set for a gathering" },
   { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
   { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
 ];
@@ -22,16 +28,7 @@ export default function AboutPage() {
     <>
       <section className="bg-forest-950 pt-20">
         <div className="grid min-h-[80vh] lg:grid-cols-2">
-          <div className="relative min-h-[60vh]">
-            <Image
-              src="/images/exterior.jpg"
-              alt="The Olea Social dining room, ready for guests"
-              fill
-              priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+          <StorySlider slides={storySlides} />
           <div className="flex items-center bg-forest-900 px-6 py-16 sm:px-12 lg:px-16">
             <div className="animate-rise max-w-lg">
               <p className="eyebrow text-brass">About us</p>
@@ -83,8 +80,8 @@ export default function AboutPage() {
         <Container>
           <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2" aria-label="Gallery">
             {gallery.map((g) => (
-              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(20%-9.6px)]">
-                <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 20vw, 60vw" className="object-cover" />
+              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(25%-9px)]">
+                <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 25vw, 60vw" className="object-cover" />
               </div>
             ))}
           </div>

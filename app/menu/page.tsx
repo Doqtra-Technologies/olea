@@ -5,7 +5,7 @@ import { menus } from "@/lib/menus";
 
 export const metadata: Metadata = {
   title: "Menu",
-  description: "A la carte, set lunch, meze lunch, pre-theatre and Christmas menus at Olea Social, Covent Garden.",
+  description: "A la carte, set lunch, meze lunch, pre-theatre, kids and Christmas menus at Olea Social, Covent Garden.",
 };
 
 export default function MenuPage() {

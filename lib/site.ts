@@ -138,8 +138,8 @@ export const posts = [
     title: "Christmas in Covent Garden: Gather at Olea Social",
     excerpt:
       "Christmas lunches, festive dinners and group gatherings with Mediterranean flavours on Upper St Martin's Lane.",
-    image: "/images/blog-christmas.jpg",
-    alt: "Guests raising glasses together at Olea Social",
+    image: "/images/blog-exterior.jpg",
+    alt: "Olea Social shopfront lit up at night with festive decorations",
     date: "2026-10-20",
     intro: [
       "Covent Garden feels especially lively during the festive season. It's a place to meet before an evening out, catch up with friends and make time for a proper celebration. At Olea Social, Christmas dining begins with Mediterranean food and the pleasure of sharing a table.",

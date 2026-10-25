@@ -272,4 +272,22 @@ export const menus: Menu[] = [
       },
     ],
   },
+  {
+    id: "kids",
+    label: "Kids",
+    title: "Kids Menu",
+    pdf: "/menus/kids.pdf",
+    sections: [
+      {
+        title: "Mains",
+        dishes: [
+          { name: "Spaghetti Bolognese", description: "Spaghetti topped with a rich, slow-cooked meat sauce and finished with Parmesan", price: "8" },
+          { name: "Olea Burger", description: "A juicy beef patty served in a soft bun with lettuce and tomato. Alternatively, it can be served plain", price: "9" },
+          { name: "Grilled Chicken Shish", description: "Charcoal grilled marinated chicken cubes served with chips", price: "11.5" },
+          { name: "Lamb Kofte", description: "Charcoal grilled mild spiced minced lamb served with chips", price: "11.5" },
+          { name: "Beef Pepperoni Pide/Flat Bread", description: "Stone oven baked pide/flat bread topped with pepperoni and cheddar", price: "11.5" },
+        ],
+      },
+    ],
+  },
 ];
