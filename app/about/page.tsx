@@ -21,6 +21,7 @@ const gallery = [
   { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
   { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
   { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
+  { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
 ];
 
 export default function AboutPage() {
@@ -80,8 +81,8 @@ export default function AboutPage() {
         <Container>
           <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2" aria-label="Gallery">
             {gallery.map((g) => (
-              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(25%-9px)]">
-                <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 25vw, 60vw" className="object-cover" />
+              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(20%-9.6px)]">
+                <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 20vw, 60vw" className="object-cover" />
               </div>
             ))}
           </div>
