@@ -18,10 +18,9 @@ export const site = {
     { days: "Monday – Friday", time: "11:30am – 11:30pm" },
     { days: "Saturday – Sunday", time: "9:30am – 11:30pm" },
   ],
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Olea+Social+10+Upper+St+Martin%27s+Lane+London+WC2H+9FB",
-  mapsEmbed:
-    "https://www.google.com/maps?q=Olea+Social,+10+Upper+St+Martin%27s+Lane,+London+WC2H+9FB&output=embed",
+  mapsUrl: "https://maps.app.goo.gl/uB2yXdj9VMmqxZVC6",
+  // Pin for the OpenStreetMap embed on the contact page.
+  mapLocation: { lat: 51.51318, lon: -0.12715 },
   // Add profile URLs here to show them in the footer.
   social: [] as { label: string; href: string }[],
 };

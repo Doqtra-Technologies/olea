@@ -41,7 +41,6 @@ export const siteSettings = defineType({
       ],
     }),
     defineField({ name: "mapsUrl", title: "Google Maps link", type: "url" }),
-    defineField({ name: "mapsEmbed", title: "Google Maps embed URL", type: "url" }),
     defineField({
       name: "social",
       title: "Social profiles",

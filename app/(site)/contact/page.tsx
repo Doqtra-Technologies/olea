@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   description: "Opening hours, address and telephone for Olea Social, 10 Upper St Martin's Lane, Covent Garden.",
 };
 
+function osmEmbed({ lat, lon }: { lat: number; lon: number }) {
+  const bbox = [lon - 0.004, lat - 0.002, lon + 0.004, lat + 0.002].join(",");
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat},${lon}`;
+}
+
 export default async function ContactPage() {
   const site = await getSettings();
   return (
@@ -80,11 +85,18 @@ export default async function ContactPage() {
           <div className="relative min-h-[420px] overflow-hidden border border-ink/10 lg:col-span-8">
             <iframe
               title="Map showing Olea Social on Upper St Martin's Lane"
-              src={site.mapsEmbed}
+              src={osmEmbed(site.mapLocation)}
               className="absolute inset-0 h-full w-full grayscale-[40%]"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
             />
+            <a
+              href={`https://www.openstreetmap.org/?mlat=${site.mapLocation.lat}&mlon=${site.mapLocation.lon}#map=18/${site.mapLocation.lat}/${site.mapLocation.lon}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-0 right-0 bg-cream/90 px-2 py-1 text-[10px] text-ink/70 hover:text-ink"
+            >
+              © OpenStreetMap contributors
+            </a>
           </div>
         </Container>
       </section>
