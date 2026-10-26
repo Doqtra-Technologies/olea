@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { DM_Mono, Fraunces, Manrope } from "next/font/google";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { RevealObserver } from "@/components/reveal";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -34,12 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-GB" className={`${fraunces.variable} ${manrope.variable} ${dmMono.variable}`}>
-      <body className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <RevealObserver />
-      </body>
+      <body className="flex min-h-screen flex-col">{children}</body>
     </html>
   );
 }

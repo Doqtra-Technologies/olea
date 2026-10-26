@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { site, type home } from "@/lib/site";
-
-type Promo = (typeof home.promos)[number];
+import { useSettings } from "@/components/settings-provider";
+import type { Promo } from "@/lib/content";
 
 export function PromoCarousel({ promos }: { promos: Promo[] }) {
+  const site = useSettings();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const promo = promos[index];

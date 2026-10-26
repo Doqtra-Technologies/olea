@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import { dietary, type Menu, type MenuSection } from "@/lib/menus";
+import type { Menu, MenuSection } from "@/lib/menus";
 
 function subscribeHash(onChange: () => void) {
   window.addEventListener("hashchange", onChange);
@@ -28,7 +28,7 @@ function Section({ section }: { section: MenuSection }) {
   );
 }
 
-export function MenuTabs({ menus }: { menus: Menu[] }) {
+export function MenuTabs({ menus, dietary }: { menus: Menu[]; dietary: string }) {
   const hash = useSyncExternalStore(subscribeHash, () => window.location.hash.slice(1), () => "");
   const [picked, setPicked] = useState<string | null>(null);
   const active = picked ?? (menus.some((m) => m.id === hash) ? hash : menus[0].id);
@@ -68,14 +68,16 @@ export function MenuTabs({ menus }: { menus: Menu[] }) {
             <h2 className="font-display text-4xl font-light text-cream sm:text-5xl">{menu.title}</h2>
             {menu.price && <p className="eyebrow mt-4 text-brass">{menu.price}</p>}
             {menu.intro && <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-white/70">{menu.intro}</p>}
-            <a
-              href={menu.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="eyebrow mt-6 inline-block border-b border-white/30 pb-1 text-[10px] text-white/70 hover:border-brass hover:text-brass"
-            >
-              Download PDF
-            </a>
+            {menu.pdf && (
+              <a
+                href={menu.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="eyebrow mt-6 inline-block border-b border-white/30 pb-1 text-[10px] text-white/70 hover:border-brass hover:text-brass"
+              >
+                Download PDF
+              </a>
+            )}
           </div>
 
           {menu.columns ? (

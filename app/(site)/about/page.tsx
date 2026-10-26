@@ -3,33 +3,20 @@ import Image from "next/image";
 import { LeafMark } from "@/components/brand";
 import { StorySlider } from "@/components/story-slider";
 import { BookingLink, Button, Container } from "@/components/ui";
-import { story } from "@/lib/site";
+import { getStory } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our Story",
   description: "How Olea Social brought the food cultures of the Mediterranean together under one roof in Covent Garden.",
 };
 
-const storySlides = [
-  { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
-  { src: "/images/our-story-2.jpg", alt: "Tables set beside Olea Social's tall street-facing windows" },
-  { src: "/images/our-story-3.jpg", alt: "The marble-topped bar with green stools and back-lit shelves of bottles" },
-];
-
-const gallery = [
-  { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
-  { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
-  { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
-  { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
-  { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
-];
-
-export default function AboutPage() {
+export default async function AboutPage() {
+  const story = await getStory();
   return (
     <>
       <section className="bg-forest-950 pt-20">
         <div className="grid min-h-[80vh] lg:grid-cols-2">
-          <StorySlider slides={storySlides} />
+          <StorySlider slides={story.slides} />
           <div className="flex items-center bg-forest-900 px-6 py-16 sm:px-12 lg:px-16">
             <div className="animate-rise max-w-lg">
               <p className="eyebrow text-brass">About us</p>
@@ -80,8 +67,8 @@ export default function AboutPage() {
       <section className="bg-forest-950 py-16 sm:py-20">
         <Container>
           <div className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2" aria-label="Gallery">
-            {gallery.map((g) => (
-              <div key={g.src} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(20%-9.6px)]">
+            {story.gallery.map((g, i) => (
+              <div key={`${g.src}-${i}`} className="relative aspect-[3/4] w-[62%] shrink-0 snap-start sm:w-[32%] lg:w-[calc(20%-9.6px)]">
                 <Image src={g.src} alt={g.alt} fill sizes="(min-width: 1024px) 20vw, 60vw" className="object-cover" />
               </div>
             ))}

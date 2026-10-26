@@ -3,9 +3,10 @@ import Link from "next/link";
 import { LeafMark, Logotype } from "@/components/brand";
 import { PromoCarousel } from "@/components/promo-carousel";
 import { Arrow, BookingLink, Button, Container } from "@/components/ui";
-import { home, site, story, whatsOn } from "@/lib/site";
+import { getHome, getSettings, getStory, getWhatsOn } from "@/lib/content";
 
-export default function Home() {
+export default async function Home() {
+  const [home, site, story, whatsOn] = await Promise.all([getHome(), getSettings(), getStory(), getWhatsOn()]);
   return (
     <>
       <section className="relative flex min-h-screen items-center overflow-hidden bg-forest-950">

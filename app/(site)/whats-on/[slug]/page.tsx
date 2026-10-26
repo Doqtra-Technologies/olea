@@ -3,21 +3,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BookingLink, Button, Container, PageHero } from "@/components/ui";
-import { menus } from "@/lib/menus";
-import { whatsOn } from "@/lib/site";
+import { getMenus, getWhatsOn } from "@/lib/content";
 
-export function generateStaticParams() {
-  return whatsOn.items.map((i) => ({ slug: i.slug }));
+export async function generateStaticParams() {
+  return (await getWhatsOn()).items.map((i) => ({ slug: i.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/whats-on/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const item = whatsOn.items.find((i) => i.slug === slug);
+  const item = (await getWhatsOn()).items.find((i) => i.slug === slug);
   return item ? { title: item.title, description: item.summary } : {};
 }
 
 export default async function WhatsOnItemPage({ params }: PageProps<"/whats-on/[slug]">) {
   const { slug } = await params;
+  const [whatsOn, menus] = await Promise.all([getWhatsOn(), getMenus()]);
   const item = whatsOn.items.find((i) => i.slug === slug);
   if (!item) notFound();
   const menu = menus.find((m) => m.id === item.menu);

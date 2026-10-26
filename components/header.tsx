@@ -4,10 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logotype } from "@/components/brand";
-import { BookingLink } from "@/components/ui";
-import { nav, site } from "@/lib/site";
+import { BookingLink } from "@/components/booking-link";
+import { useSettings } from "@/components/settings-provider";
+import { nav } from "@/lib/site";
 
 export function Header() {
+  const site = useSettings();
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   // Menu is open only for the path it was opened on, so navigating closes it.

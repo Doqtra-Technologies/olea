@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LeafMark, Logotype } from "@/components/brand";
 import { NewsletterForm } from "@/components/newsletter-form";
-import { site } from "@/lib/site";
+import { getSettings } from "@/lib/content";
 
 const explore = [
   { href: "/menu", label: "Menu" },
@@ -13,7 +13,8 @@ const explore = [
 const heading = "font-mono text-[10px] uppercase tracking-[0.25em] text-white/40";
 const link = "text-sm text-white/80 transition-colors hover:text-white";
 
-export function Footer() {
+export async function Footer() {
+  const site = await getSettings();
   return (
     <footer className="bg-forest-900 text-white">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">

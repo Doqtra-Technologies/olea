@@ -1,3 +1,6 @@
+// Built-in content. The site shows this wherever the matching Sanity field is empty,
+// and scripts/seed-sanity.ts imports it into Sanity as the starting content.
+
 export const site = {
   name: "Olea Social",
   tagline: "The modern Mediterranean in the heart of Covent Garden.",
@@ -77,6 +80,18 @@ export const story = {
     "Today, Olea continues to evolve, but that original idea remains at its heart – a contemporary expression of Mediterranean food, hospitality and social life in the heart of Covent Garden.",
   ],
   regions: ["Turkey", "Greece", "Spain", "Italy", "Morocco", "France"],
+  slides: [
+    { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
+    { src: "/images/our-story-2.jpg", alt: "Tables set beside Olea Social's tall street-facing windows" },
+    { src: "/images/our-story-3.jpg", alt: "The marble-topped bar with green stools and back-lit shelves of bottles" },
+  ],
+  gallery: [
+    { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
+    { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
+    { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
+    { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
+    { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
+  ],
 };
 
 export const privateDining =

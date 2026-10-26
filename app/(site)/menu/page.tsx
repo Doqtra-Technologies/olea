@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { MenuTabs } from "@/components/menu-tabs";
 import { PageHero, ReserveFab } from "@/components/ui";
-import { menus } from "@/lib/menus";
+import { getMenus, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Menu",
   description: "A la carte, set lunch, meze lunch, pre-theatre, kids and Christmas menus at Olea Social, Covent Garden.",
 };
 
-export default function MenuPage() {
+export default async function MenuPage() {
+  const [menus, { dietary }] = await Promise.all([getMenus(), getSettings()]);
   return (
     <>
       <PageHero
@@ -25,7 +26,7 @@ export default function MenuPage() {
           .
         </p>
       </PageHero>
-      <MenuTabs menus={menus} />
+      <MenuTabs menus={menus} dietary={dietary} />
       <ReserveFab />
     </>
   );

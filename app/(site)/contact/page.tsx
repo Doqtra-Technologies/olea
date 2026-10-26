@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { BookingLink, Container, PageHero } from "@/components/ui";
-import { site } from "@/lib/site";
+import { getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Opening hours, address and telephone for Olea Social, 10 Upper St Martin's Lane, Covent Garden.",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const site = await getSettings();
   return (
     <>
       <PageHero

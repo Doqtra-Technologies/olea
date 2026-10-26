@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui";
 import { PrivateDiningEnquiryForm } from "@/components/private-dining-enquiry-form";
-import { privateDining, site } from "@/lib/site";
+import { getPrivateDiningIntro, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Private Dining",
   description: "Private dining, group celebrations and Mediterranean menus at Olea Social in Covent Garden.",
 };
 
-export default function PrivateDiningPage() {
+export default async function PrivateDiningPage() {
+  const [privateDining, site] = await Promise.all([getPrivateDiningIntro(), getSettings()]);
   return (
     <>
       <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-forest-950 pt-28">

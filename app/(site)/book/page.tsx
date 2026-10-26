@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container, Rule } from "@/components/ui";
-import { site } from "@/lib/site";
+import { getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Book a Table",
   description: "Reserve a table at Olea Social, Covent Garden.",
 };
 
-export default function BookPage() {
+export default async function BookPage() {
+  const site = await getSettings();
   return (
     <section className="bg-forest-900 pb-20 pt-32">
       <Container>

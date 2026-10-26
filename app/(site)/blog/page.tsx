@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Container, Rule } from "@/components/ui";
-import { posts } from "@/lib/site";
+import { getPosts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "News, stories and seasonal guides from Olea Social in Covent Garden.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getPosts();
   return (
     <section className="bg-forest-900 pb-20 pt-32">
       <Container>

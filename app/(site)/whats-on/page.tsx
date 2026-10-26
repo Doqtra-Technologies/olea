@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Container, PageHero, ReserveFab } from "@/components/ui";
 import { WhatsOnGrid } from "@/components/whats-on-grid";
-import { whatsOn } from "@/lib/site";
+import { getWhatsOn } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "What's On",
-  description: whatsOn.intro,
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const whatsOn = await getWhatsOn();
+  return { title: "What's On", description: whatsOn.intro };
+}
 
-export default function WhatsOnPage() {
+export default async function WhatsOnPage() {
+  const whatsOn = await getWhatsOn();
   return (
     <>
       <PageHero

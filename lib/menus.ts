@@ -6,7 +6,7 @@ export type Menu = {
   title: string;
   price?: string;
   intro?: string;
-  pdf: string;
+  pdf?: string;
   columns?: { title: string; price: string; sections: MenuSection[] }[];
   sections: MenuSection[];
 };

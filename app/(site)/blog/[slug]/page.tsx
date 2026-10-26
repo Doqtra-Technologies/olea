@@ -3,21 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button, Container } from "@/components/ui";
-import { posts } from "@/lib/site";
+import { PostBody } from "@/components/post-body";
+import { getPost, getPosts } from "@/lib/content";
 
-export function generateStaticParams() {
-  return posts.map((p) => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  return (await getPosts()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
   return post ? { title: post.title, description: post.excerpt } : {};
 }
 
 export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
   if (!post) notFound();
 
   return (
@@ -46,18 +47,9 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             <p key={p}>{p}</p>
           ))}
         </div>
-        {post.sections.map((s) => (
-          <section key={s.heading} className="mt-14">
-            <h2 className="font-display text-3xl text-forest-800">{s.heading}</h2>
-            <div className="mt-5 space-y-5 leading-relaxed text-ink/80">
-              {s.body.map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-            </div>
-          </section>
-        ))}
+        <PostBody value={post.body} />
         <div className="mt-16 border-t border-ink/15 pt-10">
-          <p className="font-display text-2xl">{post.outro}</p>
+          {post.outro && <p className="font-display text-2xl">{post.outro}</p>}
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/menu#christmas">Christmas menus</Button>
             <Button href="/private-dining" variant="outline" className="!border-forest-800 !text-forest-800 hover:!bg-forest-800 hover:!text-cream">

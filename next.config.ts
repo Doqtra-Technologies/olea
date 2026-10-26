@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [new URL("https://cdn.sanity.io/images/**")],
+  },
   turbopack: {
     rules: {
       "*.css": {
