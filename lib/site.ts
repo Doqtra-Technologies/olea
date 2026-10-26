@@ -11,6 +11,7 @@ export const site = {
   },
   phone: "+44 20 3149 1016",
   phoneHref: "tel:+442031491016",
+  email: "booking@oleasocial.co.uk",
   bookingUrl:
     "https://www.opentable.co.uk/booking/restref/availability?lang=en-GB&correlationId=cb23b425-3861-4c8d-998e-2ef41d1075c5&restRef=334638&otSource=Restaurant%20website",
   hours: [
@@ -20,7 +21,7 @@ export const site = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Olea+Social+10+Upper+St+Martin%27s+Lane+London+WC2H+9FB",
   mapsEmbed:
-    "https://www.google.com/maps?q=10+Upper+St+Martin%27s+Lane,+London+WC2H+9FB&output=embed",
+    "https://www.google.com/maps?q=Olea+Social,+10+Upper+St+Martin%27s+Lane,+London+WC2H+9FB&output=embed",
   // Add profile URLs here to show them in the footer.
   social: [] as { label: string; href: string }[],
 };

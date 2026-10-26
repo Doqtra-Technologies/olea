@@ -24,6 +24,9 @@ export default async function ContactPage() {
           <a href={site.phoneHref} className="hover:text-brass">
             {site.phone}
           </a>
+          <a href={`mailto:${site.email}`} className="mt-2 block font-display text-xl text-brass hover:text-white">
+            {site.email}
+          </a>
         </address>
       </PageHero>
 
@@ -51,6 +54,14 @@ export default async function ContactPage() {
               </a>
             </address>
             <p className="mt-4 text-sm text-ink/60">A short walk from Covent Garden and Leicester Square.</p>
+
+            <h2 className="mt-12 font-display text-3xl text-forest-800">Email us</h2>
+            <a
+              href={`mailto:${site.email}`}
+              className="mt-4 inline-block break-all border-b-2 border-leaf pb-1 font-display text-2xl text-leaf hover:border-forest-800 hover:text-forest-800"
+            >
+              {site.email}
+            </a>
 
             <div className="mt-8 flex flex-col gap-3 sm:max-w-xs">
               <a

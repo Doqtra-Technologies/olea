@@ -17,6 +17,7 @@ export const siteSettings = defineType({
       ],
     }),
     defineField({ name: "phone", type: "string" }),
+    defineField({ name: "email", type: "string", validation: (rule) => rule.email() }),
     defineField({
       name: "bookingUrl",
       title: "Booking URL",

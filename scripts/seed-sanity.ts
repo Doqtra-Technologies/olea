@@ -53,6 +53,7 @@ async function documents(): Promise<SanityDocumentStub[]> {
       tagline: site.tagline,
       address: { line1, city, postcode },
       phone: site.phone,
+      email: site.email,
       bookingUrl: site.bookingUrl,
       hours: site.hours.map((h) => ({ _key: key(), ...h })),
       mapsUrl: site.mapsUrl,

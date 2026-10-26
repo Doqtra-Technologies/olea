@@ -5,7 +5,7 @@ const gallery = `{ "src": asset->url, alt }`;
 const section = `{ title, note, featured, "dishes": coalesce(dishes[]{ name, description, price }, []) }`;
 
 export const settingsQuery = defineQuery(`*[_id == "siteSettings"][0]{
-  name, tagline, address, phone, bookingUrl, mapsUrl, mapsEmbed, dietary,
+  name, tagline, address, phone, email, bookingUrl, mapsUrl, mapsEmbed, dietary,
   hours[]{ days, time },
   social[]{ label, href }
 }`);

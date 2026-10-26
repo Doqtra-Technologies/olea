@@ -60,6 +60,14 @@ export async function Footer() {
                   {site.phone}
                 </a>
               </p>
+              <p>
+                <a
+                  className="font-display text-lg text-brass underline decoration-brass/40 underline-offset-4 transition-colors hover:text-white"
+                  href={`mailto:${site.email}`}
+                >
+                  {site.email}
+                </a>
+              </p>
               {site.hours.map((h) => (
                 <p key={h.days} className="text-white/60">
                   {h.days}: {h.time}
