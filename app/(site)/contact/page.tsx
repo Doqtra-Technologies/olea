@@ -86,9 +86,22 @@ export default async function ContactPage() {
             <iframe
               title="Map showing Olea Social on Upper St Martin's Lane"
               src={osmEmbed(site.mapLocation)}
-              className="absolute inset-0 h-full w-full grayscale-[40%]"
+              className="pointer-events-none absolute inset-0 h-full w-full grayscale-[40%]"
               loading="lazy"
+              tabIndex={-1}
             />
+            {/* The map is static, so the label stays above the marker, which sits at the centre. */}
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${site.name} on Google Maps`}
+              className="absolute inset-0"
+            >
+              <span className="absolute left-1/2 top-[calc(50%-3.5rem)] -translate-x-1/2 -translate-y-full whitespace-nowrap bg-forest-800 px-4 py-2 font-display text-lg text-cream shadow-lg after:absolute after:left-1/2 after:top-full after:-translate-x-1/2 after:border-8 after:border-transparent after:border-t-forest-800 after:content-['']">
+                {site.name}
+              </span>
+            </a>
             <a
               href={`https://www.openstreetmap.org/?mlat=${site.mapLocation.lat}&mlon=${site.mapLocation.lon}#map=18/${site.mapLocation.lat}/${site.mapLocation.lon}`}
               target="_blank"
