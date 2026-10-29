@@ -26,7 +26,8 @@ export const privateDiningQuery = defineQuery(`*[_id == "privateDiningPage"][0].
 export const whatsOnPageQuery = defineQuery(`*[_id == "whatsOnPage"][0]{ eyebrow, title, intro }`);
 
 export const eventsQuery = defineQuery(`*[_type == "event" && defined(slug.current)] | order(order asc, _createdAt desc){
-  "slug": slug.current, title, category, summary, date, ${image},
+  "slug": slug.current, title, category, summary, details, date, endsOn, showOnHome, ${image},
+  "banner": banner.asset->url, "bannerAlt": banner.alt,
   "menu": menu->slug.current
 }`);
 

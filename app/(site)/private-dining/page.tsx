@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container } from "@/components/ui";
+import { Button, Container } from "@/components/ui";
 import { PrivateDiningEnquiryForm } from "@/components/private-dining-enquiry-form";
 import { getPrivateDiningIntro, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Private Dining",
-  description: "Private dining, group celebrations and Mediterranean menus at Olea Social in Covent Garden.",
+  description:
+    "Private dining, business meetings, group celebrations and Eastern Mediterranean menus at Olea Social in Covent Garden.",
 };
+
+const businessImages = [
+  { src: "/images/business-1.webp", alt: "Long tables and green leather chairs laid out in Olea Social's lower dining room" },
+  { src: "/images/business-2.webp", alt: "A meeting table set with notepads and water beside the windows, under hanging greenery" },
+  { src: "/images/business-3.webp", alt: "Rows of tables arranged for a group meeting in the Olea Social dining room" },
+];
 
 export default async function PrivateDiningPage() {
   const [privateDining, site] = await Promise.all([getPrivateDiningIntro(), getSettings()]);
@@ -46,6 +53,34 @@ export default async function PrivateDiningPage() {
               sizes="100vw"
               className="object-cover"
             />
+          </div>
+        </Container>
+      </section>
+
+      <section aria-labelledby="business-meetings" className="bg-forest-950 pb-16 pt-8 sm:pb-24 sm:pt-12">
+        <Container>
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+            <div className="lg:col-span-7">
+              <p className="eyebrow text-brass">For business</p>
+              <h2 id="business-meetings" className="mt-6 font-display text-4xl font-light leading-tight text-cream sm:text-5xl">
+                Business Meetings
+              </h2>
+              <p className="mt-6 max-w-2xl leading-relaxed text-white/70">
+                Host your next meeting, client lunch or team gathering in the heart of Covent Garden. Our private spaces
+                offer a relaxed, professional setting with attentive service and menus tailored to your schedule — from
+                working breakfasts to long lunches.
+              </p>
+            </div>
+            <div className="lg:col-span-5 lg:text-right">
+              <Button href="#enquire">Enquire Now</Button>
+            </div>
+          </div>
+          <div className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible md:pb-0">
+            {businessImages.map((img) => (
+              <div key={img.src} className="relative aspect-[3/4] w-[80%] shrink-0 snap-start sm:w-[45%] md:w-auto">
+                <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 33vw, 80vw" className="object-cover" />
+              </div>
+            ))}
           </div>
         </Container>
       </section>

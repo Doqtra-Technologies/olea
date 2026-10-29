@@ -22,8 +22,31 @@ export const event = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({ name: "date", type: "string", description: "Shown as written, e.g. 7 November 2026 · 19:30" }),
+    defineField({
+      name: "endsOn",
+      title: "Last day",
+      type: "date",
+      description: "Optional. The day after this date (London time) the item moves to Past events.",
+    }),
+    defineField({
+      name: "showOnHome",
+      title: "Show on home page",
+      type: "boolean",
+      initialValue: false,
+    }),
     defineField({ name: "summary", type: "text", rows: 5, validation: (rule) => rule.required() }),
     defineField({ name: "image", type: "imageWithAlt", validation: (rule) => rule.required() }),
+    defineField({
+      name: "banner",
+      type: "imageWithAlt",
+      description: "Optional wide banner, shown uncropped at the top of the event page.",
+    }),
+    defineField({
+      name: "details",
+      type: "array",
+      of: [defineArrayMember({ type: "text", rows: 4 })],
+      description: "Optional extra paragraphs for the event page.",
+    }),
     defineField({
       name: "menu",
       title: "Linked menu",

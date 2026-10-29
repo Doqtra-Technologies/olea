@@ -12,7 +12,8 @@ import {
   settingsQuery,
   whatsOnPageQuery,
 } from "@/lib/sanity/queries";
-import { dietary as defaultDietary, menus as defaultMenus, type Menu } from "@/lib/menus";
+import { londonToday } from "@/lib/dates";
+import { dietary as defaultDietary, menuNotice, menus as defaultMenus, type Menu } from "@/lib/menus";
 import { home, posts as defaultPosts, privateDining, site, story, whatsOn, type WhatsOnItem } from "@/lib/site";
 import { isSanityConfigured } from "@/sanity/env";
 
@@ -90,7 +91,20 @@ export async function getWhatsOn() {
     fetchContent<Partial<typeof whatsOn>>(whatsOnPageQuery),
     fetchContent<WhatsOnItem[]>(eventsQuery),
   ]);
-  return { ...merge(whatsOn, page), items: items?.length ? items : whatsOn.items };
+  // Captured in the cache, so finished events move to Past events when it refreshes.
+  const today = londonToday();
+  const list: WhatsOnItem[] = items?.length ? items : whatsOn.items;
+  return { ...merge(whatsOn, page), items: list.map((i) => ({ ...i, past: !!i.endsOn && i.endsOn < today })) };
+}
+
+export type WhatsOnEntry = Awaited<ReturnType<typeof getWhatsOn>>["items"][number];
+
+/** The menu page notice, or null once its last day has passed. */
+export async function getMenuNotice() {
+  "use cache";
+  cacheTag(CONTENT_TAG);
+  cacheLife("hours");
+  return londonToday() <= menuNotice.until ? menuNotice.text : null;
 }
 
 export async function getMenus(): Promise<Menu[]> {
