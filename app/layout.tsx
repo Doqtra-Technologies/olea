@@ -21,7 +21,7 @@ const dmMono = DM_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Olea Social | Modern Mediterranean dining in Covent Garden",
+    default: "Olea Social | Modern Eastern Mediterranean dining in Covent Garden",
     template: "%s | Olea Social",
   },
   description:

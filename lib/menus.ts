@@ -14,13 +14,19 @@ export type Menu = {
 export const dietary =
   "Please ask a member of our team before ordering if you have any allergies or intolerances. Nuts and flour are used in our kitchen, and despite our efforts to prevent cross-contamination, our dishes may contain traces of allergens. A discretionary service charge of 12.5% will be added to your bill. VAT included.";
 
+// Shown above the menus on /menu until the end of `until` (London time).
+export const menuNotice = {
+  text: "From 15 November to 31 December, our Lunch, Meze Lunch and Pre-Theatre menus will be unavailable. Only our Christmas and à la carte menus will be available during this period.",
+  until: "2026-12-31",
+};
+
 export const menus: Menu[] = [
   {
     id: "a-la-carte",
     label: "A La Carte",
     title: "A La Carte",
     intro:
-      "Our chef has crafted a unique Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.",
+      "Our chef has crafted a unique Eastern Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.",
     pdf: "/menus/a-la-carte.pdf",
     sections: [
       {
@@ -117,6 +123,72 @@ export const menus: Menu[] = [
           { name: "Saffron rice", description: "(VG)", price: "7" },
           { name: "Fresh mixed salad", description: "(VG)", price: "7" },
           { name: "Grilled asparagus and courgettes", description: "Crispy garlic (VG)", price: "6" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "gluten-free",
+    label: "Gluten Free",
+    title: "Gluten Free Menu",
+    intro: "A selection of our à la carte dishes, prepared gluten free.",
+    pdf: "/menus/gluten-free.pdf",
+    sections: [
+      {
+        title: "Starters",
+        dishes: [
+          { name: "Olives", description: "Dried apricot and lemon oil (VG)", price: "5" },
+          { name: "Hummus", description: "Black olive powder, sesame seeds (VG)", price: "9.5" },
+          { name: "Babaganoush", description: "Grilled aubergine, yogurt, tahini, garlic and lemon (V)", price: "9.5" },
+          { name: "Smoked salmon", description: "Pickled cucumber, garlic yogurt, salmon roe, cucumber sauce", price: "11.5" },
+          { name: "Cast iron prawns", description: "Oyster, chestnut & button mushrooms, confit garlic", price: "13" },
+          { name: "Cheese plate", description: "Manchego, St Nectaire, parmesan, Cabrales blue cheese with grapes, walnuts and quince chutney, with gluten-free bread (V)", price: "15.5" },
+          { name: "Antep ezme", description: "Chopped tomatoes, onions and chilli pepper salad (VG)", price: "8.5" },
+          { name: "Cacik", description: "Yogurt, cucumber, mint and dill (V)", price: "8.5" },
+          { name: "Sucuk", description: "Grilled spicy beef sausage", price: "8.5" },
+          { name: "Falafel", description: "Fritters of crushed chickpeas, fava beans and peppers (VG)", price: "8.5" },
+          { name: "Charcoal grilled halloumi", description: "Romesco sauce (V)", price: "10" },
+          { name: "Turkish aubergine shakshuka", description: "Served on yogurt (V)", price: "9.5" },
+          { name: "Octopus a feira", description: "Low cooked Galician octopus with confit potatoes and smoked paprika", price: "17.5" },
+          { name: "Burrata", description: "Heirloom tomatoes (V)", price: "13" },
+        ],
+      },
+      {
+        title: "Mains",
+        dishes: [
+          { name: "Seabream fillet", description: "Samphire and pine nuts", price: "26" },
+          { name: "Grilled monkfish shish", description: "Garlic & yogurt marinade, preserved lemon, saffron rice, romesco sauce, grilled courgette", price: "29" },
+          { name: "Grilled salmon", description: "Salmon fillet, smoky piperade, confit baby potatoes", price: "27" },
+          { name: "Incik lamb shank", description: "Slow cooked lamb shank with onions, peppers and basmati rice", price: "28" },
+          { name: "Chicken shish", description: "Grilled asparagus and courgette with sumac, smoked cacik, with gluten-free bread", price: "25" },
+          { name: "Lamb shish", description: "Grilled asparagus and courgettes with sumac, ezme salad, with gluten-free bread", price: "27" },
+          { name: "Mixed grill", description: "Grilled cubes of chicken, lamb and kofte with grilled asparagus and courgettes, ezme salad, with gluten-free bread", price: "27.5" },
+          { name: "Chicken tagine", description: "Braised chicken, spice-infused sauce, prunes, dried almonds, with rice", price: "24" },
+          { name: "Lamb kofte skewer", description: "Yogurt, crispy bread, grilled peppers and tomatoes (gluten-free bread)", price: "26" },
+          { name: "Lamb chops", description: "3 pcs, with fennel salad", price: "28.5" },
+          { name: "Grilled tiger prawn", description: "Red pepper, carrot sauce with chickpeas and spinach", price: "25" },
+          { name: "Fresh mixed salad", description: "Oakleaf lettuce, pickled shallots, goat cheese, dried olives (vegan option available) (V)", price: "16" },
+          { name: "Chargrilled cauliflower", description: "Carrot and orange purée, garlic flakes, dried olives, vegan parmesan (VG)", price: "22" },
+        ],
+      },
+      {
+        title: "Signature Steaks",
+        featured: true,
+        dishes: [
+          { name: "Australian Wagyu rib-eye 350g", description: "Marble score 8–9. Chimichurri sauce, potatoes", price: "65" },
+          { name: "Black Angus sirloin 280g", description: "Peppercorn sauce, sautéed spiced potatoes", price: "37" },
+          { name: "Black Angus rib-eye 280g", description: "Sautéed spiced potatoes, chimichurri sauce", price: "43" },
+        ],
+      },
+      {
+        title: "Sides",
+        dishes: [
+          { name: "Samphire", description: "Pine nuts and garlic oil (VG)", price: "8.5" },
+          { name: "Spiced new potatoes", description: "Parsley (V)", price: "7" },
+          { name: "Grilled asparagus and courgettes", description: "Crispy garlic (VG)", price: "6" },
+          { name: "Basmati rice", description: "(VG)", price: "5" },
+          { name: "Chips", description: "Spicy mayo (V)", price: "6" },
+          { name: "Fresh mixed salad", description: "(V)", price: "7" },
         ],
       },
     ],

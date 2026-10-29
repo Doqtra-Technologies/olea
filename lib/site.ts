@@ -3,7 +3,7 @@
 
 export const site = {
   name: "Olea Social",
-  tagline: "The modern Mediterranean in the heart of Covent Garden.",
+  tagline: "The modern Eastern Mediterranean in the heart of Covent Garden.",
   address: {
     line1: "10 Upper St Martin's Lane",
     city: "London",
@@ -38,8 +38,8 @@ export const home = {
   intro:
     "Welcome to Olea Social.",
   introSub:
-    "Where the spirit of the modern Mediterranean brings people together over great food, vibrant flavours and shared experiences. From day to night, it's a place to eat, drink, connect and enjoy the moment in the heart of Covent Garden.",
-  body: "It's time to discover the modern Mediterranean. Explore a menu inspired by the coasts of Turkey, Greece, Spain, Italy, Morocco and France, where fresh ingredients meet timeless cooking techniques and a contemporary touch. From the kitchen to the bar, everything at Olea Social is made for sharing.",
+    "Where the spirit of the modern Eastern Mediterranean brings people together over great food, vibrant flavours and shared experiences. From day to night, it's a place to eat, drink, connect and enjoy the moment in the heart of Covent Garden.",
+  body: "It's time to discover the modern Eastern Mediterranean. Explore a menu inspired by the coasts of Turkey, Greece, Spain, Italy, Morocco and France, where fresh ingredients meet timeless cooking techniques and a contemporary touch. From the kitchen to the bar, everything at Olea Social is made for sharing.",
   promos: [
     {
       id: "christmas",
@@ -58,12 +58,12 @@ export const home = {
       eyebrow: "Make lunch worth looking forward to",
       title: "Lunch at Olea Social",
       body: [
-        "Take a break in the heart of Covent Garden with our Lunch Set Menu at £19.50 per person, or enjoy our Meze Lunch for £15 per person. Choose from Mediterranean-inspired starters and mains, from Babaganoush and Hummus to Chicken Tagine, Pide and Vegetable Moussaka.",
+        "Choose from Mediterranean-inspired starters and mains, from Babaganoush and Hummus to Chicken Tagine, Pide and Vegetable Moussaka.",
         "Perfect for a quick weekday lunch, a business catch-up or a leisurely afternoon.",
       ],
       cta: { label: "Book your table", href: site.bookingUrl },
-      image: "/images/set-lunch.jpg",
-      alt: "A freshly baked pide served with Mediterranean dips and salad",
+      image: "/images/lunch-at-olea.webp",
+      alt: "Grilled prawns on romesco sauce with hummus, saffron rice and white wine on a marble table",
     },
   ],
 };
@@ -86,16 +86,16 @@ export const story = {
     { src: "/images/our-story-3.jpg", alt: "The marble-topped bar with green stools and back-lit shelves of bottles" },
   ],
   gallery: [
-    { src: "/images/hero.jpg", alt: "Guests sharing Mediterranean dishes and drinks at Olea Social" },
-    { src: "/images/meze-table.jpg", alt: "Meze of tabbouleh, hummus, aubergine, bread and fried calamari on a marble table" },
-    { src: "/images/lunch-spread.jpg", alt: "A table of aubergine, hummus and tabbouleh" },
-    { src: "/images/blog-christmas.jpg", alt: "Guests raising glasses together at Olea Social" },
+    { src: "/images/about-us-1.webp", alt: "Two guests toasting with white wine over a table of meze at Olea Social" },
+    { src: "/images/about-us-2.webp", alt: "A green banquette and marble table set beside Olea Social's tall street-facing windows" },
+    { src: "/images/about-us-3.webp", alt: "A chef holding a freshly baked pide on the pass" },
+    { src: "/images/about-us-4.webp", alt: "A guest opening the Olea Social menu beside a glass of white wine" },
     { src: "/images/our-story-1.jpg", alt: "Olea Social dining room with a hanging garden ceiling and herringbone terracotta floor" },
   ],
 };
 
 export const privateDining =
-  "Made for sharing, celebrating and coming together. From relaxed lunches and group dinners to special celebrations and corporate gatherings, Olea Social offers a vibrant setting for memorable Mediterranean dining in the heart of Covent Garden.";
+  "Made for sharing, celebrating and coming together. From relaxed lunches and group dinners to special celebrations and corporate gatherings, Olea Social offers a vibrant setting for memorable Eastern Mediterranean dining in the heart of Covent Garden.";
 
 export type WhatsOnItem = {
   slug: string;
@@ -106,6 +106,15 @@ export type WhatsOnItem = {
   alt: string;
   menu?: string;
   date?: string;
+  /** Wide banner shown uncropped at the top of the detail page. */
+  banner?: string;
+  bannerAlt?: string;
+  /** Extra paragraphs for the detail page. */
+  details?: string[];
+  /** Last day of the event (YYYY-MM-DD, London time). The day after, it moves to Past events. */
+  endsOn?: string;
+  /** Feature in the home page What's On row. */
+  showOnHome?: boolean;
 };
 
 export const whatsOn = {
@@ -123,26 +132,44 @@ export const whatsOn = {
       image: "/images/festive-card.png",
       alt: "Olea Social shopfront at night, lit sign and windows decorated with gold and silver baubles",
       menu: "christmas",
+      endsOn: "2026-12-31",
+      showOnHome: true,
     },
     {
       slug: "kizlarla-bulusuyoruz",
-      title: "Kızlarla Buluşuyoruz!",
+      title: "Girls’ Get-Together",
       category: "Events",
       summary:
-        "Join SuSu × INO Beauty at Olea Social on 7 November for an unforgettable evening of conversation, new connections and live music from Gizem Özbek. The event begins at 19:30.",
-      image: "/images/event-kizlarla-v2.png",
-      alt: "Poster for Kızlarla Buluşuyoruz! at Olea Social on 7 November",
-      date: "7 November 2026 · 19:30",
+        "Join us at Olea Social on 7 November for Girls’ Get-Together — an evening of great conversations, new connections and plenty of fun!",
+      details: [
+        "Ready for an unforgettable evening with the girls in London? Hosted in collaboration with SuSu × INO Beauty, this special evening will also feature a live performance by Gizem Özbek.",
+        "Come along and be part of an evening to remember!",
+      ],
+      image: "/images/event-girls-get-together-en.webp",
+      alt: "Poster for Girls’ Get-Together by SuSu × INO Beauty at Olea Social, London, on 7 November at 7:30 pm with Gizem Özbek live",
+      banner: "/images/banner-girls-get-together-en.webp",
+      bannerAlt: "Girls’ Get-Together: illustration of friends sharing drinks on a London terrace beside Big Ben",
+      date: "7 November 2026 · 7:30 pm",
+      endsOn: "2026-11-07",
     },
     {
       slug: "ekim-kahvalti-bulusmasi",
-      title: "Ekim Kahvaltı Buluşması",
+      title: "October Breakfast Gathering",
       category: "Events",
       summary:
-        "Join Anneler Kulübü Londra for a Halloween breakfast at Olea Social on Sunday 25 October, 11:00–14:00. Enjoy a traditional breakfast spread and unlimited tea while children take part in fancy dress, face painting, crafts and games. Tickets are £45 per adult; children aged 0–5 dine free with an adult and ages 5–11 are £15.",
-      image: "/images/event-ekim-kahvalti-v2.png",
-      alt: "Poster for the Halloween breakfast gathering at Olea Social on 25 October",
-      date: "25 October 2026 · 11:00–14:00 · £45 per person",
+        "Join us with your little ones for a Sunday filled with Halloween fun, delicious food and great company, in collaboration with Anneler Kulübü Londra.",
+      details: [
+        "We’re delighted to welcome mums and their little ones to a special Halloween breakfast at Olea Social, Covent Garden, on Sunday 25 October.",
+        "Enjoy a generous traditional Turkish sharing breakfast, featuring a selection of cheeses, breakfast favourites, freshly cooked menemen and warm poğaça pastries. With unlimited Turkish tea, it’s the perfect opportunity to relax and enjoy a leisurely Sunday breakfast with loved ones.",
+        "While mums enjoy breakfast and a catch-up, little ones can join in the Halloween fun with costumes, face painting, creative arts and crafts, colouring activities, a dedicated photo area and a play corner.",
+        "Adult tickets are £45. Children aged 0–5 can enjoy the sharing breakfast with their parents free of charge. Tickets for children aged 5–11 are £15, including breakfast. Children aged 11 and over require an adult ticket.",
+      ],
+      image: "/images/event-october-breakfast-en.webp",
+      alt: "Poster for the October Breakfast Gathering Halloween Special with Anneler Kulübü Londra at Olea Social on Sunday 25 October, 11 am to 2 pm, £45",
+      banner: "/images/banner-october-breakfast-en.webp",
+      bannerAlt: "October Breakfast Gathering: illustration of mums and children in Halloween costumes sharing breakfast",
+      date: "Sunday 25 October 2026 · 11:00 am – 2:00 pm · £45 per adult",
+      endsOn: "2026-10-25",
     },
   ] satisfies WhatsOnItem[],
 };

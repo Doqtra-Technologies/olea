@@ -7,12 +7,13 @@ import { getHome, getSettings, getStory, getWhatsOn } from "@/lib/content";
 
 export default async function Home() {
   const [home, site, story, whatsOn] = await Promise.all([getHome(), getSettings(), getStory(), getWhatsOn()]);
+  const featured = whatsOn.items.filter((i) => i.showOnHome && !i.past);
   return (
     <>
       <section className="relative flex min-h-screen items-center overflow-hidden bg-forest-950">
         <Image
-          src="/images/hero.jpg"
-          alt="A table of Mediterranean sharing dishes, wine and bread at Olea Social"
+          src="/images/olea-banner.webp"
+          alt="Overhead view of a marble table spread with hummus, croquetas, dips and meze at Olea Social"
           fill
           priority
           sizes="100vw"
@@ -36,7 +37,7 @@ export default async function Home() {
         </Container>
         <div className="absolute bottom-6 left-5 flex items-center gap-3 sm:left-8 lg:left-12">
           <span className="h-10 w-px bg-brass" />
-          <span className="eyebrow text-white/70">The modern Mediterranean</span>
+          <span className="eyebrow text-white/70">The modern Eastern Mediterranean</span>
         </div>
       </section>
 
@@ -127,47 +128,49 @@ export default async function Home() {
         </Container>
       </section>
 
-      <section className="bg-forest-950 py-16 sm:py-24">
-        <Container>
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <h2 className="eyebrow font-medium text-white">What&apos;s on</h2>
-              <div className="mt-2 h-px w-8 bg-brass" />
-            </div>
-            <Link href="/whats-on" className="eyebrow flex items-center gap-3 text-white hover:text-brass">
-              See everything <Arrow />
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {whatsOn.items.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/whats-on/${item.slug}`}
-                className="reveal group flex h-full flex-col overflow-hidden bg-cream"
-              >
-                <div className="relative aspect-[5/7] overflow-hidden bg-forest-900">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 items-center justify-between gap-4 p-5">
-                  <div>
-                    <p className="eyebrow text-[10px] text-leaf">{item.category}</p>
-                    <p className="mt-2 font-display text-2xl leading-tight text-ink">{item.title}</p>
-                  </div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/40 text-ink transition-colors group-hover:bg-ink group-hover:text-cream">
-                    <Arrow />
-                  </span>
-                </div>
+      {featured.length > 0 && (
+        <section className="bg-forest-950 py-16 sm:py-24">
+          <Container>
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <h2 className="eyebrow font-medium text-white">What&apos;s on</h2>
+                <div className="mt-2 h-px w-8 bg-brass" />
+              </div>
+              <Link href="/whats-on" className="eyebrow flex items-center gap-3 text-white hover:text-brass">
+                See everything <Arrow />
               </Link>
-            ))}
-          </div>
-        </Container>
-      </section>
+            </div>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              {featured.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/whats-on/${item.slug}`}
+                  className="reveal group flex w-full flex-col overflow-hidden bg-cream md:w-[calc((100%-2rem)/3)]"
+                >
+                  <div className="relative aspect-[5/7] overflow-hidden bg-forest-900">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 items-center justify-between gap-4 p-5">
+                    <div>
+                      <p className="eyebrow text-[10px] text-leaf">{item.category}</p>
+                      <p className="mt-2 font-display text-2xl leading-tight text-ink">{item.title}</p>
+                    </div>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/40 text-ink transition-colors group-hover:bg-ink group-hover:text-cream">
+                      <Arrow />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </>
   );
 }
