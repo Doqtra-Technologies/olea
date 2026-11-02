@@ -6,7 +6,7 @@ import { getMenuNotice, getMenus, getSettings } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Menu",
   description:
-    "A la carte, gluten free, set lunch, meze lunch, pre-theatre, kids and Christmas menus at Olea Social, Covent Garden.",
+    "A la carte, gluten free, set lunch, meze lunch, pre-theatre, kids, Christmas, bar and wine menus at Olea Social, Covent Garden.",
 };
 
 export default async function MenuPage() {

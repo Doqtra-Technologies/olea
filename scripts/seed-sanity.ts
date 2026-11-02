@@ -2,7 +2,7 @@
  * Imports the built-in content (lib/site.ts, lib/menus.ts, images and PDFs in public/) into Sanity.
  *
  *   npm run sanity:seed            # creates documents that don't exist yet
- *   npm run sanity:seed -- --force # overwrites existing documents with the built-in content
+ *   npm run sanity:seed -- -- --force # overwrites existing documents with the built-in content
  */
 import { createReadStream } from "node:fs";
 import { basename, join } from "node:path";

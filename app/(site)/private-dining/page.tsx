@@ -22,8 +22,8 @@ export default async function PrivateDiningPage() {
     <>
       <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-forest-950 pt-28">
         <Image
-          src="/images/dining-room.jpg"
-          alt="Olea Social's dining room, ready for a private gathering"
+          src="/images/private-dining-1.webp"
+          alt="Long tables laid for a private event at Olea Social, with a screen set up at the far end"
           fill
           priority
           sizes="100vw"
@@ -47,8 +47,8 @@ export default async function PrivateDiningPage() {
         <Container>
           <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[21/9]">
             <Image
-              src="/images/dining-room.jpg"
-              alt="The Olea Social dining room set for a private gathering"
+              src="/images/private-dining-2.webp"
+              alt="Olea Social's main dining room, with green banquettes and hanging greenery above the tables"
               fill
               sizes="100vw"
               className="object-cover"
