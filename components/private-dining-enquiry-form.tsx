@@ -53,19 +53,26 @@ export function PrivateDiningEnquiryForm({ phone }:PrivateDiningEnquiryFormProps
     <form className="grid gap-8" onSubmit={handleSubmit}>
       <fieldset className="grid gap-5">
         <legend className="eyebrow mb-5 text-brass">Booking details</legend>
-        <label className={labelStyles}>
-          Booking option
-          <select name="bookingOption" defaultValue="" required className={inputStyles}>
-            <option value="" disabled>
-              Booking option
-            </option>
-            <option>Group booking</option>
-            <option>Semi-private dining</option>
-            <option>Private dining</option>
-            <option>Full restaurant hire</option>
-          </select>
-        </label>
         <div className="grid gap-5 sm:grid-cols-2">
+          <label className={labelStyles}>
+            Booking option
+            <select name="bookingOption" defaultValue="" required className={inputStyles}>
+              <option value="" disabled>
+                Booking option
+              </option>
+              <option>Group booking</option>
+              <option>Semi-private dining</option>
+              <option>Private dining</option>
+              <option>Full restaurant hire</option>
+            </select>
+          </label>
+          <label className={labelStyles}>
+            Type of event
+            <select name="eventType" defaultValue="On-Premise" required className={inputStyles}>
+              <option>On-Premise</option>
+              <option>Off-Premise</option>
+            </select>
+          </label>
           <label className={labelStyles}>
             Date
             <input name="date" type="date" required className={inputStyles} />

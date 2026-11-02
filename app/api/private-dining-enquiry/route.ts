@@ -47,7 +47,7 @@ function parseEnquiry(value: unknown): Enquiry | null {
   const bookingOption = readString(value.bookingOption, 40);
   const date = readString(value.date, 10);
   const startTime = readString(value.startTime, 5);
-  const eventType = readString(value.eventType, 20);
+  const eventType = value.eventType === undefined ? "On-Premise" : readString(value.eventType, 20);
   const firstName = readString(value.firstName, 80);
   const lastName = readString(value.lastName, 80);
   const mobile = readString(value.mobile, 40);
