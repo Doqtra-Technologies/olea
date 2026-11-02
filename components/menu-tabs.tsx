@@ -14,8 +14,8 @@ function Section({ section }: { section: MenuSection }) {
       <h3 className="font-display text-3xl font-light text-cream">{section.title}</h3>
       {section.note && <p className="eyebrow mt-2 text-[10px] text-leaf-light">{section.note}</p>}
       <ul className="mt-6 divide-y divide-white/10">
-        {section.dishes.map((d) => (
-          <li key={d.name} className="flex gap-6 py-4">
+        {section.dishes.map((d, i) => (
+          <li key={`${d.name}-${i}`} className="flex gap-6 py-4">
             <div className="flex-1">
               <p className="font-mono text-sm text-white">{d.name}</p>
               {d.description && <p className="mt-1 text-sm leading-relaxed text-white/60">{d.description}</p>}
