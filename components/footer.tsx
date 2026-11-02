@@ -5,7 +5,7 @@ import { getSettings } from "@/lib/content";
 
 const explore = [
   { href: "/menu", label: "Menu" },
-  { href: "/private-dining", label: "Private Dining" },
+  { href: "/private-dining", label: "Group Booking" },
   { href: "/whats-on", label: "What's On" },
   { href: "/blog", label: "Blog" },
 ];

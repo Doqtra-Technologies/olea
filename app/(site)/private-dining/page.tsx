@@ -5,7 +5,7 @@ import { PrivateDiningEnquiryForm } from "@/components/private-dining-enquiry-fo
 import { getPrivateDiningIntro, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Private Dining",
+  title: "Group Booking",
   description:
     "Private dining, business meetings, group celebrations and Eastern Mediterranean menus at Olea Social in Covent Garden.",
 };
@@ -31,7 +31,7 @@ export default async function PrivateDiningPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
         <Container className="relative pb-10">
-          <p className="eyebrow mb-4 text-brass">Private dining</p>
+          <p className="eyebrow mb-4 text-brass">Group booking</p>
           <h1 className="animate-rise font-display text-6xl font-light text-cream sm:text-8xl">Olea Social</h1>
           <p className="mt-3 font-display text-2xl text-white/85 sm:text-3xl">Covent Garden</p>
         </Container>
@@ -43,7 +43,7 @@ export default async function PrivateDiningPage() {
         </Container>
       </section>
 
-      <section aria-label="Private dining at Olea Social" className="bg-forest-950 py-8 sm:py-12">
+      <section aria-label="Group booking at Olea Social" className="bg-forest-950 py-8 sm:py-12">
         <Container>
           <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[21/9]">
             <Image

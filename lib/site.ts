@@ -28,7 +28,7 @@ export const site = {
 export const nav = [
   { href: "/about", label: "About Us" },
   { href: "/menu", label: "Menu" },
-  { href: "/private-dining", label: "Private Dining" },
+  { href: "/private-dining", label: "Group Booking" },
   { href: "/whats-on", label: "What's On" },
   { href: "/contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
