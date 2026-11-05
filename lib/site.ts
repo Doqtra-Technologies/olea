@@ -16,7 +16,7 @@ export const site = {
     "https://www.opentable.co.uk/booking/restref/availability?lang=en-GB&correlationId=cb23b425-3861-4c8d-998e-2ef41d1075c5&restRef=334638&otSource=Restaurant%20website",
   hours: [
     { days: "Monday – Friday", time: "11:30am – 11:30pm" },
-    { days: "Saturday – Sunday", time: "9:30am – 11:30pm" },
+    { days: "Saturday – Sunday", time: "11:30am – 11:30pm" },
   ],
   mapsUrl: "https://maps.app.goo.gl/uB2yXdj9VMmqxZVC6",
   // Pin for the OpenStreetMap embed on the contact page.

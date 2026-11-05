@@ -100,8 +100,8 @@ export function PrivateDiningEnquiryForm({ phone }:PrivateDiningEnquiryFormProps
             <input name="lastName" autoComplete="family-name" required maxLength={80} placeholder="Last name" className={inputStyles} />
           </label>
           <label className={labelStyles}>
-            Mobile number
-            <input name="mobile" type="tel" autoComplete="tel" required maxLength={40} placeholder="Mobile number" className={inputStyles} />
+            Mobile number (optional)
+            <input name="mobile" type="tel" autoComplete="tel" maxLength={40} placeholder="Mobile number" className={inputStyles} />
           </label>
           <label className={labelStyles}>
             Email address

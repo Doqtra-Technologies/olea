@@ -50,7 +50,7 @@ function parseEnquiry(value: unknown): Enquiry | null {
   const eventType = value.eventType === undefined ? "On-Premise" : readString(value.eventType, 20);
   const firstName = readString(value.firstName, 80);
   const lastName = readString(value.lastName, 80);
-  const mobile = readString(value.mobile, 40);
+  const mobile = typeof value.mobile === "string" ? value.mobile.trim() : "";
   const email = readString(value.email, 254);
   const message = typeof value.message === "string" ? value.message.trim() : null;
   const guests = Number(value.guests);
@@ -68,7 +68,7 @@ function parseEnquiry(value: unknown): Enquiry | null {
     !allowedEventTypes.has(eventType) ||
     !firstName ||
     !lastName ||
-    !mobile ||
+    mobile.length > 40 ||
     !email ||
     !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
     !Number.isInteger(guests) ||
@@ -170,7 +170,7 @@ export async function POST(request: Request) {
     `Type of event: ${enquiry.eventType}`,
     "",
     `Name: ${fullName}`,
-    `Mobile: ${enquiry.mobile}`,
+    `Mobile: ${enquiry.mobile || "(Not provided)"}`,
     `Email: ${enquiry.email}`,
     "",
     "Message:",
