@@ -85,7 +85,7 @@ export function MenuTabs({ menus, dietary }: { menus: Menu[]; dietary: string })
               {menu.columns.map((col) => (
                 <div key={col.title} className="border border-white/10 p-6 sm:p-8">
                   <div className="flex items-baseline justify-between border-b border-white/10 pb-4">
-                    <h3 className="eyebrow text-white">{col.title}</h3>
+                    <h3 className="font-display text-2xl text-white">{col.title}</h3>
                     <p className="font-display text-2xl text-brass">{col.price} pp</p>
                   </div>
                   <div className="mt-8 space-y-10">

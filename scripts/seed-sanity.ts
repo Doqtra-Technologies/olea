@@ -3,6 +3,7 @@
  *
  *   npm run sanity:seed            # creates documents that don't exist yet
  *   npm run sanity:seed -- -- --force # overwrites existing documents with the built-in content
+ *   npm run sanity:seed -- -- --force --only=menu-  # only documents whose _id starts with one of these (comma-separated)
  */
 import { createReadStream } from "node:fs";
 import { basename, join } from "node:path";
@@ -14,6 +15,7 @@ import { home, posts, privateDining, site, story, whatsOn } from "../lib/site";
 
 const client = getCliClient({ apiVersion: "2026-10-01" });
 const force = process.argv.includes("--force");
+const only = process.argv.find((a) => a.startsWith("--only="))?.slice("--only=".length).split(",");
 const publicDir = join(process.cwd(), "public");
 const uploads = new Map<string, Promise<string>>();
 
@@ -142,7 +144,7 @@ async function documents(): Promise<SanityDocumentStub[]> {
 
 async function main() {
   console.log(`Seeding ${client.config().projectId}/${client.config().dataset}${force ? " (overwriting)" : ""}`);
-  const docs = await documents();
+  const docs = (await documents()).filter((d) => !only || only.some((prefix) => d._id.startsWith(prefix)));
   const tx = client.transaction();
   for (const doc of docs) {
     if (force) tx.createOrReplace(doc as SanityDocumentStub & { _id: string });

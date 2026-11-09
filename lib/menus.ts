@@ -222,6 +222,7 @@ export const menus: Menu[] = [
     id: "meze-lunch",
     label: "Meze Lunch",
     title: "Meze Lunch",
+    price: "£15 per person",
     pdf: "/menus/lunch.pdf",
     sections: [
       {
@@ -358,6 +359,39 @@ export const menus: Menu[] = [
           { name: "Grilled Chicken Shish", description: "Charcoal grilled marinated chicken cubes served with chips", price: "11.5" },
           { name: "Lamb Kofte", description: "Charcoal grilled mild spiced minced lamb served with chips", price: "11.5" },
           { name: "Beef Pepperoni Pide/Flat Bread", description: "Stone oven baked pide/flat bread topped with pepperoni and cheddar", price: "11.5" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "dessert",
+    label: "Dessert",
+    title: "Dessert Menu",
+    pdf: "/menus/dessert.pdf",
+    sections: [
+      {
+        title: "Dessert",
+        dishes: [
+          { name: "Homemade tiramisu", description: "With cocoa powder", price: "9" },
+          { name: "Apple tart", description: "With warm custard and vanilla ice cream", price: "9" },
+          { name: "San Sebastian cheesecake", description: "With berry sauce", price: "11" },
+          { name: "Chocolate fondant", description: "With vanilla ice cream", price: "11" },
+          { name: "Baklava", description: "With pistachio and honey cream", price: "9" },
+          { name: "Chocolate brownie", description: "With vanilla ice cream and chocolate sauce", price: "9" },
+          { name: "Ice cream (per scoop)", description: "Strawberry sorbet, dark chocolate sorbet, lemon basil sorbet, vanilla gelato, pistachio gelato", price: "3.5" },
+        ],
+      },
+      {
+        title: "Hot Beverages",
+        dishes: [
+          { name: "Espresso", price: "3.75" },
+          { name: "Americano", price: "3.75" },
+          { name: "Flat white / Cappuccino / Macchiato / Latte", price: "4" },
+          { name: "Coffee mocha", price: "4.25" },
+          { name: "Hot chocolate", price: "4.25" },
+          { name: "Turkish coffee", price: "4.25" },
+          { name: "Liqueur coffee", description: "Choice of Irish coffee, French coffee, Calypso coffee, Baileys coffee", price: "9" },
+          { name: "Organic teas", description: "Hand picked, no added preservatives, simply infuse. Jasmine flower, camomile, green tea, peppermint leaf, Earl Grey, breakfast tea, fresh mint", price: "4" },
         ],
       },
     ],
