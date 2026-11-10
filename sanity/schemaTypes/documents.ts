@@ -100,8 +100,14 @@ export const post = defineType({
     defineField({ name: "title", type: "string", validation: (rule) => rule.required() }),
     defineField({ name: "slug", type: "slug", options: { source: "title" }, validation: (rule) => rule.required() }),
     defineField({ name: "date", type: "date", validation: (rule) => rule.required() }),
+    defineField({
+      name: "metaTitle",
+      title: "Search title",
+      type: "string",
+      description: "Optional. The page title shown in search results and browser tabs. Defaults to the title.",
+    }),
     defineField({ name: "excerpt", type: "text", rows: 3, description: "Shown on the blog list and in search results." }),
-    defineField({ name: "image", type: "imageWithAlt", validation: (rule) => rule.required() }),
+    defineField({ name: "image", type: "imageWithAlt", description: "Optional. Posts without a photo show as text only." }),
     defineField({
       name: "intro",
       title: "Intro paragraphs",

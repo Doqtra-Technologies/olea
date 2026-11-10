@@ -174,7 +174,76 @@ export const whatsOn = {
   ] satisfies WhatsOnItem[],
 };
 
-export const posts = [
+export type PostSource = {
+  slug: string;
+  title: string;
+  /** Page title for search results and browser tabs. Defaults to the title. */
+  metaTitle?: string;
+  /** Shown on the blog list and used as the meta description. */
+  excerpt: string;
+  /** Optional. Posts without one show as text only. */
+  image?: string;
+  alt?: string;
+  date: string;
+  intro: string[];
+  sections: { heading: string; body: string[] }[];
+  outro?: string;
+};
+
+export const posts: PostSource[] = [
+  {
+    slug: "christmas-private-dining",
+    title: "A Christmas to Remember in Our Private Dining Rooms",
+    metaTitle: "Christmas Celebrations & Private Dining Rooms | Olea Social",
+    excerpt:
+      "Bring friends, family or colleagues together at Olea Social. Explore our private dining rooms and plan your Christmas party with our festive set menu.",
+    date: "2026-11-10",
+    intro: [
+      "The best part of Christmas is getting everyone together. The friends you have been meaning to catch up with, the colleagues who have shared a busy year, the family you never quite get enough time with.",
+      "At Olea Social, we love being part of those moments. This festive season, we invite you to gather around our table, enjoy our food and make time for each other.",
+    ],
+    sections: [
+      {
+        heading: "A Little Space for Your Celebration",
+        body: [
+          "Our private dining rooms bring a more personal feel to your Christmas gathering. Whether you are planning a dinner with close friends or a Christmas party for your team, having a space for your guests makes the occasion feel that little bit more special.",
+          "There is room for the conversations, the laughter and the end-of-year toast. Settle in with your guests and let us look after you.",
+        ],
+      },
+      {
+        heading: "Christmas Around Our Table",
+        body: [
+          "Our modern Eastern Mediterranean flavours are at the heart of our festive set menu. This is how we like to celebrate: delicious food, glasses raised and everyone enjoying themselves around the table.",
+          "Join us for a festive lunch or spend the evening with us. Whatever you have planned, we want your private dining experience to feel warm and welcoming from the moment you arrive.",
+        ],
+      },
+      {
+        heading: "A Christmas Party for the People You Work With",
+        body: [
+          "After a year of busy days and shared achievements, it is lovely to spend time together away from work.",
+          "Bring your team to Olea Social for a Christmas party, say thank you over a festive meal and enjoy the chance to catch up properly. Our private dining rooms offer a setting for bringing colleagues together, whether you are planning a lunchtime gathering or an evening celebration.",
+          "And if someone has a few words to say before the meal, there is always a reason for one more toast.",
+        ],
+      },
+      {
+        heading: "Friends, Family and Festive Catch-Ups",
+        body: [
+          "Some Christmas traditions start with a simple dinner invitation.",
+          "Perhaps it is your annual gathering with friends, a family meal before everyone heads away for the holidays or a Christmas celebration you have been looking forward to for months.",
+          "We would love to welcome you. Choose a date, bring your favourite people and enjoy being together. We will take care of the meal — and the washing-up.",
+        ],
+      },
+      {
+        heading: "Let’s Plan Your Christmas Gathering",
+        body: [
+          "If you have a private dining room in mind for your celebration, speak to our team about the spaces available at Olea Social.",
+          "Tell us a little about your plans, your preferred date and how many guests will be joining you. We can discuss our private dining rooms, festive menu and any dietary requirements together.",
+          "We look forward to celebrating with you.",
+        ],
+      },
+    ],
+    outro: "Plan your Christmas gathering at Olea Social",
+  },
   {
     slug: "christmas-in-covent-garden",
     title: "Christmas in Covent Garden: Gather at Olea Social",
