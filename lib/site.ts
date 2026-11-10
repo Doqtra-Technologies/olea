@@ -188,6 +188,8 @@ export type PostSource = {
   intro: string[];
   sections: { heading: string; body: string[] }[];
   outro?: string;
+  /** Optional link for the closing line. */
+  outroHref?: string;
 };
 
 export const posts: PostSource[] = [
@@ -243,6 +245,7 @@ export const posts: PostSource[] = [
       },
     ],
     outro: "Plan your Christmas gathering at Olea Social",
+    outroHref: "/private-dining",
   },
   {
     slug: "christmas-in-covent-garden",

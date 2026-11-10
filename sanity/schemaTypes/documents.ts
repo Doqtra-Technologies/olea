@@ -130,6 +130,12 @@ export const post = defineType({
       ],
     }),
     defineField({ name: "outro", title: "Closing line", type: "string" }),
+    defineField({
+      name: "outroHref",
+      title: "Closing line link",
+      type: "string",
+      description: "Optional. A page on this site (e.g. /private-dining) or a full URL.",
+    }),
   ],
   orderings: [{ title: "Newest first", name: "dateDesc", by: [{ field: "date", direction: "desc" }] }],
   preview: { select: { title: "title", subtitle: "date", media: "image" } },

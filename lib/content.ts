@@ -34,6 +34,7 @@ export type Post = {
   intro: string[];
   body: PortableTextBlock[];
   outro?: string;
+  outroHref?: string;
 };
 
 async function fetchContent<T>(query: string): Promise<T | null> {

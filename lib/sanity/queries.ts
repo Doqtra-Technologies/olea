@@ -40,5 +40,5 @@ export const menusQuery = defineQuery(`*[_type == "menu" && defined(slug.current
 
 export const postsQuery = defineQuery(`*[_type == "post" && defined(slug.current)] | order(date desc){
   "slug": slug.current, title, metaTitle, excerpt, date, ${image},
-  "intro": coalesce(intro, []), "body": coalesce(body, []), outro
+  "intro": coalesce(intro, []), "body": coalesce(body, []), outro, outroHref
 }`);

@@ -52,7 +52,17 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
         </div>
         <PostBody value={post.body} />
         <div className="mt-16 border-t border-ink/15 pt-10">
-          {post.outro && <p className="font-display text-2xl">{post.outro}</p>}
+          {post.outro && (
+            <p className="font-display text-2xl">
+              {post.outroHref ? (
+                <Link href={post.outroHref} className="underline decoration-brass underline-offset-4 hover:text-forest-700">
+                  {post.outro}
+                </Link>
+              ) : (
+                post.outro
+              )}
+            </p>
+          )}
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/menu#christmas">Christmas menus</Button>
             <Button href="/private-dining" variant="outline" className="!border-forest-800 !text-forest-800 hover:!bg-forest-800 hover:!text-cream">

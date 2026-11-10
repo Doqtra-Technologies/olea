@@ -138,6 +138,7 @@ async function documents(): Promise<SanityDocumentStub[]> {
         intro: p.intro,
         body: sectionsToBlocks(p.sections),
         outro: p.outro,
+        outroHref: p.outroHref,
       })),
     )),
   ];
