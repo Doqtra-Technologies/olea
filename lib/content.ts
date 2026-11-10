@@ -26,9 +26,10 @@ export type Promo = (typeof home.promos)[number];
 export type Post = {
   slug: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
-  image: string;
-  alt: string;
+  image?: string;
+  alt?: string;
   date: string;
   intro: string[];
   body: PortableTextBlock[];

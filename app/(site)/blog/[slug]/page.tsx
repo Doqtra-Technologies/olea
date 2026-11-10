@@ -13,7 +13,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/blog/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPost(slug);
-  return post ? { title: post.title, description: post.excerpt } : {};
+  if (!post) return {};
+  return { title: post.metaTitle ? { absolute: post.metaTitle } : post.title, description: post.excerpt };
 }
 
 export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
@@ -35,11 +36,13 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
         </Container>
       </header>
 
-      <Container className="max-w-4xl">
-        <div className="relative aspect-[16/10] overflow-hidden">
-          <Image src={post.image} alt={post.alt} fill priority sizes="(min-width: 1024px) 900px, 100vw" className="object-cover" />
-        </div>
-      </Container>
+      {post.image && (
+        <Container className="max-w-4xl">
+          <div className="relative aspect-[16/10] overflow-hidden">
+            <Image src={post.image} alt={post.alt ?? ""} fill priority sizes="(min-width: 1024px) 900px, 100vw" className="object-cover" />
+          </div>
+        </Container>
+      )}
 
       <Container className="max-w-3xl py-16 sm:py-20">
         <div className="space-y-6 font-display text-xl leading-relaxed">
