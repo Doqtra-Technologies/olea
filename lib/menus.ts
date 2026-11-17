@@ -26,7 +26,7 @@ export const menus: Menu[] = [
     label: "A La Carte",
     title: "A La Carte",
     intro:
-      "Our chef has crafted a unique Eastern Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.",
+      "Our chef has crafted a unique Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.",
     pdf: "/menus/a-la-carte.pdf",
     sections: [
       {

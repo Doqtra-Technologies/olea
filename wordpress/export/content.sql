@@ -178,7 +178,7 @@ INSERT INTO `wp_postmeta` VALUES
 (43,13,'_heading','field_olea_menu_heading'),
 (44,13,'price',''),
 (45,13,'_price','field_olea_menu_price'),
-(46,13,'intro','Our chef has crafted a unique Eastern Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.'),
+(46,13,'intro','Our chef has crafted a unique Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.'),
 (47,13,'_intro','field_olea_menu_intro'),
 (48,13,'pdf','46'),
 (49,13,'_pdf','field_olea_menu_pdf'),
@@ -3797,4 +3797,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-11-17  1:15:58
+-- Dump completed on 2026-11-17  1:41:57

@@ -1,6 +1,6 @@
 <?php
 /**
- * Sets the A la carte menu to the November 2026 version: its dishes and its PDF download.
+ * Sets the A la carte menu to the November 2026 version: its intro, its dishes and its PDF download.
  * Run it with ../update-a-la-carte.sh. Safe to run again; it writes the same content each time.
  *
  * Each section is [title, note, featured, dishes], and each dish is [name, description, price].
@@ -12,6 +12,7 @@ require_once ABSPATH . 'wp-admin/includes/image.php';
 
 const OLEA_ALC_PDF = '/public/menus/a-la-carte.pdf';
 const OLEA_ALC_PDF_NAME = 'a-la-carte-menu.pdf';
+const OLEA_ALC_INTRO = 'Our chef has crafted a unique Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.';
 
 $sections = [
     ['Starters', '', false, [
@@ -90,6 +91,8 @@ $sections = [
 $found = get_posts(['post_type' => 'olea_menu', 'name' => 'a-la-carte', 'post_status' => 'any', 'fields' => 'ids', 'numberposts' => 1]);
 if (!$found) WP_CLI::error('There is no menu with the slug a-la-carte.');
 $menu = $found[0];
+
+update_field('field_olea_menu_intro', OLEA_ALC_INTRO, $menu);
 
 update_field('field_olea_menu_sections', array_map(fn (array $s) => [
     'title' => $s[0],
