@@ -48,6 +48,9 @@ docker compose -f wordpress/docker-compose.yml stop      # stop, keeping the con
 docker compose -f wordpress/docker-compose.yml down -v   # delete the local WordPress and its content
 ```
 
+`wordpress/update-a-la-carte.sh` applies the November 2026 A la carte menu and its PDF, and `wordpress/export.sh`
+writes the current content to `wordpress/export/` for the move to hosting.
+
 `wordpress/import.sh` copies the content, images and PDFs from the old Sanity dataset into WordPress. It is a
 one-off for the move: running it again overwrites edits made in WordPress since.
 
@@ -70,9 +73,18 @@ Without that rule, run `wordpress/refresh.sh` after editing to make the site rel
    define('OLEA_REVALIDATE_URL', 'https://<live-domain>/api/revalidate');
    define('OLEA_REVALIDATE_SECRET', '<long random string>');
    ```
-4. Move the content across: export the local database and `wp-content/uploads`, import them on the host and
-   replace `http://localhost:8080` with the new address (`wp search-replace`), or run
-   `wordpress/scripts/import-sanity.php` there with WP-CLI.
+4. Move the content across with the files in `wordpress/export/` (refresh them first with `wordpress/export.sh`).
+   On the host, with WP-CLI, from the WordPress folder:
+   ```bash
+   tar -xzf uploads.tar.gz -C wp-content/        # images and PDFs
+   wp db import content.sql                      # posts, menus, What's On, media records (table prefix wp_)
+   wp eval-file import-options.php options.json  # "Olea Site" settings and the site icon
+   wp search-replace 'http://localhost:8080' 'https://cms.<domain>' --all-tables
+   wp media regenerate --yes                     # rebuild the resized images
+   ```
+   `import-options.php` is in `wordpress/scripts/`. `content.sql` replaces the host's posts tables, so run it on a
+   fresh install. It carries no users, passwords or site settings. `olea-content.xml` is the same content as a
+   standard WordPress export file, for hosts without WP-CLI; menu images and PDFs need relinking after that route.
 5. On the site's host (e.g. Vercel) set `WORDPRESS_URL` to the WordPress address and `REVALIDATE_SECRET` to the
    same secret, then redeploy.
 6. Under **Settings → Reading**, keep "Discourage search engines" ticked so only the real site is indexed.
