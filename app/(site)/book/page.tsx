@@ -15,7 +15,7 @@ export default async function BookPage() {
       <Container>
         <p className="eyebrow text-brass">Reserve a table</p>
         <h1 className="mt-4 font-display text-5xl font-light text-cream sm:text-6xl">
-          Book your <span className="italic">table</span>
+          Book your <span className="text-leaf">table</span>
         </h1>
         <Rule className="mt-5" />
         <p className="mt-6 max-w-xl font-display text-lg text-white/80">
@@ -38,7 +38,7 @@ export default async function BookPage() {
               href={site.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-14 items-center justify-center bg-brass px-10 py-4 font-mono text-sm font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-dark"
+              className="inline-flex min-h-14 items-center justify-center bg-brass px-10 py-4 font-mono text-sm font-medium uppercase tracking-[0.2em] text-on-brass transition-colors hover:bg-brass-dark"
             >
               Book now
             </a>

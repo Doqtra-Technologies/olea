@@ -40,6 +40,7 @@ fi
 
 wp plugin is-installed secure-custom-fields || wp plugin install secure-custom-fields
 wp plugin activate secure-custom-fields olea-content
+wp eval-file /scripts/set-site-icon.php
 
 echo
 echo "WordPress admin: $url/wp-admin (user and password are in wordpress/.env)"

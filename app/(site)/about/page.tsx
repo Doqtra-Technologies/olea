@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { LeafMark } from "@/components/brand";
+import { Stamp } from "@/components/brand";
 import { StorySlider } from "@/components/story-slider";
 import { BookingLink, Button, Container } from "@/components/ui";
 import { getStory } from "@/lib/content";
@@ -34,12 +34,12 @@ export default async function AboutPage() {
       <section className="relative overflow-hidden bg-sand py-20 text-ink sm:py-28">
         <Container className="grid items-center gap-12 lg:grid-cols-12">
           <div className="reveal flex justify-center lg:col-span-4">
-            <LeafMark className="h-64 w-auto text-leaf sm:h-80" title="Olea leaf" />
+            <Stamp className="h-64 w-auto text-leaf sm:h-80" title="Olea stamp" />
           </div>
           <div className="reveal lg:col-span-8">
             <p className="eyebrow text-leaf">What&apos;s in a name</p>
             <h2 className="mt-4 font-display text-4xl font-light leading-tight sm:text-5xl">
-              <span className="italic">Olea</span>, the olive tree. <span className="italic">Social</span>, the table we share.
+              <span className="text-brass">Olea</span>, the olive tree. <span className="text-brass">Social</span>, the table we share.
             </h2>
             <div className="mt-8 max-w-2xl space-y-5 leading-relaxed text-ink/80">
               {story.name.map((p) => (

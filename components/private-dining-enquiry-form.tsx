@@ -134,7 +134,7 @@ export function PrivateDiningEnquiryForm({ phone }:PrivateDiningEnquiryFormProps
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-flex min-h-12 items-center justify-center bg-brass px-8 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-ink transition-colors hover:bg-brass-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"
+          className="inline-flex min-h-12 items-center justify-center bg-brass px-8 py-3 font-mono text-[11px] font-medium uppercase tracking-[0.2em] text-on-brass transition-colors hover:bg-brass-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass"
         >
           {isSubmitting ? "Sending..." : "Send enquiry"}
         </button>

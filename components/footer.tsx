@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LeafMark, Logotype } from "@/components/brand";
+import { Logotype, Stamp } from "@/components/brand";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { getSettings } from "@/lib/content";
 
@@ -20,7 +20,7 @@ export async function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-6 border-b border-white/10 py-12">
           <Logotype className="h-8 w-auto text-cream sm:h-10" />
-          <LeafMark className="h-14 w-auto text-leaf-light" />
+          <Stamp className="h-14 w-auto text-leaf-light" />
         </div>
 
         <div className="grid gap-12 py-14 md:grid-cols-3 md:gap-0">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { LeafMark, Logotype } from "@/components/brand";
+import { Logotype, LogotypeEndorsed, Stamp } from "@/components/brand";
 import { PromoCarousel } from "@/components/promo-carousel";
 import { Arrow, BookingLink, Button, Container } from "@/components/ui";
 import { getHome, getSettings, getStory, getWhatsOn } from "@/lib/content";
@@ -24,7 +24,9 @@ export default async function Home() {
           <div className="animate-rise">
             <h1>
               <span className="sr-only">Olea Social</span>
-              <Logotype className="w-[88vw] max-w-[760px] text-cream drop-shadow-lg" title="" />
+              {/* The HAZ endorsement comes off below 50px tall, which is where the wordmark lands on phones. */}
+              <Logotype className="w-[88vw] text-cream drop-shadow-lg sm:hidden" title="" />
+              <LogotypeEndorsed className="hidden w-[88vw] max-w-[760px] text-cream drop-shadow-lg sm:block" title="" />
             </h1>
             <p className="mt-6 max-w-md font-display text-xl text-white/85 sm:text-2xl">{site.tagline}</p>
             <div className="mt-10 flex flex-wrap gap-3">
@@ -42,7 +44,7 @@ export default async function Home() {
       </section>
 
       <section className="relative overflow-hidden bg-forest-900 py-20 sm:py-28">
-        <LeafMark className="pointer-events-none absolute -right-24 top-10 hidden h-[520px] w-auto text-forest-800 lg:block" />
+        <Stamp className="pointer-events-none absolute -right-24 top-10 hidden h-[520px] w-auto text-forest-800 lg:block" />
         <Container className="relative">
           <p className="reveal max-w-5xl font-display text-3xl font-light leading-snug text-white sm:text-4xl lg:text-5xl">
             <span className="block">{home.intro}</span>

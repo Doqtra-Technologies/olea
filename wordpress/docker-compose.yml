@@ -16,6 +16,8 @@ x-wordpress-volumes: &wordpress-volumes
   - wordpress:/var/www/html
   - ./plugin/olea-content:/var/www/html/wp-content/plugins/olea-content
   - ./scripts:/scripts:ro
+  # The site's public files, for scripts that upload one to the media library.
+  - ../public:/public:ro
 
 services:
   db:
