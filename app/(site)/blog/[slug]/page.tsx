@@ -50,7 +50,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             <p key={p}>{p}</p>
           ))}
         </div>
-        <PostBody value={post.body} />
+        <PostBody html={post.body} />
         <div className="mt-16 border-t border-ink/15 pt-10">
           {post.outro && (
             <p className="font-display text-2xl">
