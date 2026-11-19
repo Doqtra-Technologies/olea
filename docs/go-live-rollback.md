@@ -19,7 +19,7 @@ No secret values live in this file. Secrets: `wordpress/deploy/.env.deploy` (ser
 | --- | --- | --- |
 | `WORDPRESS_URL` | lib/content.ts, next.config.ts (image remotePatterns) | `https://cms.oleasocial.co.uk` |
 | `REVALIDATE_SECRET` | app/api/revalidate | `OLEA_REVALIDATE_SECRET` in `wordpress/.env` (same as wp-config.php on the server) |
-| `RESEND_API_KEY` | app/api/private-dining-enquiry | **not set yet.** Needed before the domain moves, or the private dining form answers "temporarily unavailable" (503) |
+| `RESEND_API_KEY` | app/api/private-dining-enquiry | Resend key for the verified domain `mail.oleasocial.co.uk`. Mail goes from `bookings@mail.oleasocial.co.uk` to `booking@oleasocial.co.uk`, reply-to the enquirer |
 
 ## Deploying
 
@@ -43,6 +43,7 @@ The project has Vercel Authentication on every URL except custom domains. For au
 
 | When | URL | Commit | Result |
 | --- | --- | --- | --- |
+| 2026-11-19 | https://olea-social-bs1vhoa8x-nikhilbajantri86-gmailcoms-projects.vercel.app (production, aliased https://olea-social-indol.vercel.app) | 6502b06 | Next 16.4.6, Resend from-address. 14/14 pages match local; 28/28 browser loads clean; 3/3 fonts, 9/9 menu PDFs 200; revalidate 2s/2s, wrong secret 401; one test enquiry (recipient temporarily overridden to the developer's address in a temporary production build, olea-social-5ubtjhwme, replaced 1 min later) accepted by Resend; invalid enquiry 400 |
 | 2026-11-19 | https://olea-social-k7e36rnlt-nikhilbajantri86-gmailcoms-projects.vercel.app (production, aliased https://olea-social-indol.vercel.app) | aaa1ea9 | 14/14 pages match local (text, images, PDF links, 10 menu tabs, logo); 28/28 loads at 375px + 1440px with no console errors, 4xx/5xx, broken images or overflow; brand fonts load; 9/9 menu PDFs 200; revalidate test: price edit shown 2s after calling /api/revalidate, revert 1s, wrong secret 401 |
 
 ## Rollback
