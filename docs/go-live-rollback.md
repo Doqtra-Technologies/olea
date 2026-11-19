@@ -7,38 +7,72 @@ No secret values live in this file. Secrets: `wordpress/deploy/.env.deploy` (ser
 
 | Piece | Where |
 | --- | --- |
-| Website (Next.js) | Vercel team **gourmetica**, project **olea** (vercel.com/gourmetica/olea), Git: Doqtra-Technologies/olea, production branch `main` |
+| Website (Next.js), new | Vercel team **nikhilbajantri86-gmailcoms-projects**, project **olea-social** (region lhr1, Node 26.x). Not Git-connected: deploy with the CLI only (see below) |
+| Website, old | Vercel team **gourmetica**, project **olea** (no access from our account). Serves oleasocial.co.uk until the domain moves. Never deploy to it |
 | CMS | https://cms.oleasocial.co.uk/wp-admin, GoDaddy cPanel account `cbyvgpab6678`, docroot `~/public_html/cms`, DB `olea_wp` (prefix `wp_`) |
-| Old CMS (rollback) | Sanity project `i3daovoa`. Kept, not deleted |
-| DNS / email | GoDaddy. Root `@` A 216.198.79.1 (Vercel), `www` CNAME to Vercel, `cms` A 92.205.169.47, mail on Microsoft 365. Not changed by this migration |
+| Old CMS (rollback) | Sanity project `i3daovoa`, dataset `production`. Kept, not deleted |
+| DNS / email | GoDaddy. Root `@` A 216.198.79.1 (Vercel), `www` CNAME to Vercel, `cms` A 92.205.169.47, mail on Microsoft 365 + Resend. Only the Vercel records may change for the domain move; never MX/SPF/DKIM/DMARC/autodiscover/Resend |
 
-## Vercel environment variables
+## olea-social environment variables (Production and Preview)
 
-The WordPress build reads only:
+| Name | Used by | Value |
+| --- | --- | --- |
+| `WORDPRESS_URL` | lib/content.ts, next.config.ts (image remotePatterns) | `https://cms.oleasocial.co.uk` |
+| `REVALIDATE_SECRET` | app/api/revalidate | `OLEA_REVALIDATE_SECRET` in `wordpress/.env` (same as wp-config.php on the server) |
+| `RESEND_API_KEY` | app/api/private-dining-enquiry | **not set yet.** Needed before the domain moves, or the private dining form answers "temporarily unavailable" (503) |
 
-| Name | Value |
-| --- | --- |
-| `WORDPRESS_URL` | `https://cms.oleasocial.co.uk` |
-| `REVALIDATE_SECRET` | the `OLEA_REVALIDATE_SECRET` value in `wordpress/.env` (must match wp-config.php on the server) |
-| `RESEND_API_KEY` | unchanged (private dining enquiry form) |
+## Deploying
 
-Live project state before go-live (production deployment URL, existing env var names including the Sanity ones):
-**not yet recorded.** The Vercel CLI on this machine is logged in to team `nikhilbajantri86-gmailcoms-projects`,
-which cannot see the `gourmetica` team. Log in with the account that owns `gourmetica`, then run:
+Deploy only committed files, from a clean copy, with the CLI:
 
 ```bash
-vercel switch gourmetica
-vercel ls olea --prod            # current production deployment URL: write it here
-vercel env ls --scope gourmetica # env var NAMES only: write them here
+D=$(mktemp -d) && git archive HEAD | tar -x -C "$D" && cp -r .vercel "$D"/ && cd "$D"
+vercel deploy                 # preview
+vercel deploy --prod          # production
 ```
+
+`vercel.json` sets `git.deploymentEnabled: false`, so pushes to GitHub start no build in any Vercel
+project linked to the repo, including the old gourmetica one. To use Git auto-deploys on olea-social later, connect the repo
+to olea-social first, disconnect it from gourmetica/olea, then remove that setting.
+`.vercelignore` also keeps `.env*`, `docs/`, `wordpress/` and `public/amendment/` out of any upload.
+The project has Vercel Authentication on every URL except custom domains. For automated checks, use the
+"Protection Bypass for Automation" secret (Project → Settings → Deployment Protection), sent as the
+`x-vercel-protection-bypass` header or set once as a cookie with `?x-vercel-protection-bypass=<secret>&x-vercel-set-bypass-cookie=true`.
+
+## Deployments
+
+| When | URL | Commit | Result |
+| --- | --- | --- | --- |
+| 2026-11-19 | https://olea-social-k7e36rnlt-nikhilbajantri86-gmailcoms-projects.vercel.app (production, aliased https://olea-social-indol.vercel.app) | aaa1ea9 | 14/14 pages match local (text, images, PDF links, 10 menu tabs, logo); 28/28 loads at 375px + 1440px with no console errors, 4xx/5xx, broken images or overflow; brand fonts load; 9/9 menu PDFs 200; revalidate test: price edit shown 2s after calling /api/revalidate, revert 1s, wrong secret 401 |
 
 ## Rollback
 
-### Website back to Sanity (seconds)
+### Website back to Sanity, in olea-social
 
-In Vercel (team gourmetica → olea → Deployments), open the last production deployment from before the
-merge and choose **Promote to Production** (CLI: `vercel promote <previous-deployment-url> --scope gourmetica`).
-That build still uses Sanity, as long as the Sanity env vars and the Sanity project still exist. For a permanent revert, `git revert -m 1 <merge commit>` on `main`.
+Use this if the site fails after the domain moves to olea-social. `main` (`de030e5`) is still the Sanity
+version. Its env var names are below. Values come from the Sanity project (sanity.io/manage → `i3daovoa`) and the
+old `.env.example` defaults. Never commit them.
+
+| Name | Value source |
+| --- | --- |
+| `NEXT_PUBLIC_SANITY_PROJECT_ID` | `i3daovoa` |
+| `NEXT_PUBLIC_SANITY_DATASET` | `production` |
+| `NEXT_PUBLIC_SANITY_API_VERSION` | optional, code default `2026-10-01` |
+| `SANITY_REVALIDATE_SECRET` | the secret in the Sanity webhook (sanity.io/manage → API → Webhooks), or a new one there and here |
+| `RESEND_API_KEY` | same as above |
+
+```bash
+vercel env add NEXT_PUBLIC_SANITY_PROJECT_ID production   # and the others above
+D=$(mktemp -d) && git archive de030e5 | tar -x -C "$D" && cp -r .vercel "$D"/ && cd "$D" && vercel deploy --prod
+```
+
+Faster, for a problem in a new release only: `vercel rollback <previous olea-social deployment URL>` or
+Promote to Production in the dashboard.
+
+### Domain back to the old project
+
+Only possible from the gourmetica account: re-add oleasocial.co.uk + www there. The DNS records point at
+Vercel in general, not at a project, so DNS needs no change apart from the TXT verification Vercel may ask for.
 
 ### CMS server
 
