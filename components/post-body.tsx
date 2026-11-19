@@ -1,22 +1,15 @@
-import { PortableText, type PortableTextBlock, type PortableTextComponents } from "@portabletext/react";
+// Styles for the HTML the WordPress editor produces: headings, paragraphs, lists, links and images.
+const styles = [
+  "[&_h2]:mt-14 [&_h2]:font-display [&_h2]:text-3xl [&_h2]:text-forest-800",
+  "[&_h3]:mt-10 [&_h3]:font-display [&_h3]:text-2xl [&_h3]:text-forest-800",
+  "[&_p]:mt-5 [&_p]:leading-relaxed [&_p]:text-ink/80",
+  "[&_ul]:mt-5 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6 [&_ul]:leading-relaxed [&_ul]:text-ink/80",
+  "[&_ol]:mt-5 [&_ol]:list-decimal [&_ol]:space-y-2 [&_ol]:pl-6 [&_ol]:leading-relaxed [&_ol]:text-ink/80",
+  "[&_a]:underline [&_a]:underline-offset-4 [&_a:hover]:text-leaf",
+  "[&_figure]:mt-8 [&_img]:h-auto [&_img]:max-w-full",
+].join(" ");
 
-const components: PortableTextComponents = {
-  block: {
-    h2: ({ children }) => <h2 className="mt-14 font-display text-3xl text-forest-800">{children}</h2>,
-    normal: ({ children }) => <p className="mt-5 leading-relaxed text-ink/80">{children}</p>,
-  },
-  list: {
-    bullet: ({ children }) => <ul className="mt-5 list-disc space-y-2 pl-6 leading-relaxed text-ink/80">{children}</ul>,
-  },
-  marks: {
-    link: ({ children, value }) => (
-      <a href={value?.href} className="underline underline-offset-4 hover:text-leaf">
-        {children}
-      </a>
-    ),
-  },
-};
-
-export function PostBody({ value }: { value: PortableTextBlock[] }) {
-  return <PortableText value={value} components={components} />;
+/** Renders a post body. The HTML comes from our own WordPress, written by its signed-in editors. */
+export function PostBody({ html }: { html: string }) {
+  return <div className={styles} dangerouslySetInnerHTML={{ __html: html }} />;
 }

@@ -1,0 +1,9 @@
+# Only what the Next.js build needs goes to Vercel.
+.env*
+!.env.example
+.claude/
+.htaccess
+docs/
+wordpress/
+public/amendment/
+*.tsbuildinfo

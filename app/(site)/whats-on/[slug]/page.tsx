@@ -5,6 +5,10 @@ import { notFound } from "next/navigation";
 import { BookingLink, Button, Container, PageHero } from "@/components/ui";
 import { getMenus, getWhatsOn } from "@/lib/content";
 
+// Lets the page be re-rendered on request after a content edit clears the cache. Without it,
+// the header's usePathname() has no <Suspense> to wait in and the re-render fails with a 500.
+export const instant = false;
+
 export async function generateStaticParams() {
   return (await getWhatsOn()).items.map((i) => ({ slug: i.slug }));
 }

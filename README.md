@@ -1,48 +1,92 @@
 # Olea Social website
 
-Next.js site with content managed in [Sanity](https://www.sanity.io). The Sanity Studio is built in at `/studio`.
+Next.js site with content managed in WordPress. WordPress only holds the content: the site reads it over the
+REST API, and visitors never see WordPress itself.
 
 ```bash
-npm run dev   # http://localhost:3000, Studio at http://localhost:3000/studio
+wordpress/setup.sh   # once: local WordPress at http://localhost:8080
+npm run dev          # http://localhost:3000
 ```
 
 ## Content
 
-Everything editable lives in the Studio:
+Everything editable lives in the WordPress admin (`/wp-admin`):
 
-| Studio item          | Drives                                                                    |
-| -------------------- | ------------------------------------------------------------------------- |
-| Site settings        | Address, phone, booking URL, opening hours, maps, social links, menu note |
-| Home page            | Intro copy and the promotions carousel                                    |
-| About page           | Story text, regions, slideshow and gallery photos                         |
-| Private dining page  | Intro paragraph                                                           |
-| What's On page       | Page heading and intro                                                    |
-| What's On items      | Event/offer cards and their detail pages                                  |
-| Menus                | Every menu tab on `/menu`, dishes, prices and PDF downloads               |
-| Blog posts           | `/blog` and each post                                                     |
+| WordPress item              | Drives                                                                    |
+| --------------------------- | ------------------------------------------------------------------------- |
+| Olea Site → Site settings   | Address, phone, booking URL, opening hours, maps, social links, menu note |
+| Olea Site → Home page       | Intro copy and the promotions carousel                                    |
+| Olea Site → About page      | Story text, regions, slideshow and gallery photos                         |
+| Olea Site → Private dining  | Intro paragraph                                                           |
+| Olea Site → What's On page  | Page heading and intro                                                    |
+| What's On                   | Event/offer cards and their detail pages                                  |
+| Menus                       | Every menu tab on `/menu`, dishes, prices and PDF downloads               |
+| Posts                       | `/blog` and each post                                                     |
 
-Until `NEXT_PUBLIC_SANITY_PROJECT_ID` is set, and for any field left empty in Sanity, the site falls back
-to the built-in content in `lib/site.ts` and `lib/menus.ts`.
+Menus and What's On items are sorted by their **Order** number, lowest first. Their **Slug** is part of the
+site's links (`/menu#christmas`, `/whats-on/festive-season`). Image alt text is set on the image in the media library.
 
-## Setting up Sanity
+Until `WORDPRESS_URL` is set, and for any field left empty in WordPress, the site falls back to the built-in
+content in `lib/site.ts` and `lib/menus.ts`.
 
-1. Create a project at [sanity.io/manage](https://www.sanity.io/manage) (or run `npx sanity init --env` and skip
-   the template). Use the `production` dataset.
-2. Copy `.env.example` to `.env.local` and fill in the project ID and a long random `SANITY_REVALIDATE_SECRET`.
-3. In the project's **API → CORS origins**, add `http://localhost:3000` and the live domain, both with
-   **Allow credentials** ticked, so the Studio can sign in.
-4. Import the current site content, images and PDFs:
-   ```bash
-   npx sanity login
-   npm run sanity:seed            # only creates documents that don't exist yet
+## How it fits together
+
+- `wordpress/plugin/olea-content/` is a small WordPress plugin. It defines the content types and fields
+  (using the free [Secure Custom Fields](https://wordpress.org/plugins/secure-custom-fields/) plugin), serves them
+  at `/wp-json/olea/v1/…`, and calls the site's `/api/revalidate` after every save.
+- `lib/content.ts` reads those endpoints. Pages are cached for an hour and refreshed straight away when
+  WordPress calls `/api/revalidate`.
+
+## Local WordPress
+
+Needs Docker. `wordpress/setup.sh` starts WordPress and its database, installs both plugins, and writes
+`wordpress/.env` (admin login) and `.env.local` (for the site). Run it again any time; finished steps are skipped.
+
+```bash
+wordpress/setup.sh                              # start
+docker compose -f wordpress/docker-compose.yml stop      # stop, keeping the content
+docker compose -f wordpress/docker-compose.yml down -v   # delete the local WordPress and its content
+```
+
+`wordpress/update-a-la-carte.sh` applies the November 2026 A la carte menu and its PDF, and `wordpress/export.sh`
+writes the current content to `wordpress/export/` for the move to hosting.
+
+`wordpress/import.sh` copies the content, images and PDFs from the old Sanity dataset into WordPress. It is a
+one-off for the move: running it again overwrites edits made in WordPress since.
+
+For edits to show on the local site straight away, WordPress (in Docker) must be able to reach the site on port
+3000. With ufw, allow it once:
+
+```bash
+sudo ufw allow from 172.16.0.0/12 to any port 3000 proto tcp
+```
+
+Without that rule, run `wordpress/refresh.sh` after editing to make the site reload its content.
+
+## Hosting WordPress
+
+1. Install WordPress on the host (any PHP 8.1+ WordPress hosting), at its own address such as `cms.<domain>`.
+2. Install and activate **Secure Custom Fields**, then upload `wordpress/plugin/olea-content` and activate it.
+3. Add to `wp-config.php`:
+   ```php
+   define('OLEA_SITE_URL', 'https://<live-domain>');
+   define('OLEA_REVALIDATE_URL', 'https://<live-domain>/api/revalidate');
+   define('OLEA_REVALIDATE_SECRET', '<long random string>');
    ```
-   `npm run sanity:seed -- --force` overwrites Sanity with the built-in content. It discards edits made in the Studio.
-5. In **API → Webhooks**, add a webhook so published changes appear on the live site straight away:
-   - URL: `https://<live-domain>/api/revalidate`
-   - Dataset: `production`, trigger on create, update and delete
-   - Projection: `{_type}`, HTTP method: `POST`
-   - Secret: the same value as `SANITY_REVALIDATE_SECRET`
-6. Set the same three environment variables on the host (e.g. Vercel) and redeploy.
-7. Invite the client under **Members** in sanity.io/manage. They sign in at `https://<live-domain>/studio`.
+4. Move the content across with the files in `wordpress/export/` (refresh them first with `wordpress/export.sh`).
+   On the host, with WP-CLI, from the WordPress folder:
+   ```bash
+   tar -xzf uploads.tar.gz -C wp-content/        # images and PDFs
+   wp db import content.sql                      # posts, menus, What's On, media records (table prefix wp_)
+   wp eval-file import-options.php options.json  # "Olea Site" settings and the site icon
+   wp search-replace 'http://localhost:8080' 'https://cms.<domain>' --all-tables
+   wp media regenerate --yes                     # rebuild the resized images
+   ```
+   `import-options.php` is in `wordpress/scripts/`. `content.sql` replaces the host's posts tables, so run it on a
+   fresh install. It carries no users, passwords or site settings. `olea-content.xml` is the same content as a
+   standard WordPress export file, for hosts without WP-CLI; menu images and PDFs need relinking after that route.
+5. On the site's host (e.g. Vercel) set `WORDPRESS_URL` to the WordPress address and `REVALIDATE_SECRET` to the
+   same secret, then redeploy.
+6. Under **Settings → Reading**, keep "Discourage search engines" ticked so only the real site is indexed.
 
-Without the webhook, content still refreshes on its own within an hour.
+Without the revalidate settings, content still refreshes on its own within an hour.

@@ -1,5 +1,5 @@
-// Built-in content. The site shows this wherever the matching Sanity field is empty,
-// and scripts/seed-sanity.ts imports it into Sanity as the starting content.
+// Built-in content. The site shows this wherever the matching WordPress field is empty,
+// and everywhere when no WordPress is configured.
 
 export const site = {
   name: "Olea Social",
