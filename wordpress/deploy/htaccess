@@ -1,0 +1,31 @@
+# Always use HTTPS.
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# The website (oleasocial.co.uk) may read the REST API from the browser.
+<IfModule mod_headers.c>
+  SetEnvIf Request_URI "^/wp-json/" OLEA_REST
+  Header always set Access-Control-Allow-Origin "https://oleasocial.co.uk" env=OLEA_REST
+  Header always set Access-Control-Allow-Methods "GET, OPTIONS" env=OLEA_REST
+  Header always set Access-Control-Allow-Headers "Content-Type, Authorization" env=OLEA_REST
+  Header always append Vary "Origin" env=OLEA_REST
+</IfModule>
+
+# XML-RPC is not used.
+<Files xmlrpc.php>
+  Require all denied
+</Files>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
