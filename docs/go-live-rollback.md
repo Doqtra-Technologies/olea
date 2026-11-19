@@ -47,9 +47,13 @@ Undeploy: empty `~/public_html/cms` (keep `.well-known` and `cgi-bin`) and drop 
 
 ## Backups (on the server)
 
+Times are server time (MST, UTC−7), so 03:15 MST is 10:15 UK time in winter.
+
 - Daily 03:15: DB dump to `~/backups/olea/db-YYYYMMDD.sql.gz`, kept 14 days.
 - Weekly (Sunday 03:45): `~/backups/olea/uploads-YYYYMMDD.tar.gz`, kept 14 days.
-- Script: `~/bin/olea-backup.sh` (crontab: `crontab -l`).
+- Script: `~/bin/olea-backup.sh db|uploads` (crontab: `crontab -l`). Uses wp-config's DB creds; no password in cron.
+- These live on the same server. For off-site copies, pull them now and then:
+  `scp 'olea-cpanel:backups/olea/*' ~/olea-backups/`.
 
 ### Restore
 
@@ -63,3 +67,16 @@ wp cache flush && wp rewrite flush --hard
 ```
 
 Then save any post in wp-admin (or call the revalidate route) so the website drops its cache.
+
+## Users
+
+- Admin: username and password are `WP_ADMIN_USER` / `WP_ADMIN_PASS` in `wordpress/deploy/.env.deploy`.
+  Its email is still the placeholder `admin@example.com`. Change it in wp-admin → Profile.
+- WordPress can't send email (blocked by `wp-content/mu-plugins/olea-hardening.php`), so new users and
+  password resets get no email. Hand passwords over directly.
+- Pinar (client editor). The Editor role can edit menus, What's On, blog, media and the Olea Site pages, but not
+  plugins, settings or users. Replace `PINAR_EMAIL`; the command prints a generated password once:
+
+  ```bash
+  ssh olea-cpanel 'cd ~/public_html/cms && php -d memory_limit=512M /usr/bin/wp user create pinar PINAR_EMAIL --role=editor --first_name=Pinar --porcelain && php -d memory_limit=512M /usr/bin/wp user reset-password pinar --show-password --skip-email'
+  ```
