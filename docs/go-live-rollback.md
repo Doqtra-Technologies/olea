@@ -31,9 +31,11 @@ vercel deploy                 # preview
 vercel deploy --prod          # production
 ```
 
-`vercel.json` sets `git.deploymentEnabled: false`, so pushes to GitHub start no build in any Vercel
-project linked to the repo, including the old gourmetica one. To use Git auto-deploys on olea-social later, connect the repo
-to olea-social first, disconnect it from gourmetica/olea, then remove that setting.
+Git auto-deploys: olea-social is connected to Doqtra-Technologies/olea and `main` is its production branch.
+Every push or merge to `main` builds and goes live on www.oleasocial.co.uk. `vercel.json` turns Git builds off for
+all other branches (`"**": false`), so feature branches and PR pushes start no deployment. Test changes with a
+CLI preview (`vercel deploy` from a `git archive` copy, above), never a production deploy. The old gourmetica `olea`
+project may still be linked to the repo and build `main` too; it owns no domain any more, so that is harmless.
 `.vercelignore` also keeps `.env*`, `docs/`, `wordpress/` and `public/amendment/` out of any upload.
 The project has Vercel Authentication on every URL except custom domains. For automated checks, use the
 "Protection Bypass for Automation" secret (Project → Settings → Deployment Protection), sent as the

@@ -50,7 +50,7 @@ export const menus: Menu[] = [
           { name: "Cast iron prawns", description: "Oyster, chestnut & button mushrooms, confit garlic", price: "13" },
           { name: "Falafel", description: "Fritters of crushed chickpeas, fava beans and peppers (VG)", price: "8.5" },
           { name: "Crispy courgette", description: "Beetroot purée, yogurt and garlic", price: "8.5" },
-          { name: "Lambs liver", description: "Sautéed lambs liver in butter sauce served on cauliflower purée, red onions, sumac", price: "11" },
+          { name: "Lambs liver", description: "Sautéed lambs liver in butter sauce, served on cauliflower purée, red onions, sumac", price: "11" },
           { name: "Cheese plate", description: "Manchego, St Nectaire, parmesan, blue cheese, with grapes, walnuts, olive oil torta and quince chutney (V)", price: "15.5" },
         ],
       },
@@ -62,7 +62,7 @@ export const menus: Menu[] = [
           { name: "Grilled salmon", description: "Salmon fillet, smoky piperade, confit baby potatoes", price: "27" },
           { name: "Grilled tiger prawn", description: "Red pepper, carrot sauce with chickpeas and spinach", price: "28" },
           { name: "Prawn and Cornish crab spaghetti", description: "Sautéed prawns, Cornish white crab meat, garlic, chilli, parsley", price: "27" },
-          { name: "Grilled octopus", description: "Tendered octopus with pan-fried potatoes, romesco sauce", price: "24" },
+          { name: "Grilled octopus", description: "Tender octopus with pan-fried potatoes, romesco sauce", price: "24" },
         ],
       },
       {
@@ -92,7 +92,7 @@ export const menus: Menu[] = [
           { name: "Mixed grill", description: "Grilled cubes of chicken, lamb and kofte with grilled asparagus and courgette, ezme salad", price: "27.5" },
           { name: "Lamb chops", description: "3 pcs, with fennel salad", price: "28.5" },
           { name: "Minced meat moussaka", description: "Served with cacik", price: "26" },
-          { name: "Incik", description: "Slow cooked lamb shank (boneless) with onions, peppers, keşkek, drizzled with butter sauce", price: "28" },
+          { name: "Incik lamb shank", description: "Slow cooked boneless lamb shank with onions, peppers and keşkek, drizzled with butter sauce", price: "28" },
         ],
       },
       {
