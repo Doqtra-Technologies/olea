@@ -186,7 +186,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Olea Social Website <booking@oleasocial.co.uk>",
+        from: "Olea Social <bookings@mail.oleasocial.co.uk>",
         to: [recipient],
         reply_to: enquiry.email,
         subject: `Private dining enquiry from ${fullName}`,
