@@ -41,7 +41,9 @@ function isValidDate(value: string) {
   return parsed.getUTCFullYear() === year && parsed.getUTCMonth() === month - 1 && parsed.getUTCDate() === day;
 }
 
-function parseEnquiry(value: unknown): Enquiry | null {
+type FieldErrors = Partial<Record<keyof Enquiry, string>>;
+
+function parseEnquiry(value: unknown): { enquiry: Enquiry } | { fieldErrors: FieldErrors } | null {
   if (!isRecord(value)) return null;
 
   const bookingOption = readString(value.bookingOption, 40);
@@ -55,44 +57,59 @@ function parseEnquiry(value: unknown): Enquiry | null {
   const message = typeof value.message === "string" ? value.message.trim() : null;
   const guests = Number(value.guests);
 
+  if (typeof value.website !== "string") return null;
+
+  const fieldErrors: FieldErrors = {};
+  if (!bookingOption || !allowedBookingOptions.has(bookingOption)) {
+    fieldErrors.bookingOption = "Please choose a booking option.";
+  }
+  if (!date || !isValidDate(date)) fieldErrors.date = "Please enter a valid date.";
   if (
-    !bookingOption ||
-    !allowedBookingOptions.has(bookingOption) ||
-    !date ||
-    !isValidDate(date) ||
     !startTime ||
     !/^\d{2}:\d{2}$/.test(startTime) ||
     Number(startTime.slice(0, 2)) > 23 ||
-    Number(startTime.slice(3, 5)) > 59 ||
+    Number(startTime.slice(3, 5)) > 59
+  ) {
+    fieldErrors.startTime = "Please enter a valid start time.";
+  }
+  if (!eventType || !allowedEventTypes.has(eventType)) fieldErrors.eventType = "Please choose a type of event.";
+  if (!firstName) fieldErrors.firstName = "Please enter your first name.";
+  if (!lastName) fieldErrors.lastName = "Please enter your last name.";
+  if (mobile.length > 40) fieldErrors.mobile = "Please enter a shorter mobile number.";
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) fieldErrors.email = "Please enter a valid email address.";
+  if (!Number.isInteger(guests) || guests < 1 || guests > 500) {
+    fieldErrors.guests = "Please enter between 1 and 500 people.";
+  }
+  if (message === null || message.length > 300) fieldErrors.message = "Please keep your message to 300 characters.";
+
+  if (
+    Object.keys(fieldErrors).length > 0 ||
+    !bookingOption ||
+    !date ||
+    !startTime ||
     !eventType ||
-    !allowedEventTypes.has(eventType) ||
     !firstName ||
     !lastName ||
-    mobile.length > 40 ||
     !email ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
-    !Number.isInteger(guests) ||
-    guests < 1 ||
-    guests > 500 ||
-    message === null ||
-    message.length > 300 ||
-    typeof value.website !== "string"
+    message === null
   ) {
-    return null;
+    return { fieldErrors };
   }
 
   return {
-    bookingOption,
-    date,
-    guests,
-    startTime,
-    eventType,
-    firstName,
-    lastName,
-    mobile,
-    email,
-    message,
-    website: value.website,
+    enquiry: {
+      bookingOption,
+      date,
+      guests,
+      startTime,
+      eventType,
+      firstName,
+      lastName,
+      mobile,
+      email,
+      message,
+      website: value.website,
+    },
   };
 }
 
@@ -137,10 +154,14 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  const enquiry = parseEnquiry(payload);
-  if (!enquiry) {
-    return Response.json({ error: "Please check the required enquiry details." }, { status: 400 });
+  const parsed = parseEnquiry(payload);
+  if (!parsed || "fieldErrors" in parsed) {
+    return Response.json(
+      { error: "Please check the required enquiry details.", fieldErrors: parsed?.fieldErrors ?? {} },
+      { status: 400 },
+    );
   }
+  const { enquiry } = parsed;
 
   if (enquiry.website) {
     return Response.json({ message: "Enquiry received." });
@@ -199,9 +220,15 @@ export async function POST(request: Request) {
   }
 
   if (!resendResponse.ok) {
-    console.error("Resend rejected a private dining enquiry.", {
-      status: resendResponse.status,
-    });
+    let resendError: { name?: unknown; message?: unknown } = {};
+    try {
+      resendError = await resendResponse.json();
+    } catch {
+      // Body was not JSON; the status code is still logged.
+    }
+    console.error(
+      `Resend rejected a private dining enquiry: status=${resendResponse.status} name=${String(resendError.name ?? "unknown")} message=${String(resendError.message ?? "").slice(0, 200)}`,
+    );
     return Response.json({ error: "We couldn't send your enquiry. Please call us." }, { status: 502 });
   }
 

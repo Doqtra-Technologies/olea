@@ -45,3 +45,6 @@ wordpress/deploy/.env.deploy
 
 # Client source material, never deployed or committed
 /public/amendment/
+
+# Local screenshots of form states
+/docs/form-states/
