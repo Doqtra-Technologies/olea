@@ -1,0 +1,1 @@
+- No cPanel Force-HTTPS toggle is available: add an http→https 301 redirect at the top of public_html/cms/.htaccess (before the WordPress rules), and set FORCE_SSL_ADMIN true (SSL is already valid).

@@ -1,0 +1,60 @@
+[
+ {
+  "page": "menu@375",
+  "height": 9249,
+  "heading": "clever",
+  "display": "clever",
+  "body": "documan",
+  "eyebrow": "documan",
+  "loaded": [
+   "clever 100 900",
+   "documan 100 400",
+   "documan 500 900",
+   "__nextjs-Geist 400 600"
+  ],
+  "overflowX": 0,
+  "logos": [
+   "24px/1133.719970703125",
+   "32px/1133.719970703125"
+  ],
+  "brokenImgs": [],
+  "fonts": [
+   "200 Clever_Medium",
+   "200 Documan_Light",
+   "200 Documan_Medium",
+   "200 geist-latin.woff2"
+  ],
+  "bad": [],
+  "failed": [],
+  "errors": []
+ },
+ {
+  "page": "menu@1440",
+  "height": 5199,
+  "heading": "clever",
+  "display": "clever",
+  "body": "documan",
+  "eyebrow": "documan",
+  "loaded": [
+   "clever 100 900",
+   "documan 100 400",
+   "documan 500 900",
+   "__nextjs-Geist 400 600"
+  ],
+  "overflowX": 0,
+  "logos": [
+   "28px/1133.719970703125",
+   "40px/1133.719970703125"
+  ],
+  "brokenImgs": [],
+  "fonts": [
+   "200 Clever_Medium",
+   "200 Documan_Light",
+   "200 Documan_Medium",
+   "200 geist-latin.woff2"
+  ],
+  "bad": [],
+  "failed": [],
+  "errors": []
+ }
+]
