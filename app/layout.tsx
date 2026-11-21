@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { brand } from "@/lib/brand";
 import "./globals.css";
 
@@ -35,6 +36,8 @@ export const metadata: Metadata = {
     "Olea Social brings the flavours of Turkey, Greece, Spain, Italy and Morocco together on Upper St Martin's Lane, Covent Garden. Restaurant and bar made for sharing.",
 };
 
+const GA_ID = "G-VM8Z7ZQ1XS";
+
 export const viewport: Viewport = {
   themeColor: brand.grove,
 };
@@ -43,6 +46,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-GB" className={`${clever.variable} ${documan.variable}`}>
       <body className="flex min-h-screen flex-col">{children}</body>
+      {/* Google Analytics 4 (gtag.js), loaded once for every page. */}
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+      <Script id="ga-init" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+      </Script>
     </html>
   );
 }
