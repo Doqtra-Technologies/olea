@@ -252,7 +252,7 @@ export const menus: Menu[] = [
       {
         title: "A choice of starter",
         dishes: [
-          { name: "Babaganoush", description: "Grilled aubergine, yogurt, tahini, garlic and lemon (V)" },
+          { name: "Babaganoush", description: "Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)" },
           { name: "Smoked salmon", description: "Pickled cucumber, garlic yogurt, salmon roe, cucumber sauce" },
           { name: "Falafel", description: "Fritters of crushed chickpeas, fava beans and peppers" },
           { name: "Hummus", description: "Dried black olive flakes, sesame seeds (V)" },
@@ -264,7 +264,7 @@ export const menus: Menu[] = [
           { name: "Chicken shish", description: "Grilled asparagus and courgette with sumac, cacik and lavash bread" },
           { name: "Chargrilled cauliflower", description: "Carrot and orange purée, garlic flakes, dried olives (VG)" },
           { name: "Minced meat moussaka", description: "Served with cacik" },
-          { name: "Seabream fillet", description: "Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine" },
+          { name: "Seabass fillet", description: "Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine" },
         ],
       },
     ],
@@ -331,7 +331,7 @@ export const menus: Menu[] = [
               { name: "Black Angus sirloin", description: "Chargrilled, peppercorn sauce, sautéed spiced potatoes" },
               { name: "Vegetable moussaka (v)", description: "Layers of aubergine, courgettes, potatoes and peppers topped with béchamel and cheese gratin" },
               { name: "Grilled monkfish", description: "Garlic & yogurt marinade, preserved lemon, saffron rice, romesco sauce, grilled courgette" },
-              { name: "Lamb shank", description: "Slow cooked with onions, peppers and bulgur rice" },
+              { name: "Lamb shank", description: "Slow cooked lamb shank (boneless) with onions, peppers and keşkek, butter sauce" },
               { name: "Chicken shish", description: "Grilled cubes of marinated chicken breast with grilled asparagus and courgettes" },
             ],
           },
@@ -342,6 +342,81 @@ export const menus: Menu[] = [
               { name: "Chocolate brownie (v)", description: "Vanilla ice cream" },
             ],
           },
+        ],
+      },
+    ],
+  },
+  {
+    id: "party-menu-1",
+    label: "Party Menu 1",
+    title: "Party Menu 1",
+    price: "£48 per person",
+    pdf: "/menus/party-menu-1.pdf",
+    sections: [
+      {
+        title: "Selection of starters",
+        dishes: [
+          { name: "Hummus", description: "Dried black olive flakes, sesame seeds (VG)" },
+          { name: "Tabbouleh", description: "Parsley, mint, crushed wheat, tomatoes, spring onions and lemon (VG)" },
+          { name: "Babaganoush", description: "Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)" },
+          { name: "Falafel", description: "Fritters of crushed chickpeas, fava beans and peppers (VG)" },
+          { name: "Cacik", description: "Yogurt, cucumber, mint, dill (V)" },
+        ],
+      },
+      {
+        title: "A choice of main",
+        dishes: [
+          { name: "Lamb kofte", description: "Yogurt, crispy bread, grilled peppers and tomatoes" },
+          { name: "Chicken tagine", description: "Braised chicken, spice-infused sauce, prunes, dried apricots, almonds, with rice" },
+          { name: "Grilled salmon", description: "Salmon fillet, smoky piperade, confit baby potatoes" },
+          { name: "Chargrilled cauliflower", description: "Carrot and orange purée, garlic flakes and dried olives (VG)" },
+          { name: "Chicken shish", description: "Grilled cubes of marinated chicken breast served with grilled asparagus, courgettes and lavash bread" },
+        ],
+      },
+      {
+        title: "Dessert",
+        dishes: [
+          { name: "Baklava", description: "Pistachio and honey cream (V)" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "party-menu-2",
+    label: "Party Menu 2",
+    title: "Party Menu 2",
+    price: "£55 per person",
+    pdf: "/menus/party-menu-2.pdf",
+    sections: [
+      {
+        title: "Selection of starters",
+        dishes: [
+          { name: "Hummus", description: "Dried black olive flakes, sesame seeds (VG)" },
+          { name: "Tabbouleh", description: "Parsley, mint, crushed wheat, tomatoes, spring onions and lemon (VG)" },
+          { name: "Babaganoush", description: "Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)" },
+          { name: "Falafel", description: "Fritters of crushed chickpeas, fava beans and peppers (VG)" },
+          { name: "Cacik", description: "Yogurt, cucumber, mint, dill (V)" },
+          { name: "Manchego croquetas", description: "Manchego cheese, chilli jam (V)" },
+          { name: "Calamari", description: "Fried baby calamari served with lime mayo" },
+          { name: "Hellim cheese", description: "Chargrilled Cypriot cheese (V)" },
+        ],
+      },
+      {
+        title: "A choice of main",
+        dishes: [
+          { name: "Mixed grill", description: "Grilled cubes of chicken, lamb and kofte served with grilled asparagus and courgette, with ezme salad and lavash bread" },
+          { name: "Sirloin steak", description: "280g Black Angus sirloin, peppercorn sauce, sautéed spiced potatoes" },
+          { name: "Lamb chops", description: "Grilled lamb chops, served with fennel salad" },
+          { name: "Vegetable moussaka", description: "Layers of aubergine, courgette, potatoes and peppers topped with béchamel sauce and cheese gratin (V)" },
+          { name: "Seabass", description: "Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine" },
+          { name: "Lamb shank", description: "Slow cooked lamb shank (boneless) with onions, peppers, keşkek, drizzled with butter sauce" },
+        ],
+      },
+      {
+        title: "A choice of dessert",
+        dishes: [
+          { name: "Baklava", description: "Pistachio and honey cream (V)" },
+          { name: "Chocolate brownie", description: "Vanilla ice cream and chocolate sauce" },
         ],
       },
     ],
