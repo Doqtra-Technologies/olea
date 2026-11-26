@@ -1,6 +1,7 @@
 <?php
 // Tells the site to drop its cached content after an edit, so changes show straight away.
-// Needs OLEA_REVALIDATE_URL (https://<site>/api/revalidate) and OLEA_REVALIDATE_SECRET.
+// Needs OLEA_REVALIDATE_URL (https://www.<site>/api/revalidate, the address that answers without a redirect)
+// and OLEA_REVALIDATE_SECRET. Set OLEA_REVALIDATE_LOG to a file outside the web root to keep a record of failures.
 
 defined('ABSPATH') || exit;
 
@@ -11,15 +12,23 @@ function olea_queue_revalidate(): void
     if ($queued || !olea_config('OLEA_REVALIDATE_URL') || !olea_config('OLEA_REVALIDATE_SECRET')) return;
     $queued = true;
     add_action('shutdown', function () {
-        $response = wp_remote_post(olea_config('OLEA_REVALIDATE_URL'), [
+        $url = olea_config('OLEA_REVALIDATE_URL');
+        $response = wp_remote_post($url, [
             'timeout' => 3,
+            // A redirect would turn the POST into a GET or drop the secret, so treat one as a failure.
+            'redirection' => 0,
             'headers' => ['Authorization' => 'Bearer ' . olea_config('OLEA_REVALIDATE_SECRET')],
         ]);
+        $result = is_wp_error($response) ? $response->get_error_message() : wp_remote_retrieve_response_code($response);
         // Kept for troubleshooting: wp option get olea_last_revalidate
-        update_option('olea_last_revalidate', [
-            'time' => current_time('mysql'),
-            'result' => is_wp_error($response) ? $response->get_error_message() : wp_remote_retrieve_response_code($response),
-        ], false);
+        update_option('olea_last_revalidate', ['time' => current_time('mysql'), 'result' => $result], false);
+
+        $log = olea_config('OLEA_REVALIDATE_LOG');
+        if ($log && $result !== 200) {
+            $where = wp_remote_retrieve_header($response, 'location');
+            $line = sprintf("%s\t%s\t%s%s\n", current_time('mysql'), $url, $result, $where ? " -> $where" : '');
+            @file_put_contents($log, $line, FILE_APPEND | LOCK_EX);
+        }
     });
 }
 

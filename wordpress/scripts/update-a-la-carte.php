@@ -10,7 +10,7 @@ require_once ABSPATH . 'wp-admin/includes/file.php';
 require_once ABSPATH . 'wp-admin/includes/media.php';
 require_once ABSPATH . 'wp-admin/includes/image.php';
 
-const OLEA_ALC_PDF = '/public/menus/a-la-carte.pdf';
+const OLEA_ALC_PDF = '/menus/a-la-carte.pdf';
 const OLEA_ALC_PDF_NAME = 'a-la-carte-menu.pdf';
 const OLEA_ALC_INTRO = 'Our chef has crafted a unique Mediterranean menu with ingredients and flavours from the Mediterranean coast. Using timeless cooking techniques and authentic flavours, all served with a modern twist.';
 
@@ -103,7 +103,7 @@ update_field('field_olea_menu_sections', array_map(fn (array $s) => [
 WP_CLI::log(sprintf('Dishes: %d in %d sections.', array_sum(array_map(fn (array $s) => count($s[3]), $sections)), count($sections)));
 
 // The PDF: upload the new file once, recognised afterwards by its checksum.
-if (!is_readable(OLEA_ALC_PDF)) WP_CLI::error('Missing ' . OLEA_ALC_PDF . ' (public/menus/a-la-carte.pdf in the repository).');
+if (!is_readable(OLEA_ALC_PDF)) WP_CLI::error('Missing ' . OLEA_ALC_PDF . ' (wordpress/menus/a-la-carte.pdf in the repository).');
 $checksum = md5_file(OLEA_ALC_PDF);
 $old = (int) get_field('pdf', $menu, false);
 $existing = get_posts(['post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_olea_checksum', 'meta_value' => $checksum, 'fields' => 'ids', 'numberposts' => 1]);

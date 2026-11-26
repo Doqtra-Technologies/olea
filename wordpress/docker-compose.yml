@@ -18,6 +18,8 @@ x-wordpress-volumes: &wordpress-volumes
   - ./scripts:/scripts:ro
   # The site's public files, for scripts that upload one to the media library.
   - ../public:/public:ro
+  # Source copies of the menu PDFs, for the scripts that upload them. The site links to the CMS copies.
+  - ./menus:/menus:ro
 
 services:
   db:

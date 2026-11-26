@@ -1,9 +1,9 @@
 <?php
 /**
  * Applies the menus the client sent on 24 November 2026: Pre-Theatre and Christmas (changed dishes and PDFs),
- * and the new Party Menu 1 and Party Menu 2. The Gluten Free PDF sent with them was identical to the one online.
+ * the new Party Menu 1 and Party Menu 2, and the Gluten Free PDF (same content as before, now under a clean name).
  *
- *   wp eval-file update-menus-2026-11-24.php <folder holding the PDFs>
+ *   wp eval-file update-menus-2026-11-24.php [folder holding the PDFs, default /menus]
  *
  * Safe to run again. Only the dishes named here change, and previous PDFs stay in the media library.
  */
@@ -12,10 +12,11 @@ require_once ABSPATH . 'wp-admin/includes/file.php';
 require_once ABSPATH . 'wp-admin/includes/media.php';
 require_once ABSPATH . 'wp-admin/includes/image.php';
 
-$dir = rtrim($args[0] ?? '/public/menus', '/');
+$dir = rtrim($args[0] ?? '/menus', '/');
 $files = [
     'pre-theatre' => ['pre-theatre.pdf', 'pre-theatre-menu.pdf', 'Pre-Theatre menu'],
-    'christmas' => ['christmas-2026.pdf', 'christmas-menu-2026.pdf', 'Christmas menu 2026'],
+    'christmas' => ['christmas-2026.pdf', 'christmas-menu.pdf', 'Christmas menu'],
+    'gluten-free' => ['gluten-free.pdf', 'gluten-free-menu.pdf', 'Gluten Free menu'],
     'party-menu-1' => ['party-menu-1.pdf', 'party-menu-1.pdf', 'Party Menu 1'],
     'party-menu-2' => ['party-menu-2.pdf', 'party-menu-2.pdf', 'Party Menu 2'],
 ];
@@ -43,12 +44,12 @@ function olea_nov24_replace(array $sections, array $old, array $new): array
     return $sections;
 }
 
-/** Uploads the PDF once, recognised afterwards by its checksum. */
+/** Uploads the PDF once under its file name, recognised afterwards by its checksum and that name. */
 function olea_nov24_pdf(string $path, string $name, string $title): int
 {
     $checksum = md5_file($path);
-    $found = get_posts(['post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_olea_checksum', 'meta_value' => $checksum, 'fields' => 'ids', 'numberposts' => 1]);
-    if ($found) return $found[0];
+    $found = get_posts(['post_type' => 'attachment', 'post_status' => 'inherit', 'meta_key' => '_olea_checksum', 'meta_value' => $checksum, 'fields' => 'ids', 'numberposts' => -1]);
+    foreach ($found as $id) if (basename(get_attached_file($id)) === $name) return $id;
     // Sideloading moves the file it is given, so hand it a copy.
     $tmp = wp_tempnam($name);
     copy($path, $tmp);
@@ -60,7 +61,7 @@ function olea_nov24_pdf(string $path, string $name, string $title): int
 }
 
 $menus = array_combine(array_keys($files), array_map('olea_nov24_menu', array_keys($files)));
-foreach (['pre-theatre', 'christmas'] as $slug) if (!$menus[$slug]) WP_CLI::error("There is no menu with the slug $slug.");
+foreach (['pre-theatre', 'christmas', 'gluten-free'] as $slug) if (!$menus[$slug]) WP_CLI::error("There is no menu with the slug $slug.");
 
 // Work out every change before writing anything.
 $pre = get_field('sections', $menus['pre-theatre']);
@@ -133,4 +134,4 @@ foreach ($files as $slug => [$file, $name, $title]) {
 
 // Saving a menu is what tells the site to reload its content.
 wp_update_post(['ID' => $menus['pre-theatre']]);
-WP_CLI::success('Pre-Theatre, Christmas, Party Menu 1 and Party Menu 2 updated.');
+WP_CLI::success('Pre-Theatre, Christmas, Gluten Free, Party Menu 1 and Party Menu 2 updated.');

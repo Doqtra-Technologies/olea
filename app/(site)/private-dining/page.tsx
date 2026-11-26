@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button, Container } from "@/components/ui";
 import { PrivateDiningEnquiryForm } from "@/components/private-dining-enquiry-form";
-import { getPrivateDiningIntro, getSettings } from "@/lib/content";
+import { getMenus, getPrivateDiningIntro, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Group Booking",
@@ -17,7 +17,9 @@ const businessImages = [
 ];
 
 export default async function PrivateDiningPage() {
-  const [privateDining, site] = await Promise.all([getPrivateDiningIntro(), getSettings()]);
+  const [privateDining, site, menus] = await Promise.all([getPrivateDiningIntro(), getSettings(), getMenus()]);
+  // The group set menus are the Party Menu tabs on /menu (slugs party-menu-1, party-menu-2, …).
+  const groupMenus = menus.filter((m) => m.id.startsWith("party-menu"));
   return (
     <>
       <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-forest-950 pt-28">
@@ -84,6 +86,42 @@ export default async function PrivateDiningPage() {
           </div>
         </Container>
       </section>
+
+      {groupMenus.length > 0 && (
+        <section aria-labelledby="group-menus" className="bg-forest-950 pb-16 sm:pb-24">
+          <Container>
+            <p className="eyebrow text-brass">Set menus for groups</p>
+            <h2 id="group-menus" className="mt-6 font-display text-4xl font-light leading-tight text-cream sm:text-5xl">
+              Group Menus
+            </h2>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {groupMenus.map((m) => (
+                <div key={m.id} className="flex flex-col border border-white/15 p-6 sm:p-8">
+                  <div className="flex flex-col gap-2 border-b border-white/10 pb-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                    <h3 className="font-display text-3xl text-cream">{m.title}</h3>
+                    {m.price && <p className="eyebrow text-brass">{m.price}</p>}
+                  </div>
+                  <ul className="mt-6 flex-1 space-y-2 text-sm leading-relaxed text-white/70">
+                    {m.sections.map((s) => (
+                      <li key={s.title}>
+                        <span className="text-white">{s.title}:</span> {s.dishes.map((d) => d.name).join(", ")}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Button href={`/menu#${m.id}`}>View menu</Button>
+                    {m.pdf && (
+                      <Button href={m.pdf} variant="light">
+                        Download PDF
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
 
       <section id="enquire" className="scroll-mt-20 bg-forest-900 py-16 sm:py-24">
         <Container className="grid gap-10 lg:grid-cols-12">
