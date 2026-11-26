@@ -17,13 +17,13 @@
  7. WordPress will then import each of the posts, pages, comments, categories, etc.
     contained in this file into your site.
 -->
-<!-- generator="WordPress/7.1.4" created="2026-11-26 00:38" -->
+<!-- generator="WordPress/7.1.4" created="2026-11-26 01:03" -->
 <rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
   <channel>
 <title>Olea Social</title>
 <link>http://localhost:8080</link>
 <description/>
-<pubDate>Thu, 26 Nov 2026 00:38:03 +0000</pubDate>
+<pubDate>Thu, 26 Nov 2026 01:03:44 +0000</pubDate>
 <language>en-US</language>
 <wp:wxr_version>1.2</wp:wxr_version>
 <wp:base_site_url>http://localhost:8080</wp:base_site_url>
@@ -2248,7 +2248,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_featured</wp:meta_key>
@@ -2256,7 +2256,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Olives]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Olives with dried apricot and lemon oil (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_name</wp:meta_key>
@@ -2264,7 +2264,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Dried apricot and lemon oil (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_description</wp:meta_key>
@@ -2280,7 +2280,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Hummus]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Hummus with black olive powder, sesame seeds (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_name</wp:meta_key>
@@ -2288,7 +2288,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Black olive powder, sesame seeds (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_description</wp:meta_key>
@@ -2312,7 +2312,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic and lemon (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[grilled aubergine, yogurt, tahini, garlic and lemon (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_description</wp:meta_key>
@@ -2328,7 +2328,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Smoked salmon]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Smoked salmon, pickled cucumber, garlic yogurt, salmon roe, cucumber sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_name</wp:meta_key>
@@ -2336,7 +2336,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Pickled cucumber, garlic yogurt, salmon roe, cucumber sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_description</wp:meta_key>
@@ -2360,7 +2360,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Oyster, chestnut & button mushrooms, confit garlic]]></wp:meta_value>
+    <wp:meta_value><![CDATA[oyster, chestnut & button mushrooms, confit garlic]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_4_description</wp:meta_key>
@@ -2376,7 +2376,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Cheese plate]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Cheese plate manchego, st nectaire, parmesan, cabrales blue cheese with grapes and walnuts and quince chutney with gluten-free bread (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_5_name</wp:meta_key>
@@ -2384,7 +2384,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Manchego, St Nectaire, parmesan, Cabrales blue cheese with grapes, walnuts and quince chutney, with gluten-free bread (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_5_description</wp:meta_key>
@@ -2408,7 +2408,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_6_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Chopped tomatoes, onions and chilli pepper salad (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[chopped tomatoes, onions and chilli pepper salad (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_6_description</wp:meta_key>
@@ -2432,7 +2432,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_7_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Yogurt, cucumber, mint and dill (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[yogurt, cucumber, mint and dill (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_7_description</wp:meta_key>
@@ -2456,7 +2456,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_8_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled spicy beef sausage]]></wp:meta_value>
+    <wp:meta_value><![CDATA[grilled spicy beef sausage]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_8_description</wp:meta_key>
@@ -2480,7 +2480,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_9_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Fritters of crushed chickpeas, fava beans and peppers (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[fritters of crushed chickpeas, fava beans and peppers (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_9_description</wp:meta_key>
@@ -2496,7 +2496,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_10_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Charcoal grilled halloumi]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Charcoal grilled Halloumi with romesco sauce (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_10_name</wp:meta_key>
@@ -2504,7 +2504,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_10_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Romesco sauce (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_10_description</wp:meta_key>
@@ -2520,7 +2520,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_11_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Turkish aubergine shakshuka]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Turkish aubergine shakshuka served on yogurt (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_11_name</wp:meta_key>
@@ -2528,7 +2528,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_11_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Served on yogurt (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_11_description</wp:meta_key>
@@ -2552,7 +2552,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_12_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Low cooked Galician octopus with confit potatoes and smoked paprika]]></wp:meta_value>
+    <wp:meta_value><![CDATA[low cooked Galician octopus with confit potatoes and smoked paprika]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_12_description</wp:meta_key>
@@ -2568,7 +2568,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_13_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Burrata]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Burrata with Heirloom tomatoes (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_13_name</wp:meta_key>
@@ -2576,7 +2576,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_13_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Heirloom tomatoes (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_13_description</wp:meta_key>
@@ -2616,7 +2616,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_featured</wp:meta_key>
@@ -2624,7 +2624,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Seabream fillet]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Seabream fillet with samphire and pine nuts]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_name</wp:meta_key>
@@ -2632,7 +2632,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Samphire and pine nuts]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_description</wp:meta_key>
@@ -2648,7 +2648,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled monkfish shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Monkfish Shish, garlic & yogurt marinade Monkfish, preserved lemon, saffron rice, romesco sauce, grilled courgette]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_name</wp:meta_key>
@@ -2656,7 +2656,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Garlic & yogurt marinade, preserved lemon, saffron rice, romesco sauce, grilled courgette]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_description</wp:meta_key>
@@ -2672,7 +2672,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled salmon]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Salmon, salmon fillet, smoky piperade, confit baby potatoes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_name</wp:meta_key>
@@ -2680,7 +2680,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Salmon fillet, smoky piperade, confit baby potatoes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_description</wp:meta_key>
@@ -2696,7 +2696,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Incik lamb shank]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Incik]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_name</wp:meta_key>
@@ -2704,7 +2704,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Slow cooked lamb shank with onions, peppers and basmati rice]]></wp:meta_value>
+    <wp:meta_value><![CDATA[slow cooked lamb shank with onions, peppers and basmati rice]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_description</wp:meta_key>
@@ -2720,7 +2720,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken shish, grilled asparagus and courgette with sumac, smoked cacik with gluten-free bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_4_name</wp:meta_key>
@@ -2728,7 +2728,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled asparagus and courgette with sumac, smoked cacik, with gluten-free bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_4_description</wp:meta_key>
@@ -2744,7 +2744,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb shish, grilled asparagus and courgettes with sumac, ezme salad, with gluten-free bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_5_name</wp:meta_key>
@@ -2752,7 +2752,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled asparagus and courgettes with sumac, ezme salad, with gluten-free bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_5_description</wp:meta_key>
@@ -2768,7 +2768,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_6_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Mixed grill]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Mixed grill, grilled cubes of chicken, lamb and kofte served with grilled asparagus and courgettes, with ezme salad with gluten-free bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_6_name</wp:meta_key>
@@ -2776,7 +2776,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_6_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled cubes of chicken, lamb and kofte with grilled asparagus and courgettes, ezme salad, with gluten-free bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_6_description</wp:meta_key>
@@ -2792,7 +2792,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_7_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken tagine]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken Tagine, Braised chicken, spice-infused sauce, prunes, dried almonds, with rice]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_7_name</wp:meta_key>
@@ -2800,7 +2800,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_7_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Braised chicken, spice-infused sauce, prunes, dried almonds, with rice]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_7_description</wp:meta_key>
@@ -2816,7 +2816,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_8_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb kofte skewer]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Australian Wagyu Rib-Eye 350g (Marble Score 8-9), Chimichurri sauce, Potatoes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_8_name</wp:meta_key>
@@ -2824,7 +2824,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_8_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Yogurt, crispy bread, grilled peppers and tomatoes (gluten-free bread)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_8_description</wp:meta_key>
@@ -2832,7 +2832,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_8_price</wp:meta_key>
-    <wp:meta_value><![CDATA[26]]></wp:meta_value>
+    <wp:meta_value><![CDATA[65]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_8_price</wp:meta_key>
@@ -2840,7 +2840,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_9_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb chops]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Black Angus Sirloin 280g, Peppercorn Sauce, Sautéed Spiced Potatoes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_9_name</wp:meta_key>
@@ -2848,7 +2848,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_9_description</wp:meta_key>
-    <wp:meta_value><![CDATA[3 pcs, with fennel salad]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_9_description</wp:meta_key>
@@ -2856,7 +2856,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_9_price</wp:meta_key>
-    <wp:meta_value><![CDATA[28.5]]></wp:meta_value>
+    <wp:meta_value><![CDATA[37]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_9_price</wp:meta_key>
@@ -2864,7 +2864,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_10_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled tiger prawn]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Black Angus Rib-Eye 280g]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_10_name</wp:meta_key>
@@ -2872,7 +2872,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_10_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Red pepper, carrot sauce with chickpeas and spinach]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Sautéed spiced Potatoes, Chimichurri sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_10_description</wp:meta_key>
@@ -2880,7 +2880,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_10_price</wp:meta_key>
-    <wp:meta_value><![CDATA[25]]></wp:meta_value>
+    <wp:meta_value><![CDATA[43]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_10_price</wp:meta_key>
@@ -2888,7 +2888,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_11_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Fresh mixed salad]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb chops (3 pcs) served with fennel salad]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_11_name</wp:meta_key>
@@ -2896,7 +2896,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_11_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Oakleaf lettuce, pickled shallots, goat cheese, dried olives (V) (vegan option)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_11_description</wp:meta_key>
@@ -2904,7 +2904,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_11_price</wp:meta_key>
-    <wp:meta_value><![CDATA[16]]></wp:meta_value>
+    <wp:meta_value><![CDATA[28.5]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_11_price</wp:meta_key>
@@ -2912,7 +2912,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_12_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chargrilled cauliflower]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled tiger prawn]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_12_name</wp:meta_key>
@@ -2920,7 +2920,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_12_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Carrot and orange purée, garlic flakes, dried olives, vegan parmesan (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[red pepper, carrot sauce with chickpeas and spinach]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_12_description</wp:meta_key>
@@ -2928,7 +2928,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_12_price</wp:meta_key>
-    <wp:meta_value><![CDATA[22]]></wp:meta_value>
+    <wp:meta_value><![CDATA[25]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_12_price</wp:meta_key>
@@ -2936,7 +2936,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes</wp:meta_key>
-    <wp:meta_value><![CDATA[13]]></wp:meta_value>
+    <wp:meta_value><![CDATA[16]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes</wp:meta_key>
@@ -2944,7 +2944,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Signature Steaks]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Sides]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_title</wp:meta_key>
@@ -2960,7 +2960,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[1]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_featured</wp:meta_key>
@@ -2968,7 +2968,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Australian Wagyu rib-eye 350g]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Samphire with pine nuts and garlic oil (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_name</wp:meta_key>
@@ -2976,7 +2976,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Marble score 8–9. Chimichurri sauce, potatoes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_description</wp:meta_key>
@@ -2984,7 +2984,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_price</wp:meta_key>
-    <wp:meta_value><![CDATA[65]]></wp:meta_value>
+    <wp:meta_value><![CDATA[8.5]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_price</wp:meta_key>
@@ -2992,7 +2992,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Black Angus sirloin 280g]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Spiced New Potatoes with Parsley (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_1_name</wp:meta_key>
@@ -3000,7 +3000,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Peppercorn sauce, sautéed spiced potatoes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_1_description</wp:meta_key>
@@ -3008,7 +3008,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_1_price</wp:meta_key>
-    <wp:meta_value><![CDATA[37]]></wp:meta_value>
+    <wp:meta_value><![CDATA[7]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_1_price</wp:meta_key>
@@ -3016,7 +3016,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Black Angus rib-eye 280g]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled asparagus and courgettes with crispy garlic (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_2_name</wp:meta_key>
@@ -3024,7 +3024,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Sautéed spiced potatoes, chimichurri sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_2_description</wp:meta_key>
@@ -3032,7 +3032,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_2_price</wp:meta_key>
-    <wp:meta_value><![CDATA[43]]></wp:meta_value>
+    <wp:meta_value><![CDATA[6]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_2_price</wp:meta_key>
@@ -3040,191 +3040,15 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes</wp:meta_key>
-    <wp:meta_value><![CDATA[3]]></wp:meta_value>
+    <wp:meta_value><![CDATA[6]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes</wp:meta_key>
     <wp:meta_value><![CDATA[field_olea_menu_sections_dishes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
-    <wp:meta_key>sections_3_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Sides]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_title</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_title]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_note</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_note</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_note]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_featured]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Samphire]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Pine nuts and garlic oil (VG)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_0_price</wp:meta_key>
-    <wp:meta_value><![CDATA[8.5]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_0_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Spiced new potatoes]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Parsley (V)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_1_price</wp:meta_key>
-    <wp:meta_value><![CDATA[7]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_1_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled asparagus and courgettes]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Crispy garlic (VG)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_2_price</wp:meta_key>
-    <wp:meta_value><![CDATA[6]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_2_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Basmati rice]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[(VG)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_3_price</wp:meta_key>
-    <wp:meta_value><![CDATA[5]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_3_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chips]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Spicy mayo (V)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_4_price</wp:meta_key>
-    <wp:meta_value><![CDATA[6]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_4_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Fresh mixed salad]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[(V)]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes_5_price</wp:meta_key>
-    <wp:meta_value><![CDATA[7]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes_5_price</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>sections_3_dishes</wp:meta_key>
-    <wp:meta_value><![CDATA[6]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_sections_3_dishes</wp:meta_key>
-    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
     <wp:meta_key>sections</wp:meta_key>
-    <wp:meta_value><![CDATA[4]]></wp:meta_value>
+    <wp:meta_value><![CDATA[3]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections</wp:meta_key>
@@ -3237,6 +3061,150 @@
   <wp:postmeta>
     <wp:meta_key>_columns</wp:meta_key>
     <wp:meta_value><![CDATA[field_olea_menu_columns]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_13_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Lamb kofte skewer, yogurt, crispy bread, grilled peppers and tomatoes (GF bread)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_13_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_13_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_13_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_13_price</wp:meta_key>
+    <wp:meta_value><![CDATA[26]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_13_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_14_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Fresh mixed salad, oakleaf lettuce, pickled shallots, goat cheese, dried olives (V) (Vegan option)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_14_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_14_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_14_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_14_price</wp:meta_key>
+    <wp:meta_value><![CDATA[16]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_14_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_15_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Chargrilled cauliflower, carrot and orange puree, garlic flakes, dried olives, vegan parmesan (VG)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_15_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_15_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_15_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_1_dishes_15_price</wp:meta_key>
+    <wp:meta_value><![CDATA[22]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_1_dishes_15_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_3_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Basmati rice (VG)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_3_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_3_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_3_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_3_price</wp:meta_key>
+    <wp:meta_value><![CDATA[5]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_3_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_4_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Chips with spicy mayo (V)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_4_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_4_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_4_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_4_price</wp:meta_key>
+    <wp:meta_value><![CDATA[6]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_4_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_5_name</wp:meta_key>
+    <wp:meta_value><![CDATA[Fresh mixed salad (V)]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_5_name</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_name]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_5_description</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_5_description</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_description]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>sections_2_dishes_5_price</wp:meta_key>
+    <wp:meta_value><![CDATA[7]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_sections_2_dishes_5_price</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_sections_dishes_price]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -3905,8 +3873,8 @@
   <wp:post_id>20</wp:post_id>
   <wp:post_date>2026-11-10 15:35:47</wp:post_date>
   <wp:post_date_gmt>2026-11-10 15:35:47</wp:post_date_gmt>
-  <wp:post_modified>2026-11-26 00:31:43</wp:post_modified>
-  <wp:post_modified_gmt>2026-11-26 00:31:43</wp:post_modified_gmt>
+  <wp:post_modified>2026-11-26 01:01:56</wp:post_modified>
+  <wp:post_modified_gmt>2026-11-26 01:01:56</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>pre-theatre</wp:post_name>
@@ -3966,7 +3934,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_featured</wp:meta_key>
@@ -3982,7 +3950,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_description</wp:meta_key>
@@ -3998,7 +3966,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Smoked salmon]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Smoked salmon, pickled cucumber, garlic yogurt, salmon roe, cucumber sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_name</wp:meta_key>
@@ -4006,7 +3974,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Pickled cucumber, garlic yogurt, salmon roe, cucumber sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_description</wp:meta_key>
@@ -4030,7 +3998,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Fritters of crushed chickpeas, fava beans and peppers]]></wp:meta_value>
+    <wp:meta_value><![CDATA[fritters of crushed chickpeas, fava beans and peppers]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_description</wp:meta_key>
@@ -4054,7 +4022,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Dried black olive flakes, sesame seeds (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[dried black olive flakes, sesame seeds (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_description</wp:meta_key>
@@ -4078,7 +4046,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_title</wp:meta_key>
-    <wp:meta_value><![CDATA[A choice of main]]></wp:meta_value>
+    <wp:meta_value><![CDATA[A choice of Main]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_title</wp:meta_key>
@@ -4094,7 +4062,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_featured</wp:meta_key>
@@ -4102,7 +4070,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken shish, grilled asparagus and courgette with sumac, cacik and lavash bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_name</wp:meta_key>
@@ -4110,7 +4078,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled asparagus and courgette with sumac, cacik and lavash bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_description</wp:meta_key>
@@ -4126,7 +4094,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chargrilled cauliflower]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chargrilled cauliflower, carrot and orange puree, garlic flakes, dried olives (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_name</wp:meta_key>
@@ -4134,7 +4102,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Carrot and orange purée, garlic flakes, dried olives (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_description</wp:meta_key>
@@ -4150,7 +4118,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Minced meat moussaka]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Minced meat moussaka, served with cacik]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_name</wp:meta_key>
@@ -4158,7 +4126,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Served with cacik]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_description</wp:meta_key>
@@ -4174,7 +4142,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Seabass fillet]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Seabass fillet, with sautéed diced aubergine, cherry tomatoes, asparagus, shallots, and white wine]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_name</wp:meta_key>
@@ -4182,7 +4150,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_description</wp:meta_key>
@@ -4339,7 +4307,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_0_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Sharing starters]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Sharing Starters]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_0_title</wp:meta_key>
@@ -4355,7 +4323,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_0_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_0_featured</wp:meta_key>
@@ -4371,7 +4339,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_0_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Purée of chickpeas with tahini, garlic]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Puree of chickpeas with tahini, garlic]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_0_dishes_0_description</wp:meta_key>
@@ -4491,7 +4459,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Choice of main course]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Choice of Main Course]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_title</wp:meta_key>
@@ -4507,7 +4475,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_featured</wp:meta_key>
@@ -4515,7 +4483,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb kofte]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb Kofte]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_dishes_0_name</wp:meta_key>
@@ -4539,7 +4507,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken Shish]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_dishes_1_name</wp:meta_key>
@@ -4563,7 +4531,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Meat moussaka]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Meat Moussaka]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_dishes_2_name</wp:meta_key>
@@ -4587,7 +4555,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled salmon]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Salmon]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_dishes_3_name</wp:meta_key>
@@ -4611,7 +4579,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_1_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled confit artichoke (vg)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Confit Artichoke (vg)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_1_dishes_4_name</wp:meta_key>
@@ -4659,7 +4627,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_2_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_2_featured</wp:meta_key>
@@ -4667,7 +4635,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_2_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chocolate brownie (v)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chocolate brownie with vanilla ice cream (v)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_2_dishes_0_name</wp:meta_key>
@@ -4675,7 +4643,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_0_sections_2_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Vanilla ice cream]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_0_sections_2_dishes_0_description</wp:meta_key>
@@ -4723,7 +4691,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_0_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Sharing starters]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Sharing Starters]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_0_title</wp:meta_key>
@@ -4739,7 +4707,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_0_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_0_featured</wp:meta_key>
@@ -4747,7 +4715,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_0_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Bread basket with focaccia (v)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Bread Basket with Focaccia (v)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_0_dishes_0_name</wp:meta_key>
@@ -4779,7 +4747,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_0_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Purée of chickpeas with tahini, garlic]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Puree of chickpeas with tahini, garlic]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_0_dishes_1_description</wp:meta_key>
@@ -4803,7 +4771,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_0_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Chilli jam]]></wp:meta_value>
+    <wp:meta_value><![CDATA[chilli jam]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_0_dishes_2_description</wp:meta_key>
@@ -4947,7 +4915,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Choice of main course]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Choice of Main Course]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_title</wp:meta_key>
@@ -4963,7 +4931,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_featured</wp:meta_key>
@@ -4971,7 +4939,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Mixed grill]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Mixed Grill]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_0_name</wp:meta_key>
@@ -4995,7 +4963,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Black Angus sirloin]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Black Angus Sirloin]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_1_name</wp:meta_key>
@@ -5003,7 +4971,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Chargrilled, peppercorn sauce, sautéed spiced potatoes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chargrilled black angus sirloin, peppercorn sauce, sautéed spiced potatoes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_1_description</wp:meta_key>
@@ -5019,7 +4987,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Vegetable moussaka (v)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Vegetable Moussaka (v)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_2_name</wp:meta_key>
@@ -5027,7 +4995,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Layers of aubergine, courgettes, potatoes and peppers topped with béchamel and cheese gratin]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Layers of aubergine, courgettes potatoes and peppers topped with bechamel sauce and cheese gratin]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_2_description</wp:meta_key>
@@ -5043,7 +5011,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled monkfish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Monkfish]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_3_name</wp:meta_key>
@@ -5067,7 +5035,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb shank]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb Shank]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_4_name</wp:meta_key>
@@ -5075,7 +5043,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Slow cooked lamb shank (boneless) with onions, peppers and keşkek, butter sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Slow cooked Lamb Shank (boneless) with onions, peppers and Keskek, butter sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_4_description</wp:meta_key>
@@ -5091,7 +5059,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken Shish]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_5_name</wp:meta_key>
@@ -5099,7 +5067,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_1_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled cubes of marinated chicken breast with grilled asparagus and courgettes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled cubes of marinated chicken breast served with grilled asparagus and courgettes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_1_dishes_5_description</wp:meta_key>
@@ -5123,7 +5091,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_2_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Choice of dessert]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Choice of Dessert]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_2_title</wp:meta_key>
@@ -5139,7 +5107,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_2_featured</wp:meta_key>
-    <wp:meta_value><![CDATA[]]></wp:meta_value>
+    <wp:meta_value><![CDATA[0]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_2_featured</wp:meta_key>
@@ -5147,7 +5115,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_2_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Basque country cheesecake (v)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Basque Country Cheesecake (v)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_2_dishes_0_name</wp:meta_key>
@@ -5171,7 +5139,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_2_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chocolate brownie (v)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chocolate brownie with vanilla ice cream (v)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_2_dishes_1_name</wp:meta_key>
@@ -5179,7 +5147,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>columns_1_sections_2_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Vanilla ice cream]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_columns_1_sections_2_dishes_1_description</wp:meta_key>
@@ -15320,17 +15288,17 @@ At Olea Social, we love being part of those moments. This festive season, we inv
 <item>
   <title><![CDATA[Party Menu 1]]></title>
   <link>http://localhost:8080/olea_menu/party-menu-1/</link>
-  <pubDate>Thu, 26 Nov 2026 00:31:43 +0000</pubDate>
+  <pubDate>Thu, 26 Nov 2026 01:01:56 +0000</pubDate>
   <dc:creator/>
   <guid isPermaLink="false">http://localhost:8080/olea_menu/party-menu-1/</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
   <wp:post_id>48</wp:post_id>
-  <wp:post_date>2026-11-26 00:31:43</wp:post_date>
-  <wp:post_date_gmt>2026-11-26 00:31:43</wp:post_date_gmt>
-  <wp:post_modified>2026-11-26 00:31:43</wp:post_modified>
-  <wp:post_modified_gmt>2026-11-26 00:31:43</wp:post_modified_gmt>
+  <wp:post_date>2026-11-26 01:01:56</wp:post_date>
+  <wp:post_date_gmt>2026-11-26 01:01:56</wp:post_date_gmt>
+  <wp:post_modified>2026-11-26 01:01:56</wp:post_modified>
+  <wp:post_modified_gmt>2026-11-26 01:01:56</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>party-menu-1</wp:post_name>
@@ -15374,7 +15342,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Hummus]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Hummus (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_name</wp:meta_key>
@@ -15382,7 +15350,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Dried black olive flakes, sesame seeds (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Dried black olive flakes, sesame seeds]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_description</wp:meta_key>
@@ -15398,7 +15366,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Tabbouleh]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Tabbouleh (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_name</wp:meta_key>
@@ -15406,7 +15374,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Parsley, mint, crushed wheat, tomatoes, spring onions and lemon (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Parsley, Mint, Crushed Wheat, Tomatoes, Spring Onions, and Lemon]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_description</wp:meta_key>
@@ -15422,7 +15390,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Babaganoush]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Babaganoush (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_name</wp:meta_key>
@@ -15430,7 +15398,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_description</wp:meta_key>
@@ -15446,7 +15414,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Falafel]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Falafel (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_name</wp:meta_key>
@@ -15454,7 +15422,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Fritters of crushed chickpeas, fava beans and peppers (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Fritters of Crushed chickpeas, Fava Beans and Peppers]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_description</wp:meta_key>
@@ -15470,7 +15438,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Cacik]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Cacik (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_4_name</wp:meta_key>
@@ -15478,7 +15446,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Yogurt, cucumber, mint, dill (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Yogurt, Cucumber, Mint, Dill]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_4_description</wp:meta_key>
@@ -15526,7 +15494,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb kofte]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb Kofte]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_name</wp:meta_key>
@@ -15550,7 +15518,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken tagine]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken Tagine]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_name</wp:meta_key>
@@ -15574,7 +15542,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled salmon]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Salmon]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_name</wp:meta_key>
@@ -15598,7 +15566,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chargrilled cauliflower]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chargrilled Cauliflower (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_name</wp:meta_key>
@@ -15606,7 +15574,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Carrot and orange purée, garlic flakes and dried olives (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chargrilled Cauliflower served with carrot and orange puree, garlic flakes and dried olives]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_description</wp:meta_key>
@@ -15622,7 +15590,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chicken shish]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chicken Shish]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_4_name</wp:meta_key>
@@ -15630,7 +15598,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled cubes of marinated chicken breast served with grilled asparagus, courgettes and lavash bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled cubes of marinated chicken breast served with grilled asparagus, courgettes and Lavash Bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_4_description</wp:meta_key>
@@ -15678,7 +15646,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Baklava]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Baklava with pistachio and honey cream (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_name</wp:meta_key>
@@ -15686,7 +15654,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Pistachio and honey cream (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_description</wp:meta_key>
@@ -15728,21 +15696,29 @@ At Olea Social, we love being part of those moments. This festive season, we inv
     <wp:meta_key>_wp_old_date</wp:meta_key>
     <wp:meta_value><![CDATA[2026-11-24]]></wp:meta_value>
   </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>columns</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_columns</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_columns]]></wp:meta_value>
+  </wp:postmeta>
 </item>
 <item>
   <title><![CDATA[Party Menu 2]]></title>
   <link>http://localhost:8080/olea_menu/party-menu-2/</link>
-  <pubDate>Thu, 26 Nov 2026 00:31:43 +0000</pubDate>
+  <pubDate>Thu, 26 Nov 2026 01:01:56 +0000</pubDate>
   <dc:creator/>
   <guid isPermaLink="false">http://localhost:8080/olea_menu/party-menu-2/</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
   <wp:post_id>49</wp:post_id>
-  <wp:post_date>2026-11-26 00:31:43</wp:post_date>
-  <wp:post_date_gmt>2026-11-26 00:31:43</wp:post_date_gmt>
-  <wp:post_modified>2026-11-26 00:31:43</wp:post_modified>
-  <wp:post_modified_gmt>2026-11-26 00:31:43</wp:post_modified_gmt>
+  <wp:post_date>2026-11-26 01:01:56</wp:post_date>
+  <wp:post_date_gmt>2026-11-26 01:01:56</wp:post_date_gmt>
+  <wp:post_modified>2026-11-26 01:01:56</wp:post_modified>
+  <wp:post_modified_gmt>2026-11-26 01:01:56</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>party-menu-2</wp:post_name>
@@ -15786,7 +15762,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Hummus]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Hummus (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_name</wp:meta_key>
@@ -15794,7 +15770,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Dried black olive flakes, sesame seeds (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Dried black olive flakes, sesame seeds]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_0_description</wp:meta_key>
@@ -15810,7 +15786,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Tabbouleh]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Tabbouleh (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_name</wp:meta_key>
@@ -15818,7 +15794,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Parsley, mint, crushed wheat, tomatoes, spring onions and lemon (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Parsley, Mint, Crushed Wheat, Tomatoes, Spring Onions, and Lemon]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_1_description</wp:meta_key>
@@ -15834,7 +15810,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Babaganoush]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Babaganoush (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_name</wp:meta_key>
@@ -15842,7 +15818,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_2_description</wp:meta_key>
@@ -15858,7 +15834,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Falafel]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Falafel (VG)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_name</wp:meta_key>
@@ -15866,7 +15842,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Fritters of crushed chickpeas, fava beans and peppers (VG)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Fritters of Crushed chickpeas, Fava Beans and Peppers]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_3_description</wp:meta_key>
@@ -15882,7 +15858,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_4_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Cacik]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Cacik (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_4_name</wp:meta_key>
@@ -15890,7 +15866,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Yogurt, cucumber, mint, dill (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Yoghurt, Cucumber, Mint, Dill]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_4_description</wp:meta_key>
@@ -15906,7 +15882,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Manchego croquetas]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Manchego croquetas (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_5_name</wp:meta_key>
@@ -15914,7 +15890,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Manchego cheese, chilli jam (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Manchego cheese, chilli jam]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_5_description</wp:meta_key>
@@ -15938,7 +15914,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_6_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Fried baby calamari served with lime mayo]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Fried Baby Calamari served with Lime Mayo]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_6_description</wp:meta_key>
@@ -15954,7 +15930,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_7_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Hellim cheese]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Hellim Cheese (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_7_name</wp:meta_key>
@@ -15962,7 +15938,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_0_dishes_7_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Chargrilled Cypriot cheese (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chargrilled Cypriot cheese]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_0_dishes_7_description</wp:meta_key>
@@ -16010,7 +15986,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Mixed grill]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Mixed Grill]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_name</wp:meta_key>
@@ -16018,7 +15994,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled cubes of chicken, lamb and kofte served with grilled asparagus and courgette, with ezme salad and lavash bread]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled cubes of Chicken, Lamb, and kofte served with grilled Asparagus and Courgette with ezme salad and lavash bread]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_0_description</wp:meta_key>
@@ -16034,7 +16010,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Sirloin steak]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Sirloin Steak]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_name</wp:meta_key>
@@ -16042,7 +16018,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[280g Black Angus sirloin, peppercorn sauce, sautéed spiced potatoes]]></wp:meta_value>
+    <wp:meta_value><![CDATA[280g Black Angus Sirloin, Peppercorn sauce, Sautéed spiced potatoes]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_1_description</wp:meta_key>
@@ -16058,7 +16034,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb chops]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb Chops]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_name</wp:meta_key>
@@ -16066,7 +16042,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_2_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Grilled lamb chops, served with fennel salad]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Grilled Lamb Chops, served with Fennel Salad]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_2_description</wp:meta_key>
@@ -16082,7 +16058,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Vegetable moussaka]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Vegetable Moussaka (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_name</wp:meta_key>
@@ -16090,7 +16066,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_3_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Layers of aubergine, courgette, potatoes and peppers topped with béchamel sauce and cheese gratin (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Layers of Aubergine, Courgette, Potatoes and Peppers topped with bechamel sauce and Cheese gratin]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_3_description</wp:meta_key>
@@ -16114,7 +16090,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_4_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine]]></wp:meta_value>
+    <wp:meta_value><![CDATA[With sauteed diced aubergine, cherry tomatoes, asparagus, shallots and white wine]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_4_description</wp:meta_key>
@@ -16130,7 +16106,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_5_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Lamb shank]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Lamb Shank]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_5_name</wp:meta_key>
@@ -16138,7 +16114,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_1_dishes_5_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Slow cooked lamb shank (boneless) with onions, peppers, keşkek, drizzled with butter sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Slow cooked Lamb Shank (boneless) with onions, peppers, keşkek, drizzled with butter sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_1_dishes_5_description</wp:meta_key>
@@ -16186,7 +16162,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Baklava]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Baklava with pistachio and honey cream (V)]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_name</wp:meta_key>
@@ -16194,7 +16170,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_0_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Pistachio and honey cream (V)]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_0_description</wp:meta_key>
@@ -16210,7 +16186,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_1_name</wp:meta_key>
-    <wp:meta_value><![CDATA[Chocolate brownie]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Chocolate brownie with vanilla ice cream and chocolate sauce]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_1_name</wp:meta_key>
@@ -16218,7 +16194,7 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>sections_2_dishes_1_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Vanilla ice cream and chocolate sauce]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_sections_2_dishes_1_description</wp:meta_key>
@@ -16259,6 +16235,14 @@ At Olea Social, we love being part of those moments. This festive season, we inv
   <wp:postmeta>
     <wp:meta_key>_wp_old_date</wp:meta_key>
     <wp:meta_value><![CDATA[2026-11-24]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>columns</wp:meta_key>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
+  </wp:postmeta>
+  <wp:postmeta>
+    <wp:meta_key>_columns</wp:meta_key>
+    <wp:meta_value><![CDATA[field_olea_menu_columns]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
