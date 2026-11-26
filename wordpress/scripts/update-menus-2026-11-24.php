@@ -68,6 +68,9 @@ $pre = get_field('sections', $menus['pre-theatre']);
 $pre = olea_nov24_replace($pre, ['Babaganoush', 'Grilled aubergine, yogurt, tahini, garlic and lemon (V)'], ['Babaganoush', 'Grilled aubergine, yogurt, tahini, garlic, lemon, grilled pepper, onion (V)']);
 $pre = olea_nov24_replace($pre, ['Seabream fillet', 'Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine'], ['Seabass fillet', 'Sautéed diced aubergine, cherry tomatoes, asparagus, shallots and white wine']);
 
+$gluten = get_field('sections', $menus['gluten-free']);
+$gluten = olea_nov24_replace($gluten, ['Fresh mixed salad', 'Oakleaf lettuce, pickled shallots, goat cheese, dried olives (vegan option available) (V)'], ['Fresh mixed salad', 'Oakleaf lettuce, pickled shallots, goat cheese, dried olives (V) (vegan option)']);
+
 $christmas = get_field('columns', $menus['christmas']);
 foreach ($christmas as &$column) {
     if ($column['title'] !== 'Menu 2') continue;
@@ -121,6 +124,7 @@ $party = [
 
 update_field('field_olea_menu_sections', $pre, $menus['pre-theatre']);
 update_field('field_olea_menu_columns', $christmas, $menus['christmas']);
+update_field('field_olea_menu_sections', $gluten, $menus['gluten-free']);
 foreach ($party as $slug => [$label, $order, $price, $sections]) {
     $id = wp_insert_post(['ID' => $menus[$slug], 'post_type' => 'olea_menu', 'post_name' => $slug, 'post_title' => $label, 'post_status' => 'publish', 'menu_order' => $order], true);
     if (is_wp_error($id)) WP_CLI::error($id->get_error_message());

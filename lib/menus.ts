@@ -168,7 +168,7 @@ export const menus: Menu[] = [
           { name: "Lamb kofte skewer", description: "Yogurt, crispy bread, grilled peppers and tomatoes (gluten-free bread)", price: "26" },
           { name: "Lamb chops", description: "3 pcs, with fennel salad", price: "28.5" },
           { name: "Grilled tiger prawn", description: "Red pepper, carrot sauce with chickpeas and spinach", price: "25" },
-          { name: "Fresh mixed salad", description: "Oakleaf lettuce, pickled shallots, goat cheese, dried olives (vegan option available) (V)", price: "16" },
+          { name: "Fresh mixed salad", description: "Oakleaf lettuce, pickled shallots, goat cheese, dried olives (V) (vegan option)", price: "16" },
           { name: "Chargrilled cauliflower", description: "Carrot and orange purée, garlic flakes, dried olives, vegan parmesan (VG)", price: "22" },
         ],
       },
